@@ -1,0 +1,24 @@
+15:09:32.755 [main] INFO  org.irecapi.Irec.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 21032 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+15:09:32.756 [main] INFO  org.irecapi.Irec.loginTest - No active profile set, falling back to default profiles: default
+15:09:33.448 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:09:33.872 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:09:34.365 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:09:35.272 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+15:09:35.482 [main] INFO  org.irecapi.Irec.loginTest - Started loginTest in 2.952 seconds (JVM running for 3.924)
+15:09:35.881 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:10:18.763 [main] INFO  org.irecapi.Irec.loginTest - Starting loginTest on DESKTOP-SPJKFLC with PID 18008 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+15:10:18.765 [main] INFO  org.irecapi.Irec.loginTest - No active profile set, falling back to default profiles: default
+15:10:19.444 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:10:19.905 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:10:20.405 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:10:21.137 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+15:10:21.287 [main] INFO  org.irecapi.Irec.loginTest - Started loginTest in 2.77 seconds (JVM running for 3.452)
+15:10:21.455 [TestNG-method=loginTest-1] INFO  org.irecapi.Irec.loginTest - 准备开始---------
+15:10:21.578 [TestNG-method=loginTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:10:21.584 [TestNG-method=loginTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:10:21.585 [TestNG-method=loginTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258"}
+15:10:22.237 [TestNG-method=loginTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3ODc3NzgzOTkzNywiZXhwIjoxNjc5MzgyNjM5fQ.ie7-T4ghxH1bIpl93tvGYF-IYQzti3-N0-75nwY4I-VT9MjG9QaKjD6o6y-jxdfRWz9mwZY8naeH4QApUHG_oA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1678777839958"}
+15:10:22.237 [TestNG-method=loginTest-1] INFO  org.irecapi.Irec.loginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3ODc3NzgzOTkzNywiZXhwIjoxNjc5MzgyNjM5fQ.ie7-T4ghxH1bIpl93tvGYF-IYQzti3-N0-75nwY4I-VT9MjG9QaKjD6o6y-jxdfRWz9mwZY8naeH4QApUHG_oA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1678777839958"}
+15:10:22.237 [TestNG-method=loginTest-1] INFO  org.irecapi.Irec.loginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3ODc3NzgzOTkzNywiZXhwIjoxNjc5MzgyNjM5fQ.ie7-T4ghxH1bIpl93tvGYF-IYQzti3-N0-75nwY4I-VT9MjG9QaKjD6o6y-jxdfRWz9mwZY8naeH4QApUHG_oA"}
+15:10:22.239 [TestNG-method=loginTest-1] INFO  org.irecapi.Irec.loginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY3ODc3NzgzOTkzNywiZXhwIjoxNjc5MzgyNjM5fQ.ie7-T4ghxH1bIpl93tvGYF-IYQzti3-N0-75nwY4I-VT9MjG9QaKjD6o6y-jxdfRWz9mwZY8naeH4QApUHG_oA
+15:10:22.431 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

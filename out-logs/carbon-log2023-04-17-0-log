@@ -1,0 +1,1025 @@
+14:24:04.397 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 3320 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+14:24:04.398 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+14:24:05.147 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:24:05.602 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:24:05.606 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:24:05.607 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:24:05.608 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:24:05.609 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:24:06.022 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:24:06.933 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+14:24:07.059 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.92 seconds (JVM running for 4.069)
+14:24:07.087 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+14:24:07.088 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:24:07.088 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:24:07.092 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+14:24:07.095 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@756aadfc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@705a8dbc, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@40729f01, org.springframework.test.context.support.DirtiesContextTestExecutionListener@d535a3d]
+14:24:07.095 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+14:24:07.095 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:24:07.096 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:24:07.181 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+14:24:07.182 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:24:07.186 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+14:24:07.900 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjY5MzA5NSwiZXhwIjoxNjgyMzE3NDkzfQ.E6B9d5zTOe1dmfC1ZnlOVPJyY2XRz8WuorxgSYUwgGaPS59ht_lnx1JMmxoob__wrQeFcN3KpgJLa3tykQHXUg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712693117"}
+14:24:07.903 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjY5MzA5NSwiZXhwIjoxNjgyMzE3NDkzfQ.E6B9d5zTOe1dmfC1ZnlOVPJyY2XRz8WuorxgSYUwgGaPS59ht_lnx1JMmxoob__wrQeFcN3KpgJLa3tykQHXUg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712693117"}
+14:24:07.903 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjY5MzA5NSwiZXhwIjoxNjgyMzE3NDkzfQ.E6B9d5zTOe1dmfC1ZnlOVPJyY2XRz8WuorxgSYUwgGaPS59ht_lnx1JMmxoob__wrQeFcN3KpgJLa3tykQHXUg"}
+14:24:07.903 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjY5MzA5NSwiZXhwIjoxNjgyMzE3NDkzfQ.E6B9d5zTOe1dmfC1ZnlOVPJyY2XRz8WuorxgSYUwgGaPS59ht_lnx1JMmxoob__wrQeFcN3KpgJLa3tykQHXUg
+14:24:07.933 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+14:24:07.935 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+14:24:07.936 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:24:07.936 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目90853556","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 90853556","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+14:24:08.251 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":69,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712693523"}
+14:24:08.251 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":69,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712693523"}
+14:24:08.336 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:24:08.687 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：69
+14:24:08.688 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目90853556
+14:24:08.688 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@1dcedc93
+14:24:09.031 [cluster-ClusterId{value='643ce60689dbc14831f465c3', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+14:24:10.051 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:24:10.063 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+14:27:26.802 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 33032 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+14:27:26.803 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+14:27:27.537 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:27:27.987 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:27:27.992 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:27:27.994 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:27:27.995 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:27:27.996 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:27:28.418 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:27:29.187 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+14:27:29.305 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.749 seconds (JVM running for 3.494)
+14:27:29.333 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+14:27:29.335 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:27:29.336 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:27:29.340 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+14:27:29.343 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5eea5627, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3330f3ad, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@f425231, org.springframework.test.context.support.DirtiesContextTestExecutionListener@506aabf6]
+14:27:29.343 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+14:27:29.343 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:27:29.343 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:27:29.438 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+14:27:29.438 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:27:29.442 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+14:27:29.992 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjg5NTE5OCwiZXhwIjoxNjgyMzE3Njk1fQ.BkrEFq3CVDKLQb4JZSv1cC-TUj_6h65968Vbiy7NUmTMhIKXZbIsNKhrUhs8AdI9tZO2P8HepKDiDT3FEn1xtQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712895223"}
+14:27:29.993 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjg5NTE5OCwiZXhwIjoxNjgyMzE3Njk1fQ.BkrEFq3CVDKLQb4JZSv1cC-TUj_6h65968Vbiy7NUmTMhIKXZbIsNKhrUhs8AdI9tZO2P8HepKDiDT3FEn1xtQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712895223"}
+14:27:29.994 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjg5NTE5OCwiZXhwIjoxNjgyMzE3Njk1fQ.BkrEFq3CVDKLQb4JZSv1cC-TUj_6h65968Vbiy7NUmTMhIKXZbIsNKhrUhs8AdI9tZO2P8HepKDiDT3FEn1xtQ"}
+14:27:29.994 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxMjg5NTE5OCwiZXhwIjoxNjgyMzE3Njk1fQ.BkrEFq3CVDKLQb4JZSv1cC-TUj_6h65968Vbiy7NUmTMhIKXZbIsNKhrUhs8AdI9tZO2P8HepKDiDT3FEn1xtQ
+14:27:30.018 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+14:27:30.021 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+14:27:30.021 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:27:30.021 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目30300740","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 30300740","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+14:27:30.311 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":70,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712895588"}
+14:27:30.311 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":70,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712895588"}
+14:27:30.371 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:27:30.614 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：70
+14:27:30.615 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目30300740
+14:27:30.615 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@7066363
+14:27:31.287 [cluster-ClusterId{value='643ce6d138728811fa20c0ef', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+14:27:31.454 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/b0757bd0f17d4cb6ba9f5b8ba570b3dc.pdf","createdAt":1681712896693,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1781,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712896730"}
+14:27:31.463 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+14:27:31.467 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+14:27:31.467 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:27:31.467 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"name":"xxx银行协议模板.pdf","path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/b0836763c58e4678956af2012b8fa6ec.pdf","descEn":"Korean antipyretic sticker of Huguang Guild Hall","id":1108,"desc":"湖广会馆韩国货退热贴"}],"projectId":70}
+14:27:31.715 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712896994"}
+14:27:31.715 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681712896994"}
+14:27:31.938 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:27:31.945 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+14:48:43.460 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 29988 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+14:48:43.461 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+14:48:44.167 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:48:44.617 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:48:44.622 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:48:44.623 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:48:44.624 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:48:44.625 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:48:45.049 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:48:45.969 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+14:48:46.167 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.936 seconds (JVM running for 3.824)
+14:48:46.191 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+14:48:46.192 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:48:46.193 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:48:46.199 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+14:48:46.203 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3138953b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@27df95e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@b46e103, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b0e9f30]
+14:48:46.203 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+14:48:46.204 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:48:46.204 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:48:46.315 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+14:48:46.316 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:48:46.321 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+14:48:46.930 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDE3MjE1MywiZXhwIjoxNjgyMzE4OTcyfQ.yoS8lu-DIDJwVvh66YLVZm-4Oj4t9-r4--JBpSEz-y0sdMO-Sm7D78n7eWkwkIfETYICLa7n57K6E8E0Wkz9Ug"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714172180"}
+14:48:46.931 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDE3MjE1MywiZXhwIjoxNjgyMzE4OTcyfQ.yoS8lu-DIDJwVvh66YLVZm-4Oj4t9-r4--JBpSEz-y0sdMO-Sm7D78n7eWkwkIfETYICLa7n57K6E8E0Wkz9Ug"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714172180"}
+14:48:46.931 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDE3MjE1MywiZXhwIjoxNjgyMzE4OTcyfQ.yoS8lu-DIDJwVvh66YLVZm-4Oj4t9-r4--JBpSEz-y0sdMO-Sm7D78n7eWkwkIfETYICLa7n57K6E8E0Wkz9Ug"}
+14:48:46.931 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDE3MjE1MywiZXhwIjoxNjgyMzE4OTcyfQ.yoS8lu-DIDJwVvh66YLVZm-4Oj4t9-r4--JBpSEz-y0sdMO-Sm7D78n7eWkwkIfETYICLa7n57K6E8E0Wkz9Ug
+14:48:46.953 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+14:48:46.955 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+14:48:46.955 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:48:46.955 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目90423150","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 90423150","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+14:48:47.263 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":71,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714172561"}
+14:48:47.264 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":71,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714172561"}
+14:48:47.325 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:48:47.577 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：71
+14:48:47.577 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目90423150
+14:48:47.577 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@67bd351e
+14:48:48.077 [cluster-ClusterId{value='643cebcdaad1976438f7295f', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+14:48:48.465 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/16a75633bd0d4206a2c5ca5640a0aa75.pdf","createdAt":1681714173720,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1782,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714173759"}
+14:48:48.475 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+14:48:48.478 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+14:48:48.478 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:48:48.479 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/16a75633bd0d4206a2c5ca5640a0aa75.pdf","createdAt":1681714173720,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1782,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714173759"}],"projectId":71}
+14:48:48.760 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714174060"}
+14:48:48.760 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714174060"}
+14:48:48.994 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:48:49.001 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+14:50:48.410 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 11908 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+14:50:48.411 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+14:50:49.107 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:50:49.587 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:50:49.592 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:50:49.593 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:50:49.595 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:50:49.596 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:50:50.070 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:50:50.800 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+14:50:50.931 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.767 seconds (JVM running for 3.499)
+14:50:50.960 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+14:50:50.962 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:50:50.962 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:50:50.970 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+14:50:50.973 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f425231, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@506aabf6, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5cbd94b2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6824b913]
+14:50:50.973 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+14:50:50.973 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:50:50.973 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:50:51.063 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+14:50:51.063 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:50:51.065 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+14:50:51.592 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDI5NjgyNSwiZXhwIjoxNjgyMzE5MDk2fQ.Urif0chesih2Xbj1dr-WEk_1QWkDPdt6KG0e8h6W_QydacZgQOK6goeyollE7kvmJWzH8KEdLbAFehq2HccuFg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714296846"}
+14:50:51.592 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDI5NjgyNSwiZXhwIjoxNjgyMzE5MDk2fQ.Urif0chesih2Xbj1dr-WEk_1QWkDPdt6KG0e8h6W_QydacZgQOK6goeyollE7kvmJWzH8KEdLbAFehq2HccuFg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714296846"}
+14:50:51.592 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDI5NjgyNSwiZXhwIjoxNjgyMzE5MDk2fQ.Urif0chesih2Xbj1dr-WEk_1QWkDPdt6KG0e8h6W_QydacZgQOK6goeyollE7kvmJWzH8KEdLbAFehq2HccuFg"}
+14:50:51.592 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDI5NjgyNSwiZXhwIjoxNjgyMzE5MDk2fQ.Urif0chesih2Xbj1dr-WEk_1QWkDPdt6KG0e8h6W_QydacZgQOK6goeyollE7kvmJWzH8KEdLbAFehq2HccuFg
+14:50:51.616 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+14:50:51.618 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+14:50:51.618 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:50:51.618 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目23869921","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 23869921","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+14:50:51.900 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":72,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714297199"}
+14:50:51.901 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":72,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714297199"}
+14:50:51.968 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:50:52.270 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：72
+14:50:52.271 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目23869921
+14:50:52.271 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@47248a48
+14:50:52.912 [cluster-ClusterId{value='643cec4acd11252bc38f1d40', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+14:50:53.036 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/ff12dd416eec45d2a94ba5e1bee2475f.pdf","createdAt":1681714298291,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1783,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714298333"}
+14:50:53.045 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+14:50:53.317 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:50:53.325 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+14:51:23.866 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 11668 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+14:51:23.867 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+14:51:24.583 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:51:25.039 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:51:25.044 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:51:25.045 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:51:25.046 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:51:25.047 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:51:25.438 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:51:26.173 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+14:51:26.291 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.701 seconds (JVM running for 3.408)
+14:51:26.322 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+14:51:26.324 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:51:26.324 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:51:26.330 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+14:51:26.334 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f425231, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@506aabf6, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5cbd94b2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6824b913]
+14:51:26.334 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+14:51:26.334 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:51:26.334 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+14:51:26.423 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+14:51:26.424 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:51:26.429 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+14:51:26.745 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDMzMTk4NCwiZXhwIjoxNjgyMzE5MTMxfQ.rHf0N5vMePVkPjCFJyhaJViYOU1J7oED3s07R-fnwVdDl29w-mXieE8ULOHvIxm_TkC6dLn2K188e1KFq9Zbjg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714332006"}
+14:51:26.748 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDMzMTk4NCwiZXhwIjoxNjgyMzE5MTMxfQ.rHf0N5vMePVkPjCFJyhaJViYOU1J7oED3s07R-fnwVdDl29w-mXieE8ULOHvIxm_TkC6dLn2K188e1KFq9Zbjg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714332006"}
+14:51:26.748 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDMzMTk4NCwiZXhwIjoxNjgyMzE5MTMxfQ.rHf0N5vMePVkPjCFJyhaJViYOU1J7oED3s07R-fnwVdDl29w-mXieE8ULOHvIxm_TkC6dLn2K188e1KFq9Zbjg"}
+14:51:26.748 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNDMzMTk4NCwiZXhwIjoxNjgyMzE5MTMxfQ.rHf0N5vMePVkPjCFJyhaJViYOU1J7oED3s07R-fnwVdDl29w-mXieE8ULOHvIxm_TkC6dLn2K188e1KFq9Zbjg
+14:51:26.769 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+14:51:26.772 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+14:51:26.772 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+14:51:26.772 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目63295270","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 63295270","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+14:51:27.044 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":73,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714332344"}
+14:51:27.044 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":73,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714332344"}
+14:51:27.115 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+14:51:27.369 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：73
+14:51:27.369 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目63295270
+14:51:27.369 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@47248a48
+14:51:27.856 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/9ec02559fadb446495e4e50a6a932890.pdf","createdAt":1681714333106,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1784,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681714333152"}
+14:51:27.866 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+14:51:28.110 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:51:28.117 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+15:11:47.998 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 27564 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+15:11:47.999 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+15:11:48.702 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:11:49.181 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:49.185 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:49.186 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:49.188 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:49.189 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:49.595 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:11:50.338 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+15:11:50.469 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.712 seconds (JVM running for 3.443)
+15:11:50.495 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:11:50.496 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:11:50.497 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:11:50.503 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:11:50.507 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3138953b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@27df95e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@b46e103, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b0e9f30]
+15:11:50.507 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:11:50.507 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:50.507 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:50.612 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:11:50.625 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:11:50.634 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:11:51.217 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NjQzNiwiZXhwIjoxNjgyMzIwMzU2fQ.qM4OJkfvo_dZY9FIVgZDMMs0RJKLwLDokHROlEo7jqjD2rR7ZDyfWZN2I8L0SH4Ajceq8saRmsWlRmnOMug6VA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715556462"}
+15:11:51.217 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NjQzNiwiZXhwIjoxNjgyMzIwMzU2fQ.qM4OJkfvo_dZY9FIVgZDMMs0RJKLwLDokHROlEo7jqjD2rR7ZDyfWZN2I8L0SH4Ajceq8saRmsWlRmnOMug6VA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715556462"}
+15:11:51.217 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NjQzNiwiZXhwIjoxNjgyMzIwMzU2fQ.qM4OJkfvo_dZY9FIVgZDMMs0RJKLwLDokHROlEo7jqjD2rR7ZDyfWZN2I8L0SH4Ajceq8saRmsWlRmnOMug6VA"}
+15:11:51.217 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NjQzNiwiZXhwIjoxNjgyMzIwMzU2fQ.qM4OJkfvo_dZY9FIVgZDMMs0RJKLwLDokHROlEo7jqjD2rR7ZDyfWZN2I8L0SH4Ajceq8saRmsWlRmnOMug6VA
+15:11:51.238 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+15:11:51.240 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+15:11:51.240 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:11:51.241 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目85262623","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 85262623","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+15:11:51.506 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":74,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715556823"}
+15:11:51.507 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":74,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715556823"}
+15:11:51.574 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+15:11:51.901 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：74
+15:11:51.902 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目85262623
+15:11:51.902 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@4978777f
+15:11:51.914 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:11:51.915 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:11:51.915 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:11:51.925 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:11:51.927 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@66383c29, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f7c420c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5d152bcd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@43cb5f38]
+15:11:51.927 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:11:51.927 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:51.927 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:11:51.929 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:11:51.929 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:11:51.929 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:11:52.163 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NzQ2MiwiZXhwIjoxNjgyMzIwMzU3fQ.Hq_p9vdQzbXBa3q1GU4BxF1emWZF_l4qhYykZgDomSgnzb2r_yFTuIz9OzlUGUAE_brfH7r4hVfVX-KgGTMKDQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715557484"}
+15:11:52.164 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NzQ2MiwiZXhwIjoxNjgyMzIwMzU3fQ.Hq_p9vdQzbXBa3q1GU4BxF1emWZF_l4qhYykZgDomSgnzb2r_yFTuIz9OzlUGUAE_brfH7r4hVfVX-KgGTMKDQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715557484"}
+15:11:52.164 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NzQ2MiwiZXhwIjoxNjgyMzIwMzU3fQ.Hq_p9vdQzbXBa3q1GU4BxF1emWZF_l4qhYykZgDomSgnzb2r_yFTuIz9OzlUGUAE_brfH7r4hVfVX-KgGTMKDQ"}
+15:11:52.164 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTU1NzQ2MiwiZXhwIjoxNjgyMzIwMzU3fQ.Hq_p9vdQzbXBa3q1GU4BxF1emWZF_l4qhYykZgDomSgnzb2r_yFTuIz9OzlUGUAE_brfH7r4hVfVX-KgGTMKDQ
+15:11:52.430 [cluster-ClusterId{value='643cf136f1597e1f4fd30994', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+15:11:53.268 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/4b6493890ac9470c8f374579c2b21a45.pdf","createdAt":1681715558544,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1785,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715558584"}
+15:11:53.272 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+15:11:53.498 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:11:53.505 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+15:18:20.125 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 26632 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+15:18:20.126 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+15:18:20.941 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:18:21.521 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:21.530 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:21.533 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:21.536 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:21.539 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:22.228 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:18:23.467 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+15:18:23.603 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 3.749 seconds (JVM running for 5.309)
+15:18:23.638 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:18:23.639 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:18:23.639 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:18:23.643 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:18:23.647 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78288f83, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@29c1249a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5beb6be2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2d6a0766]
+15:18:23.647 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:18:23.647 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:23.647 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:23.734 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:18:23.735 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:18:23.740 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:18:24.234 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk0OTQ4NCwiZXhwIjoxNjgyMzIwNzQ5fQ.AipwW-O4a9SsG9w-0ZqgOe1z6qE8jwjNgpTtKF3qi35oilT-VnHEmAGHboi1F8g4BDxctO7raEPlJMEDC49zyw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715949503"}
+15:18:24.235 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk0OTQ4NCwiZXhwIjoxNjgyMzIwNzQ5fQ.AipwW-O4a9SsG9w-0ZqgOe1z6qE8jwjNgpTtKF3qi35oilT-VnHEmAGHboi1F8g4BDxctO7raEPlJMEDC49zyw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715949503"}
+15:18:24.235 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk0OTQ4NCwiZXhwIjoxNjgyMzIwNzQ5fQ.AipwW-O4a9SsG9w-0ZqgOe1z6qE8jwjNgpTtKF3qi35oilT-VnHEmAGHboi1F8g4BDxctO7raEPlJMEDC49zyw"}
+15:18:24.235 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk0OTQ4NCwiZXhwIjoxNjgyMzIwNzQ5fQ.AipwW-O4a9SsG9w-0ZqgOe1z6qE8jwjNgpTtKF3qi35oilT-VnHEmAGHboi1F8g4BDxctO7raEPlJMEDC49zyw
+15:18:24.259 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+15:18:24.262 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+15:18:24.262 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:18:24.262 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目55567746","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 55567746","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+15:18:24.492 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":75,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715949819"}
+15:18:24.492 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":75,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715949819"}
+15:18:24.580 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+15:18:24.980 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：75
+15:18:24.980 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目55567746
+15:18:24.980 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@69d2fb0a
+15:18:52.695 [cluster-ClusterId{value='643cf2bff825b96800904101', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+15:18:52.696 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:18:52.698 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:18:52.698 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:18:52.703 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:18:52.703 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@186481d4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@24eecabf, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2ffa91dc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@78d6c244]
+15:18:52.715 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:18:52.715 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:52.715 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:18:52.716 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:18:52.716 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:18:52.721 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:18:52.919 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk3ODIyNiwiZXhwIjoxNjgyMzIwNzc4fQ.GeLk_k1RLUGF6g-wUjnFUyAjZDHIagCOQ70Khfx-yIOrFYxV0YrbKLj-FPSHv-YaWYe8swpM3wZAPD68WTQo-A"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715978245"}
+15:18:52.920 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk3ODIyNiwiZXhwIjoxNjgyMzIwNzc4fQ.GeLk_k1RLUGF6g-wUjnFUyAjZDHIagCOQ70Khfx-yIOrFYxV0YrbKLj-FPSHv-YaWYe8swpM3wZAPD68WTQo-A"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715978245"}
+15:18:52.920 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk3ODIyNiwiZXhwIjoxNjgyMzIwNzc4fQ.GeLk_k1RLUGF6g-wUjnFUyAjZDHIagCOQ70Khfx-yIOrFYxV0YrbKLj-FPSHv-YaWYe8swpM3wZAPD68WTQo-A"}
+15:18:52.921 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNTk3ODIyNiwiZXhwIjoxNjgyMzIwNzc4fQ.GeLk_k1RLUGF6g-wUjnFUyAjZDHIagCOQ70Khfx-yIOrFYxV0YrbKLj-FPSHv-YaWYe8swpM3wZAPD68WTQo-A
+15:18:59.945 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/2bd78d41ddd349e4abb39cb5c1013371.pdf","createdAt":1681715985229,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1786,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681715985265"}
+15:21:29.172 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+15:21:29.284 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:21:29.292 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+15:21:36.496 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 20900 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+15:21:36.497 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+15:21:37.283 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:21:37.884 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:37.895 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:37.900 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:37.903 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:37.905 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:39.257 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:21:40.365 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+15:21:40.501 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 4.297 seconds (JVM running for 5.259)
+15:21:40.527 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:21:40.530 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:21:40.530 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:21:40.535 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:21:40.537 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5563bb40, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11148dc2, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3be80ece, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60a01cb]
+15:21:40.538 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:21:40.538 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:40.538 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:40.627 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:21:40.627 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:21:40.633 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:21:41.104 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE0NjM1NywiZXhwIjoxNjgyMzIwOTQ2fQ.rjRNAqSYeHItPV-fG0VucQ5ABcBST2YqeB6JB6OkAWaV0cERwjKt4xKjXGUgwBFHwtGb_yE8cQeOsRqfHEDD5A"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716146376"}
+15:21:41.106 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE0NjM1NywiZXhwIjoxNjgyMzIwOTQ2fQ.rjRNAqSYeHItPV-fG0VucQ5ABcBST2YqeB6JB6OkAWaV0cERwjKt4xKjXGUgwBFHwtGb_yE8cQeOsRqfHEDD5A"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716146376"}
+15:21:41.106 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE0NjM1NywiZXhwIjoxNjgyMzIwOTQ2fQ.rjRNAqSYeHItPV-fG0VucQ5ABcBST2YqeB6JB6OkAWaV0cERwjKt4xKjXGUgwBFHwtGb_yE8cQeOsRqfHEDD5A"}
+15:21:41.106 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE0NjM1NywiZXhwIjoxNjgyMzIwOTQ2fQ.rjRNAqSYeHItPV-fG0VucQ5ABcBST2YqeB6JB6OkAWaV0cERwjKt4xKjXGUgwBFHwtGb_yE8cQeOsRqfHEDD5A
+15:21:41.129 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+15:21:41.132 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+15:21:41.132 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:21:41.133 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目94784866","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 94784866","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+15:21:41.370 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":76,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716146698"}
+15:21:41.371 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":76,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716146698"}
+15:21:41.478 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+15:21:41.770 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：76
+15:21:41.771 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目94784866
+15:21:41.771 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@277bc3a5
+15:21:44.973 [cluster-ClusterId{value='643cf384a8a7071666271839', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+15:21:44.974 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:21:44.977 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:21:44.977 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:21:44.981 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:21:44.981 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28b5662d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@34b2d51a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7e4ac598, org.springframework.test.context.support.DirtiesContextTestExecutionListener@cf10c92]
+15:21:44.981 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:21:44.993 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:44.993 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:21:44.996 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:21:44.996 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:21:44.998 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:21:45.232 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE1MDUzNSwiZXhwIjoxNjgyMzIwOTUwfQ.jHomZZwBxVdzFTVUjQF9QuOI66c-0Y_bQozqeUfkjX0CC2zuHR7roNRGDHuRrMSNC8eaI5PFgzMK-M3LhOKCDA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716150556"}
+15:21:45.232 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE1MDUzNSwiZXhwIjoxNjgyMzIwOTUwfQ.jHomZZwBxVdzFTVUjQF9QuOI66c-0Y_bQozqeUfkjX0CC2zuHR7roNRGDHuRrMSNC8eaI5PFgzMK-M3LhOKCDA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716150556"}
+15:21:45.232 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE1MDUzNSwiZXhwIjoxNjgyMzIwOTUwfQ.jHomZZwBxVdzFTVUjQF9QuOI66c-0Y_bQozqeUfkjX0CC2zuHR7roNRGDHuRrMSNC8eaI5PFgzMK-M3LhOKCDA"}
+15:21:45.232 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjE1MDUzNSwiZXhwIjoxNjgyMzIwOTUwfQ.jHomZZwBxVdzFTVUjQF9QuOI66c-0Y_bQozqeUfkjX0CC2zuHR7roNRGDHuRrMSNC8eaI5PFgzMK-M3LhOKCDA
+15:21:46.160 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/a5c070e739bf4bd4ad03a20270b2f16a.pdf","createdAt":1681716151446,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1787,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716151487"}
+15:22:35.933 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+15:22:35.938 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+15:22:35.938 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:22:35.938 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/a5c070e739bf4bd4ad03a20270b2f16a.pdf","name":"0.pdf","id":1787}],"projectId":76}
+15:22:35.962 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:22:35.970 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+15:23:00.281 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 20736 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+15:23:00.281 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+15:23:00.963 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:23:01.413 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:01.418 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:01.419 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:01.420 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:01.421 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:01.826 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+15:23:02.509 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+15:23:02.617 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.576 seconds (JVM running for 3.303)
+15:23:02.647 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:23:02.648 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:23:02.648 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:23:02.654 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:23:02.657 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5cbd94b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6824b913, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@756aadfc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@705a8dbc]
+15:23:02.657 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:23:02.658 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:02.658 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:02.762 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:23:02.762 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:23:02.767 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:23:03.069 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyODMzOSwiZXhwIjoxNjgyMzIxMDI4fQ.NyqGPTO-XsS3bUezjPAcO7C-PmEsFpJJHEjC4mAU196Ty5j05s-tmgp5Hn8ZS2hqpmB0zmrCibcurgt-HEeisA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716228358"}
+15:23:03.069 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyODMzOSwiZXhwIjoxNjgyMzIxMDI4fQ.NyqGPTO-XsS3bUezjPAcO7C-PmEsFpJJHEjC4mAU196Ty5j05s-tmgp5Hn8ZS2hqpmB0zmrCibcurgt-HEeisA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716228358"}
+15:23:03.072 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyODMzOSwiZXhwIjoxNjgyMzIxMDI4fQ.NyqGPTO-XsS3bUezjPAcO7C-PmEsFpJJHEjC4mAU196Ty5j05s-tmgp5Hn8ZS2hqpmB0zmrCibcurgt-HEeisA"}
+15:23:03.072 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyODMzOSwiZXhwIjoxNjgyMzIxMDI4fQ.NyqGPTO-XsS3bUezjPAcO7C-PmEsFpJJHEjC4mAU196Ty5j05s-tmgp5Hn8ZS2hqpmB0zmrCibcurgt-HEeisA
+15:23:03.092 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+15:23:03.095 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+15:23:03.095 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:23:03.095 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目84116931","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 84116931","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+15:23:03.334 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":77,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716228662"}
+15:23:03.334 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":77,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716228662"}
+15:23:03.403 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+15:23:03.673 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：77
+15:23:03.674 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目84116931
+15:23:03.674 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@47248a48
+15:23:03.689 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+15:23:03.689 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:23:03.690 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:23:03.690 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+15:23:03.691 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f7eee96, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a36cd5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53f0d09c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@47acd13b]
+15:23:03.691 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+15:23:03.691 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:03.691 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+15:23:03.692 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+15:23:03.692 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:23:03.693 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+15:23:03.912 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyOTIwNywiZXhwIjoxNjgyMzIxMDI5fQ.BFGcup0rhiZhROHz2kuJ6Z8LnWlCqEyBOlh_8Z09IoAzH96FZck8gOzPE4rpnwG9Lv8pdjxkPFhgKLtaUHHLcw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716229226"}
+15:23:03.912 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyOTIwNywiZXhwIjoxNjgyMzIxMDI5fQ.BFGcup0rhiZhROHz2kuJ6Z8LnWlCqEyBOlh_8Z09IoAzH96FZck8gOzPE4rpnwG9Lv8pdjxkPFhgKLtaUHHLcw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716229226"}
+15:23:03.912 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyOTIwNywiZXhwIjoxNjgyMzIxMDI5fQ.BFGcup0rhiZhROHz2kuJ6Z8LnWlCqEyBOlh_8Z09IoAzH96FZck8gOzPE4rpnwG9Lv8pdjxkPFhgKLtaUHHLcw"}
+15:23:03.912 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxNjIyOTIwNywiZXhwIjoxNjgyMzIxMDI5fQ.BFGcup0rhiZhROHz2kuJ6Z8LnWlCqEyBOlh_8Z09IoAzH96FZck8gOzPE4rpnwG9Lv8pdjxkPFhgKLtaUHHLcw
+15:23:04.637 [cluster-ClusterId{value='643cf3d60ff7921cc27c3fe0', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+15:23:04.833 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/51b651b5d21f4cacb3b72041951a20cb.pdf","createdAt":1681716230127,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1788,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716230159"}
+15:23:04.836 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+15:23:04.853 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+15:23:04.854 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+15:23:04.854 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/51b651b5d21f4cacb3b72041951a20cb.pdf","name":"1.pdf","id":1788}],"projectId":77}
+15:23:05.124 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716230456"}
+15:23:05.124 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681716230456"}
+15:23:05.342 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:23:05.349 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+16:23:43.374 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 22540 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+16:23:43.375 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+16:23:44.215 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16:23:44.638 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:44.642 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:44.643 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:44.644 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:44.645 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:45.015 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+16:23:45.748 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+16:23:45.858 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.725 seconds (JVM running for 3.482)
+16:23:45.884 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+16:23:45.884 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:23:45.886 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:23:45.889 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+16:23:45.892 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5cbd94b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6824b913, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@756aadfc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@705a8dbc]
+16:23:45.892 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+16:23:45.892 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:45.892 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:45.995 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+16:23:45.995 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+16:23:46.001 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+16:23:46.528 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3MTgyNiwiZXhwIjoxNjgyMzI0NjcxfQ.nulJblmz8UsV0NVfl490r3JrxKgLBRzPA7horBdfI8Ae0r5S37uSpkib5JYhB7Qb4i_O0VvszBzpsy9Q61NDdA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719871857"}
+16:23:46.528 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3MTgyNiwiZXhwIjoxNjgyMzI0NjcxfQ.nulJblmz8UsV0NVfl490r3JrxKgLBRzPA7horBdfI8Ae0r5S37uSpkib5JYhB7Qb4i_O0VvszBzpsy9Q61NDdA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719871857"}
+16:23:46.528 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3MTgyNiwiZXhwIjoxNjgyMzI0NjcxfQ.nulJblmz8UsV0NVfl490r3JrxKgLBRzPA7horBdfI8Ae0r5S37uSpkib5JYhB7Qb4i_O0VvszBzpsy9Q61NDdA"}
+16:23:46.529 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3MTgyNiwiZXhwIjoxNjgyMzI0NjcxfQ.nulJblmz8UsV0NVfl490r3JrxKgLBRzPA7horBdfI8Ae0r5S37uSpkib5JYhB7Qb4i_O0VvszBzpsy9Q61NDdA
+16:23:46.549 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+16:23:46.551 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+16:23:46.551 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+16:23:46.551 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目38901233","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 38901233","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+16:23:46.796 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":78,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719872180"}
+16:23:46.796 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":78,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719872180"}
+16:23:46.862 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+16:23:47.139 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：78
+16:23:47.140 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目38901233
+16:23:47.140 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@47248a48
+16:23:47.152 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+16:23:47.153 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:23:47.153 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:23:47.154 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+16:23:47.155 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f7eee96, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a36cd5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53f0d09c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@47acd13b]
+16:23:47.155 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+16:23:47.155 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:47.155 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+16:23:47.156 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+16:23:47.156 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+16:23:47.156 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+16:23:47.380 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3Mjc0NiwiZXhwIjoxNjgyMzI0NjcyfQ.ozADjoxa0i5WO96JkhedpBZYwM63rSSITATVrx18KtyCTnswNrhennZ1eQSc6ZX4DsfDhBffE9VadLlnpUxM3g"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719872766"}
+16:23:47.381 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3Mjc0NiwiZXhwIjoxNjgyMzI0NjcyfQ.ozADjoxa0i5WO96JkhedpBZYwM63rSSITATVrx18KtyCTnswNrhennZ1eQSc6ZX4DsfDhBffE9VadLlnpUxM3g"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719872766"}
+16:23:47.381 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3Mjc0NiwiZXhwIjoxNjgyMzI0NjcyfQ.ozADjoxa0i5WO96JkhedpBZYwM63rSSITATVrx18KtyCTnswNrhennZ1eQSc6ZX4DsfDhBffE9VadLlnpUxM3g"}
+16:23:47.381 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcxOTg3Mjc0NiwiZXhwIjoxNjgyMzI0NjcyfQ.ozADjoxa0i5WO96JkhedpBZYwM63rSSITATVrx18KtyCTnswNrhennZ1eQSc6ZX4DsfDhBffE9VadLlnpUxM3g
+16:23:47.843 [cluster-ClusterId{value='643d0211a8a7e25b2c6f5a8f', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+16:23:48.503 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/e71133fd939c4158a8648a7e69dfb297.pdf","createdAt":1681719873850,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1789,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719873887"}
+16:23:48.504 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+16:23:48.507 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+16:23:48.507 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+16:23:48.507 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/e71133fd939c4158a8648a7e69dfb297.pdf","name":"0.pdf","id":1789}],"projectId":78}
+16:23:48.711 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719874096"}
+16:23:48.711 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681719874096"}
+16:23:48.949 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+16:23:48.957 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+17:03:38.509 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 16820 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+17:03:38.510 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+17:03:39.193 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:03:39.617 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:39.623 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:39.624 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:39.625 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:39.626 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:40.025 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+17:03:40.713 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+17:03:40.839 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.58 seconds (JVM running for 3.286)
+17:03:40.879 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:03:40.881 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:03:40.882 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:03:40.887 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:03:40.890 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5cbd94b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6824b913, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@756aadfc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@705a8dbc]
+17:03:40.891 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:03:40.891 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:40.891 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:41.027 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:03:41.030 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:03:41.032 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:03:41.524 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Njg3OCwiZXhwIjoxNjgyMzI3MDY2fQ.wMhQgE0AvN9d4xTNDbpddoMv3Bm7Cxz9yx98bG4A7pT1aBu3tXfXTLH0gNyVqq1w8cqCGY3FM9RUcjI64zwJCg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722266899"}
+17:03:41.524 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Njg3OCwiZXhwIjoxNjgyMzI3MDY2fQ.wMhQgE0AvN9d4xTNDbpddoMv3Bm7Cxz9yx98bG4A7pT1aBu3tXfXTLH0gNyVqq1w8cqCGY3FM9RUcjI64zwJCg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722266899"}
+17:03:41.524 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Njg3OCwiZXhwIjoxNjgyMzI3MDY2fQ.wMhQgE0AvN9d4xTNDbpddoMv3Bm7Cxz9yx98bG4A7pT1aBu3tXfXTLH0gNyVqq1w8cqCGY3FM9RUcjI64zwJCg"}
+17:03:41.528 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Njg3OCwiZXhwIjoxNjgyMzI3MDY2fQ.wMhQgE0AvN9d4xTNDbpddoMv3Bm7Cxz9yx98bG4A7pT1aBu3tXfXTLH0gNyVqq1w8cqCGY3FM9RUcjI64zwJCg
+17:03:41.547 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+17:03:41.549 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+17:03:41.549 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:03:41.549 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目83300664","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 83300664","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+17:03:41.800 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":79,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722267220"}
+17:03:41.801 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":79,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722267220"}
+17:03:41.870 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+17:03:42.206 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：79
+17:03:42.207 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目83300664
+17:03:42.207 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@47248a48
+17:03:42.221 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:03:42.222 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:03:42.222 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:03:42.223 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:03:42.224 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f7eee96, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a36cd5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@53f0d09c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@47acd13b]
+17:03:42.224 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:03:42.224 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:42.224 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:03:42.226 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:03:42.226 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:03:42.226 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:03:42.464 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Nzg2MiwiZXhwIjoxNjgyMzI3MDY3fQ.iqR2GiZBCg5245iT-1uEn9zez28-wXz3t2pvNa5wLYbUvvXVBCmDxQKe5RoFNkWjczr62mqrNihSW7T7hF3hRA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722267884"}
+17:03:42.464 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Nzg2MiwiZXhwIjoxNjgyMzI3MDY3fQ.iqR2GiZBCg5245iT-1uEn9zez28-wXz3t2pvNa5wLYbUvvXVBCmDxQKe5RoFNkWjczr62mqrNihSW7T7hF3hRA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722267884"}
+17:03:42.465 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Nzg2MiwiZXhwIjoxNjgyMzI3MDY3fQ.iqR2GiZBCg5245iT-1uEn9zez28-wXz3t2pvNa5wLYbUvvXVBCmDxQKe5RoFNkWjczr62mqrNihSW7T7hF3hRA"}
+17:03:42.465 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjI2Nzg2MiwiZXhwIjoxNjgyMzI3MDY3fQ.iqR2GiZBCg5245iT-1uEn9zez28-wXz3t2pvNa5wLYbUvvXVBCmDxQKe5RoFNkWjczr62mqrNihSW7T7hF3hRA
+17:03:42.844 [cluster-ClusterId{value='643d0b6c41f3bb4adab66d90', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+17:03:43.299 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/57baa905146246e9875f1a8f6af45761.pdf","createdAt":1681722268681,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1790,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722268714"}
+17:03:43.315 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+17:03:43.319 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+17:03:43.319 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:03:43.319 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/57baa905146246e9875f1a8f6af45761.pdf","name":"0.pdf","id":1790}],"projectId":79}
+17:03:43.530 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722268954"}
+17:03:43.530 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722268954"}
+17:03:43.766 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+17:03:43.776 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+17:05:35.182 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 23972 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+17:05:35.183 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+17:05:35.880 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:05:36.384 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:36.389 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:36.391 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:36.393 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:36.394 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:37.123 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+17:05:38.031 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+17:05:38.147 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 3.218 seconds (JVM running for 3.945)
+17:05:38.174 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:05:38.175 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:05:38.175 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:05:38.180 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:05:38.182 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5dbb50f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4a2e7bcb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@575c3e9b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74f827ad]
+17:05:38.183 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:05:38.183 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:38.183 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:38.293 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:05:38.293 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:05:38.298 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:05:38.808 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NDE1NSwiZXhwIjoxNjgyMzI3MTg0fQ.KR7n3uq4GNIX3kw73dEQIqCu7tVBDPq2zTVkVZs676N0M5yQxnFM_j0wFVSKit8ecOzig6BT2THhLjXu3EswKw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722384176"}
+17:05:38.810 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NDE1NSwiZXhwIjoxNjgyMzI3MTg0fQ.KR7n3uq4GNIX3kw73dEQIqCu7tVBDPq2zTVkVZs676N0M5yQxnFM_j0wFVSKit8ecOzig6BT2THhLjXu3EswKw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722384176"}
+17:05:38.810 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NDE1NSwiZXhwIjoxNjgyMzI3MTg0fQ.KR7n3uq4GNIX3kw73dEQIqCu7tVBDPq2zTVkVZs676N0M5yQxnFM_j0wFVSKit8ecOzig6BT2THhLjXu3EswKw"}
+17:05:38.810 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NDE1NSwiZXhwIjoxNjgyMzI3MTg0fQ.KR7n3uq4GNIX3kw73dEQIqCu7tVBDPq2zTVkVZs676N0M5yQxnFM_j0wFVSKit8ecOzig6BT2THhLjXu3EswKw
+17:05:38.837 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+17:05:38.841 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+17:05:38.841 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:05:38.841 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目49604648","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 49604648","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+17:05:39.083 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":80,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722384509"}
+17:05:39.084 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":80,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722384509"}
+17:05:39.157 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+17:05:39.473 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：80
+17:05:39.473 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目49604648
+17:05:39.473 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@2cca611f
+17:05:39.490 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:05:39.490 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:05:39.490 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:05:39.491 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:05:39.492 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@733c464f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@47272cd3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@73fbdf68, org.springframework.test.context.support.DirtiesContextTestExecutionListener@32f1fafe]
+17:05:39.492 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:05:39.492 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:39.492 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:39.494 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:05:39.494 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:05:39.494 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:05:39.726 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NTEzMywiZXhwIjoxNjgyMzI3MTg1fQ.7-xKbyuVwvGYsQyUsy-NiyHo0DAJ2p1mVRQQnLJCEKs1dXxhz9KyFnI4j1NdAkU_8YV1fWxSK4ipTVlMsxRF3A"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722385153"}
+17:05:39.727 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NTEzMywiZXhwIjoxNjgyMzI3MTg1fQ.7-xKbyuVwvGYsQyUsy-NiyHo0DAJ2p1mVRQQnLJCEKs1dXxhz9KyFnI4j1NdAkU_8YV1fWxSK4ipTVlMsxRF3A"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722385153"}
+17:05:39.727 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NTEzMywiZXhwIjoxNjgyMzI3MTg1fQ.7-xKbyuVwvGYsQyUsy-NiyHo0DAJ2p1mVRQQnLJCEKs1dXxhz9KyFnI4j1NdAkU_8YV1fWxSK4ipTVlMsxRF3A"}
+17:05:39.727 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NTEzMywiZXhwIjoxNjgyMzI3MTg1fQ.7-xKbyuVwvGYsQyUsy-NiyHo0DAJ2p1mVRQQnLJCEKs1dXxhz9KyFnI4j1NdAkU_8YV1fWxSK4ipTVlMsxRF3A
+17:05:40.142 [cluster-ClusterId{value='643d0be27f96de1bf7b6a511', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+17:05:40.580 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/a5dbe6e3d1e5437a9a1697a0f3314832.pdf","createdAt":1681722385970,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1791,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722386001"}
+17:05:40.582 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+17:05:40.585 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+17:05:40.585 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:05:40.585 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/a5dbe6e3d1e5437a9a1697a0f3314832.pdf","name":"1.pdf","id":1791}],"projectId":80}
+17:05:40.826 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722386252"}
+17:05:40.826 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722386252"}
+17:05:40.853 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:05:40.853 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:05:40.853 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:05:40.854 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:05:40.855 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@73c31181, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3d620a1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4f486211, org.springframework.test.context.support.DirtiesContextTestExecutionListener@51e3d37e]
+17:05:40.855 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:05:40.855 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:40.855 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:05:40.855 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:05:40.855 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:05:40.855 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:05:41.073 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NjQ3MiwiZXhwIjoxNjgyMzI3MTg2fQ.Ev4ppSd44k-9CXWavTCUVUgTojUPblbw4So9yCq_SZegAZrFtMc1_mb3Jn3SRbMKXbRhvYCdkO2bN-5VZxWMPQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722386496"}
+17:05:41.073 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NjQ3MiwiZXhwIjoxNjgyMzI3MTg2fQ.Ev4ppSd44k-9CXWavTCUVUgTojUPblbw4So9yCq_SZegAZrFtMc1_mb3Jn3SRbMKXbRhvYCdkO2bN-5VZxWMPQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722386496"}
+17:05:41.074 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NjQ3MiwiZXhwIjoxNjgyMzI3MTg2fQ.Ev4ppSd44k-9CXWavTCUVUgTojUPblbw4So9yCq_SZegAZrFtMc1_mb3Jn3SRbMKXbRhvYCdkO2bN-5VZxWMPQ"}
+17:05:41.074 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjM4NjQ3MiwiZXhwIjoxNjgyMzI3MTg2fQ.Ev4ppSd44k-9CXWavTCUVUgTojUPblbw4So9yCq_SZegAZrFtMc1_mb3Jn3SRbMKXbRhvYCdkO2bN-5VZxWMPQ
+17:05:41.832 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/6da62c6acf7a4cc1ac5664aea5467c84.pdf","createdAt":1681722387227,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1792,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722387259"}
+17:05:42.265 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/414da08b869e45288f2dbe830a03fa6a.pdf","createdAt":1681722387662,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1793,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722387692"}
+17:05:42.713 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/ea7cbeddd1f04bdf832b191383166731.pdf","createdAt":1681722388103,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1794,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722388134"}
+17:05:42.719 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Irec.createSitePhotoTest - 准备开始---------
+17:05:42.722 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createSitePhoto
+17:05:42.722 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:05:42.722 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"projectId":80,"status":1,"siteDoorPhotoAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/ea7cbeddd1f04bdf832b191383166731.pdf","name":"0.pdf","id":1794}],"siteNearPhotoAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/414da08b869e45288f2dbe830a03fa6a.pdf","name":"0.pdf","id":1793}],"sitePhotoAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/6da62c6acf7a4cc1ac5664aea5467c84.pdf","name":"0.pdf","id":1792}]}
+17:05:42.990 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722388418"}
+17:05:42.991 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Irec.createSitePhotoTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722388418"}
+17:05:43.228 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+17:05:43.235 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+17:15:24.921 [main] INFO  org.irecapi.Irec.createTest - Starting createTest on DESKTOP-SPJKFLC with PID 4412 (D:\code\javacode\IrecAPIAuto\target\test-classes started by 65678 in D:\code\javacode\IrecAPIAuto)
+17:15:24.922 [main] INFO  org.irecapi.Irec.createTest - No active profile set, falling back to default profiles: default
+17:15:25.594 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:15:26.102 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:26.111 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:26.115 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:26.117 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:26.119 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:26.599 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+17:15:27.304 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+17:15:27.432 [main] INFO  org.irecapi.Irec.createTest - Started createTest in 2.793 seconds (JVM running for 3.568)
+17:15:27.469 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:15:27.470 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:15:27.470 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:27.475 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:15:27.476 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@39ffda4a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3ba348ca, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56e9a474, org.springframework.test.context.support.DirtiesContextTestExecutionListener@45b15381]
+17:15:27.476 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:15:27.476 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:27.476 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:27.579 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:15:27.581 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:27.584 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:15:28.047 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3MzQyMSwiZXhwIjoxNjgyMzI3NzczfQ.NW_hCVx1aGEVTJPr8M7fNOWNMYtwaQiM_A8X-t97qct6BhDibsw8yClRRTsGZjjIyTJuqhou0TcjsaPUuRMFqQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722973439"}
+17:15:28.047 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3MzQyMSwiZXhwIjoxNjgyMzI3NzczfQ.NW_hCVx1aGEVTJPr8M7fNOWNMYtwaQiM_A8X-t97qct6BhDibsw8yClRRTsGZjjIyTJuqhou0TcjsaPUuRMFqQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722973439"}
+17:15:28.047 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3MzQyMSwiZXhwIjoxNjgyMzI3NzczfQ.NW_hCVx1aGEVTJPr8M7fNOWNMYtwaQiM_A8X-t97qct6BhDibsw8yClRRTsGZjjIyTJuqhou0TcjsaPUuRMFqQ"}
+17:15:28.047 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3MzQyMSwiZXhwIjoxNjgyMzI3NzczfQ.NW_hCVx1aGEVTJPr8M7fNOWNMYtwaQiM_A8X-t97qct6BhDibsw8yClRRTsGZjjIyTJuqhou0TcjsaPUuRMFqQ
+17:15:28.083 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - 准备开始---------
+17:15:28.087 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/create
+17:15:28.087 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:28.088 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"chinese":{"gridConnectedDesc":"噶士大夫士大夫士大夫","siteConsumptionFlag":1,"address":"广东省广州市白云区都或多或少的","siteConsumptionDesc":"感豆腐干豆腐干豆腐干地方","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot项目44415179","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"梵蒂冈地方广泛广泛的"},"english":{"gridConnectedDesc":"Gashi Doctor Scholar Doctor Scholar Doctor","siteConsumptionFlag":1,"address":"Baiyun District, Guangzhou City, Guangdong Province is more or less","siteConsumptionDesc":"Dried Tofu Dried Tofu Dried Tofu","siteConsumptionAuxiliaryPowerFlag":1,"developDesc":null,"technologyType":"PV Roof Mounted(single installation)","gridConnectedVoltageType":"6kV","developFlag":0,"capacity":"1684.256","energyType":"Solar","subsidyFlag":0,"measurementType":"Metering data and contract sales invoice","name":"Robot project 44415179","registrationDate":"2023-06-30T16:00:00.000Z","gridConnectedFlag":1,"planIssuanceType":"all","deliveryDate":"2022-03-23T16:00:00.000Z","siteConsumptionAuxiliaryPowerDesc":"The Vatican is widely distributed"}}
+17:15:28.296 [TestNG-method=createTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":82,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722973728"}
+17:15:28.296 [TestNG-method=createTest-1] INFO  org.irecapi.Irec.createTest - {"data":82,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722973728"}
+17:15:28.368 [TestNG-method=createTest-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+17:15:28.656 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目id：82
+17:15:28.656 [main] INFO  org.irecapi.Irec.createTest - 请求放置的项目名称：Robot项目44415179
+17:15:28.656 [main] INFO  org.irecapi.Irec.createTest - 请求放置的header：[Lorg.apache.http.Header;@43cb5f38
+17:15:28.668 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:15:28.669 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:15:28.669 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:28.670 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:15:28.671 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a01d7f0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5856dbe4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7e15f4d4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a058be5]
+17:15:28.671 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:15:28.671 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:28.671 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:28.672 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:15:28.672 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:28.672 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:15:28.867 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NDI4MiwiZXhwIjoxNjgyMzI3Nzc0fQ.r8CIuA487ZVBoJb1wOp-zjgha_s_2l6yLjCPF0nhn0YycrE-r0NB5NiujfvifO2-oet_EO3qxcc9jydC3cq3Yw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722974298"}
+17:15:28.867 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NDI4MiwiZXhwIjoxNjgyMzI3Nzc0fQ.r8CIuA487ZVBoJb1wOp-zjgha_s_2l6yLjCPF0nhn0YycrE-r0NB5NiujfvifO2-oet_EO3qxcc9jydC3cq3Yw"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722974298"}
+17:15:28.867 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NDI4MiwiZXhwIjoxNjgyMzI3Nzc0fQ.r8CIuA487ZVBoJb1wOp-zjgha_s_2l6yLjCPF0nhn0YycrE-r0NB5NiujfvifO2-oet_EO3qxcc9jydC3cq3Yw"}
+17:15:28.867 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NDI4MiwiZXhwIjoxNjgyMzI3Nzc0fQ.r8CIuA487ZVBoJb1wOp-zjgha_s_2l6yLjCPF0nhn0YycrE-r0NB5NiujfvifO2-oet_EO3qxcc9jydC3cq3Yw
+17:15:29.387 [cluster-ClusterId{value='643d0e2f14ee750c6cdb8c14', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:128)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:64)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+17:15:29.752 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/0b796c4aa02d457bbd3ab148ff2046dd.pdf","createdAt":1681722975142,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1795,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722975184"}
+17:15:29.754 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - 准备开始---------
+17:15:29.757 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMapLocation
+17:15:29.757 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:29.757 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"powerGenerationFacilitiesAddress":"广东省广州市白云区都或多或少的","powerGenerationFacilitiesAddressLanLon":"23.107481,113.3401572","powerGenerationFacilitiesAddressScreenshotAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/0b796c4aa02d457bbd3ab148ff2046dd.pdf","name":"0.pdf","id":1795}],"projectId":82}
+17:15:29.947 [TestNG-method=createMapLocationTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722975380"}
+17:15:29.947 [TestNG-method=createMapLocationTest-1] INFO  o.irecapi.Irec.createMapLocationTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722975380"}
+17:15:29.975 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:15:29.975 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:15:29.976 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:29.978 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:15:29.979 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4d09cade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1f87607c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4b862408, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6ddee60f]
+17:15:29.980 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:15:29.980 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:29.980 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:29.981 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:15:29.981 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:29.981 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:15:30.189 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NTYwNSwiZXhwIjoxNjgyMzI3Nzc1fQ.Z6boBHBGqh6kwHXo-yCHlotwf_3Bh0_UyWQ5TOc6RGnP5IeCVYVJqyH-tGi0A0nV2ZwIZBXPVYw-6Zv0rTyvYA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722975622"}
+17:15:30.189 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NTYwNSwiZXhwIjoxNjgyMzI3Nzc1fQ.Z6boBHBGqh6kwHXo-yCHlotwf_3Bh0_UyWQ5TOc6RGnP5IeCVYVJqyH-tGi0A0nV2ZwIZBXPVYw-6Zv0rTyvYA"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722975622"}
+17:15:30.189 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NTYwNSwiZXhwIjoxNjgyMzI3Nzc1fQ.Z6boBHBGqh6kwHXo-yCHlotwf_3Bh0_UyWQ5TOc6RGnP5IeCVYVJqyH-tGi0A0nV2ZwIZBXPVYw-6Zv0rTyvYA"}
+17:15:30.189 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3NTYwNSwiZXhwIjoxNjgyMzI3Nzc1fQ.Z6boBHBGqh6kwHXo-yCHlotwf_3Bh0_UyWQ5TOc6RGnP5IeCVYVJqyH-tGi0A0nV2ZwIZBXPVYw-6Zv0rTyvYA
+17:15:30.724 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/dfa47947880e43d3bf6afdc61b21ff6e.pdf","createdAt":1681722976114,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1796,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722976156"}
+17:15:31.351 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/c22b88eac49049d89c5df0a0dd526dd6.pdf","createdAt":1681722976742,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1797,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722976783"}
+17:15:31.807 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/8120b52ce1074209b247c5bc991bd7a3.pdf","createdAt":1681722977199,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1798,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722977239"}
+17:15:31.812 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Irec.createSitePhotoTest - 准备开始---------
+17:15:31.815 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createSitePhoto
+17:15:31.815 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:31.815 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"projectId":82,"status":1,"siteDoorPhotoAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/8120b52ce1074209b247c5bc991bd7a3.pdf","name":"1.pdf","id":1798}],"siteNearPhotoAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/c22b88eac49049d89c5df0a0dd526dd6.pdf","name":"0.pdf","id":1797}],"sitePhotoAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/dfa47947880e43d3bf6afdc61b21ff6e.pdf","name":"0.pdf","id":1796}]}
+17:15:32.147 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722977582"}
+17:15:32.147 [TestNG-method=createSitePhotoTest-1] INFO  org.irecapi.Irec.createSitePhotoTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722977582"}
+17:15:32.179 [main] INFO  org.irecapi.Utils.HttprequestUtil - http://web.coi-sit.lvtanlian.com/api/translation/simple?text=Robot%E9%A1%B9%E7%9B%AE44415179123
+17:15:32.733 [main] INFO  org.irecapi.Utils.HttprequestUtil - Response(statusCode=200, responseContent={"status":200,"error":"Access.success.general","message":"操作成功","timestamp":"1681722978167","data":"Robot Project 44415179123","path":null}, cookies=[], headers=[Access-Control-Allow-Credentials: true, Access-Control-Allow-Headers: Version,User-agent,Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, X_TIMESTAMP, X_NONCE, X_EAK, X_SIGN, Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, Access-Control-Allow-Origin: *, Access-Control-Max-Age: 3600, Cache-Control: no-cache, no-store, max-age=0, must-revalidate, Content-Type: application/json, Date: Mon, 17 Apr 2023 09:16:18 GMT, Expires: 0, Pragma: no-cache, X-Content-Type-Options: nosniff, X-Frame-Options: DENY, X-Xss-Protection: 1; mode=block, Transfer-Encoding: chunked])
+17:15:32.734 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":"Robot Project 44415179123","error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722978167"}
+17:15:32.736 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:15:32.737 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:15:32.737 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:32.737 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:15:32.742 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6436e181, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7186b202, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6b649efa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@65ef48f2]
+17:15:32.743 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:15:32.743 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:32.743 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:32.744 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:15:32.744 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:32.745 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:15:32.978 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3ODM4OCwiZXhwIjoxNjgyMzI3Nzc4fQ.f9wgZ8GVqxqTReo_P818HbVRIgITY_sWbFq45AEhi7AhbMBbceJjd_8q1RHazA_BqJdn8c2aBjvgO1_mo6eBqg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722978412"}
+17:15:32.978 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3ODM4OCwiZXhwIjoxNjgyMzI3Nzc4fQ.f9wgZ8GVqxqTReo_P818HbVRIgITY_sWbFq45AEhi7AhbMBbceJjd_8q1RHazA_BqJdn8c2aBjvgO1_mo6eBqg"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722978412"}
+17:15:32.979 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3ODM4OCwiZXhwIjoxNjgyMzI3Nzc4fQ.f9wgZ8GVqxqTReo_P818HbVRIgITY_sWbFq45AEhi7AhbMBbceJjd_8q1RHazA_BqJdn8c2aBjvgO1_mo6eBqg"}
+17:15:32.979 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3ODM4OCwiZXhwIjoxNjgyMzI3Nzc4fQ.f9wgZ8GVqxqTReo_P818HbVRIgITY_sWbFq45AEhi7AhbMBbceJjd_8q1RHazA_BqJdn8c2aBjvgO1_mo6eBqg
+17:15:33.612 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/0dc20a4ca2ea434687f60db48da1c7b2.pdf","createdAt":1681722979005,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1799,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722979045"}
+17:15:33.614 [TestNG-method=createContractTest-1] INFO  org.irecapi.Irec.createContractTest - 准备开始---------
+17:15:33.616 [TestNG-method=createContractTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createContractData
+17:15:33.616 [TestNG-method=createContractTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:33.616 [TestNG-method=createContractTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"projectId":82,"contractKeyInfoChinese":{"siteConsumerName":"非递归方法","gridOperatorName":"豆腐干地方","projectName":"Robot项目44415179123","powerGenerationFacilityOwnerName":"湖州能源公司"},"contractKeyInfoEnglish":{"siteConsumerName":"Non-recursive method","gridOperatorName":"Dried Tofu","projectName":"Robot Project 44415179123","powerGenerationFacilityOwnerName":"Huzhou Energy Company"},"contractAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/0dc20a4ca2ea434687f60db48da1c7b2.pdf","name":"0.pdf","id":1799}]}
+17:15:33.931 [TestNG-method=createContractTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722979368"}
+17:15:33.931 [TestNG-method=createContractTest-1] INFO  org.irecapi.Irec.createContractTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722979368"}
+17:15:33.975 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:15:33.976 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:15:33.976 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:33.977 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:15:33.977 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7fedb795, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@10850d17, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@51e754e1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@26865482]
+17:15:33.977 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:15:33.977 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:33.977 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:33.979 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:15:33.979 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:33.979 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:15:34.188 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3OTYwNywiZXhwIjoxNjgyMzI3Nzc5fQ.Fztl87cXV2yhlKlX-mac7YMLumeD8TB2rklV3fcqciwybaq2u6kdRN0MFmvwgGVv8QcD2By9hCTZKPVl9cDn5g"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722979623"}
+17:15:34.188 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3OTYwNywiZXhwIjoxNjgyMzI3Nzc5fQ.Fztl87cXV2yhlKlX-mac7YMLumeD8TB2rklV3fcqciwybaq2u6kdRN0MFmvwgGVv8QcD2By9hCTZKPVl9cDn5g"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722979623"}
+17:15:34.188 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3OTYwNywiZXhwIjoxNjgyMzI3Nzc5fQ.Fztl87cXV2yhlKlX-mac7YMLumeD8TB2rklV3fcqciwybaq2u6kdRN0MFmvwgGVv8QcD2By9hCTZKPVl9cDn5g"}
+17:15:34.189 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk3OTYwNywiZXhwIjoxNjgyMzI3Nzc5fQ.Fztl87cXV2yhlKlX-mac7YMLumeD8TB2rklV3fcqciwybaq2u6kdRN0MFmvwgGVv8QcD2By9hCTZKPVl9cDn5g
+17:15:34.680 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/70e3921e3589423e8863219df85d2450.pdf","createdAt":1681722980075,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1800,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722980115"}
+17:15:34.682 [TestNG-method=createPrimaryWiringDiagramTest-1] INFO  o.i.I.createPrimaryWiringDiagramTest - 准备开始---------
+17:15:34.684 [TestNG-method=createPrimaryWiringDiagramTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createPrimaryWiringDiagram
+17:15:34.684 [TestNG-method=createPrimaryWiringDiagramTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:34.684 [TestNG-method=createPrimaryWiringDiagramTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"projectId":82,"primaryWiringDiagramAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/70e3921e3589423e8863219df85d2450.pdf","name":"1.pdf","id":1800}],"capacity":1234.123}
+17:15:35.129 [TestNG-method=createPrimaryWiringDiagramTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722980560"}
+17:15:35.129 [TestNG-method=createPrimaryWiringDiagramTest-1] INFO  o.i.I.createPrimaryWiringDiagramTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722980560"}
+17:15:35.178 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.irecapi.BaseLoginTest], using SpringBootContextLoader
+17:15:35.178 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [org.irecapi.BaseLoginTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:15:35.178 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.irecapi.BaseLoginTest]: BaseLoginTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:35.179 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.irecapi.IRECApplication for test class org.irecapi.BaseLoginTest
+17:15:35.180 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2e5e6fc4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2785db06, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@79980d8d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@35d60381]
+17:15:35.180 [main] INFO  org.irecapi.BaseLoginTest - 准备开始---------
+17:15:35.180 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:35.180 [main] INFO  org.irecapi.Utils.EnvironmentUtil - 测试环境域名：http://web.coi-sit.lvtanlian.com
+17:15:35.181 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/uaa/user/login
+17:15:35.181 [main] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:35.181 [main] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"username":"17800000001","password":"A147258","terminal":1}
+17:15:35.410 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk4MDgyMSwiZXhwIjoxNjgyMzI3NzgwfQ._yue-0KLp_HCvMwdDJRtqb2F-LMIPdOymGzqxtfNvSNAtBVSij7GiQBeyrfxBjHueBGyOi1hCTUo-AHYWKvSBQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722980845"}
+17:15:35.410 [main] INFO  org.irecapi.BaseLoginTest - {"data":{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk4MDgyMSwiZXhwIjoxNjgyMzI3NzgwfQ._yue-0KLp_HCvMwdDJRtqb2F-LMIPdOymGzqxtfNvSNAtBVSij7GiQBeyrfxBjHueBGyOi1hCTUo-AHYWKvSBQ"},"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722980845"}
+17:15:35.411 [main] INFO  org.irecapi.BaseLoginTest - 此处为返回的data:{"tokenHead":"Bearer ","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk4MDgyMSwiZXhwIjoxNjgyMzI3NzgwfQ._yue-0KLp_HCvMwdDJRtqb2F-LMIPdOymGzqxtfNvSNAtBVSij7GiQBeyrfxBjHueBGyOi1hCTUo-AHYWKvSBQ"}
+17:15:35.411 [main] INFO  org.irecapi.BaseLoginTest - token:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxXzE3ODAwMDAwMDAxIiwiY3JlYXRlZCI6MTY4MTcyMjk4MDgyMSwiZXhwIjoxNjgyMzI3NzgwfQ._yue-0KLp_HCvMwdDJRtqb2F-LMIPdOymGzqxtfNvSNAtBVSij7GiQBeyrfxBjHueBGyOi1hCTUo-AHYWKvSBQ
+17:15:35.892 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/4ad34773f0204436b1fa856a9d83c795.pdf","createdAt":1681722981286,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1801,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722981326"}
+17:15:36.604 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/558f957b129f46409b1a9a330cc70218.pdf","createdAt":1681722981999,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1802,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722982040"}
+17:15:37.275 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/d52b2d203e8849f4bd7780ad6284f3e8.pdf","createdAt":1681722982666,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1803,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722982707"}
+17:15:37.772 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/efc26aba15054c808945c4d09055712e.pdf","createdAt":1681722983167,"createBy":27,"groupName":"users","size":139312,"name":"0.pdf","id":1804,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722983206"}
+17:15:38.294 [main] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":[{"userFile":{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/953bd9eda3744d94a12d4abeeb62f524.pdf","createdAt":1681722983689,"createBy":27,"groupName":"users","size":39939,"name":"1.pdf","id":1805,"fileType":11,"folderId":8},"type":2}],"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722983730"}
+17:15:38.298 [TestNG-method=createMeasurementSampleTest-1] INFO  o.i.Irec.createMeasurementSampleTest - 准备开始---------
+17:15:38.305 [TestNG-method=createMeasurementSampleTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求路径：：：http://web.coi-sit.lvtanlian.com/api/project/createMeasurementSample
+17:15:38.306 [TestNG-method=createMeasurementSampleTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 这里是请求header：：：
+17:15:38.306 [TestNG-method=createMeasurementSampleTest-1] INFO  org.irecapi.Utils.HttprequestUtil - 此处是请求参数：：：：{"projectId":82,"gridConnectedElectricityListAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/efc26aba15054c808945c4d09055712e.pdf","name":"0.pdf","id":1804}],"gridConnectedElectricitySalesInvoiceAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/558f957b129f46409b1a9a330cc70218.pdf","name":"1.pdf","id":1802}],"meterList":[{"meterId":"55232","meterType":"scalar","meterMeasurementType":"Power Generation"},{"meterId":"4352432","meterType":"interval","meterMeasurementType":"On-site Consume"}],"otherAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/953bd9eda3744d94a12d4abeeb62f524.pdf","name":"1.pdf","id":1805}],"siteConsumptiveElectricityListAtt":[{"path":"https://chanzi-1252418820.cos.ap-nanjing.myqcloud.com/irec-sit/d52b2d203e8849f4bd7780ad6284f3e8.pdf","name":"0.pdf","id":1803}]}
+17:15:38.576 [TestNG-method=createMeasurementSampleTest-1] INFO  org.irecapi.Utils.JsonUtil - 转换结果:{"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722984008"}
+17:15:38.576 [TestNG-method=createMeasurementSampleTest-1] INFO  o.i.Irec.createMeasurementSampleTest - {"data":true,"error":"Access.success.general","message":"操作成功","status":200,"timestamp":"1681722984008"}
+17:15:38.835 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+17:15:38.846 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
