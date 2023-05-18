@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.CustomerInfoExDao">
+
+    <resultMap type="org.irecapi.entity.CustomerInfoEx" id="CustomerInfoExMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+        <result property="registrationOrganizationName" column="registration_organization_name" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAddressArea" column="registration_organization_address_area" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAddressStreet" column="registration_organization_address_street" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAddressNum" column="registration_organization_address_num" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationPostalCode" column="registration_organization_postal_code" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationIrecAccountId" column="registration_organization_irec_account_id" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAgentName" column="registration_organization_agent_name" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAgentContactPhone" column="registration_organization_agent_contact_phone" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAgentEmail" column="registration_organization_agent_email" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAgentContactSignature" column="registration_organization_agent_contact_signature" jdbcType="VARCHAR"/>
+        <result property="registrationOrganizationAgentPosition" column="registration_organization_agent_position" jdbcType="VARCHAR"/>
+        <result property="projectHolderName" column="project_holder_name" jdbcType="VARCHAR"/>
+        <result property="projectHolderAddressArea" column="project_holder_address_area" jdbcType="VARCHAR"/>
+        <result property="projectHolderAddressStreet" column="project_holder_address_street" jdbcType="VARCHAR"/>
+        <result property="projectHolderAddressNum" column="project_holder_address_num" jdbcType="VARCHAR"/>
+        <result property="projectHolderPostalCode" column="project_holder_postal_code" jdbcType="VARCHAR"/>
+        <result property="projectHolderAgentName" column="project_holder_agent_name" jdbcType="VARCHAR"/>
+        <result property="projectHolderAgentContactPhone" column="project_holder_agent_contact_phone" jdbcType="VARCHAR"/>
+        <result property="projectHolderAgentEmail" column="project_holder_agent_email" jdbcType="VARCHAR"/>
+        <result property="projectHolderAgentContactSignature" column="project_holder_agent_contact_signature" jdbcType="VARCHAR"/>
+        <result property="projectHolderAgentAuthorizationAttachment" column="project_holder_agent_authorization_attachment" jdbcType="VARCHAR"/>
+        <result property="issuingRecipientName" column="issuing_recipient_name" jdbcType="VARCHAR"/>
+        <result property="issueRecipientIrecAccountId" column="issue_recipient_irec_account_id" jdbcType="VARCHAR"/>
+        <result property="contentEnId" column="content_en_id" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdBy" column="created_by" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="CustomerInfoExMap">
+        select
+          id, customer_id, registration_organization_name, registration_organization_address_area, registration_organization_address_street, registration_organization_address_num, registration_organization_postal_code, registration_organization_irec_account_id, registration_organization_agent_name, registration_organization_agent_contact_phone, registration_organization_agent_email, registration_organization_agent_contact_signature, registration_organization_agent_position, project_holder_name, project_holder_address_area, project_holder_address_street, project_holder_address_num, project_holder_postal_code, project_holder_agent_name, project_holder_agent_contact_phone, project_holder_agent_email, project_holder_agent_contact_signature, project_holder_agent_authorization_attachment, issuing_recipient_name, issue_recipient_irec_account_id, content_en_id, is_delete, created_by, created_at, updated_at
+        from customer_info_ex
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="CustomerInfoExMap">
+        select
+          id, customer_id, registration_organization_name, registration_organization_address_area, registration_organization_address_street, registration_organization_address_num, registration_organization_postal_code, registration_organization_irec_account_id, registration_organization_agent_name, registration_organization_agent_contact_phone, registration_organization_agent_email, registration_organization_agent_contact_signature, registration_organization_agent_position, project_holder_name, project_holder_address_area, project_holder_address_street, project_holder_address_num, project_holder_postal_code, project_holder_agent_name, project_holder_agent_contact_phone, project_holder_agent_email, project_holder_agent_contact_signature, project_holder_agent_authorization_attachment, issuing_recipient_name, issue_recipient_irec_account_id, content_en_id, is_delete, created_by, created_at, updated_at
+        from customer_info_ex
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="registrationOrganizationName != null and registrationOrganizationName != ''">
+                and registration_organization_name = #{registrationOrganizationName}
+            </if>
+            <if test="registrationOrganizationAddressArea != null and registrationOrganizationAddressArea != ''">
+                and registration_organization_address_area = #{registrationOrganizationAddressArea}
+            </if>
+            <if test="registrationOrganizationAddressStreet != null and registrationOrganizationAddressStreet != ''">
+                and registration_organization_address_street = #{registrationOrganizationAddressStreet}
+            </if>
+            <if test="registrationOrganizationAddressNum != null and registrationOrganizationAddressNum != ''">
+                and registration_organization_address_num = #{registrationOrganizationAddressNum}
+            </if>
+            <if test="registrationOrganizationPostalCode != null and registrationOrganizationPostalCode != ''">
+                and registration_organization_postal_code = #{registrationOrganizationPostalCode}
+            </if>
+            <if test="registrationOrganizationIrecAccountId != null and registrationOrganizationIrecAccountId != ''">
+                and registration_organization_irec_account_id = #{registrationOrganizationIrecAccountId}
+            </if>
+            <if test="registrationOrganizationAgentName != null and registrationOrganizationAgentName != ''">
+                and registration_organization_agent_name = #{registrationOrganizationAgentName}
+            </if>
+            <if test="registrationOrganizationAgentContactPhone != null and registrationOrganizationAgentContactPhone != ''">
+                and registration_organization_agent_contact_phone = #{registrationOrganizationAgentContactPhone}
+            </if>
+            <if test="registrationOrganizationAgentEmail != null and registrationOrganizationAgentEmail != ''">
+                and registration_organization_agent_email = #{registrationOrganizationAgentEmail}
+            </if>
+            <if test="registrationOrganizationAgentContactSignature != null and registrationOrganizationAgentContactSignature != ''">
+                and registration_organization_agent_contact_signature = #{registrationOrganizationAgentContactSignature}
+            </if>
+            <if test="registrationOrganizationAgentPosition != null and registrationOrganizationAgentPosition != ''">
+                and registration_organization_agent_position = #{registrationOrganizationAgentPosition}
+            </if>
+            <if test="projectHolderName != null and projectHolderName != ''">
+                and project_holder_name = #{projectHolderName}
+            </if>
+            <if test="projectHolderAddressArea != null and projectHolderAddressArea != ''">
+                and project_holder_address_area = #{projectHolderAddressArea}
+            </if>
+            <if test="projectHolderAddressStreet != null and projectHolderAddressStreet != ''">
+                and project_holder_address_street = #{projectHolderAddressStreet}
+            </if>
+            <if test="projectHolderAddressNum != null and projectHolderAddressNum != ''">
+                and project_holder_address_num = #{projectHolderAddressNum}
+            </if>
+            <if test="projectHolderPostalCode != null and projectHolderPostalCode != ''">
+                and project_holder_postal_code = #{projectHolderPostalCode}
+            </if>
+            <if test="projectHolderAgentName != null and projectHolderAgentName != ''">
+                and project_holder_agent_name = #{projectHolderAgentName}
+            </if>
+            <if test="projectHolderAgentContactPhone != null and projectHolderAgentContactPhone != ''">
+                and project_holder_agent_contact_phone = #{projectHolderAgentContactPhone}
+            </if>
+            <if test="projectHolderAgentEmail != null and projectHolderAgentEmail != ''">
+                and project_holder_agent_email = #{projectHolderAgentEmail}
+            </if>
+            <if test="projectHolderAgentContactSignature != null and projectHolderAgentContactSignature != ''">
+                and project_holder_agent_contact_signature = #{projectHolderAgentContactSignature}
+            </if>
+            <if test="projectHolderAgentAuthorizationAttachment != null and projectHolderAgentAuthorizationAttachment != ''">
+                and project_holder_agent_authorization_attachment = #{projectHolderAgentAuthorizationAttachment}
+            </if>
+            <if test="issuingRecipientName != null and issuingRecipientName != ''">
+                and issuing_recipient_name = #{issuingRecipientName}
+            </if>
+            <if test="issueRecipientIrecAccountId != null and issueRecipientIrecAccountId != ''">
+                and issue_recipient_irec_account_id = #{issueRecipientIrecAccountId}
+            </if>
+            <if test="contentEnId != null">
+                and content_en_id = #{contentEnId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from customer_info_ex
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="customerId != null">
+                and customer_id = #{customerId}
+            </if>
+            <if test="registrationOrganizationName != null and registrationOrganizationName != ''">
+                and registration_organization_name = #{registrationOrganizationName}
+            </if>
+            <if test="registrationOrganizationAddressArea != null and registrationOrganizationAddressArea != ''">
+                and registration_organization_address_area = #{registrationOrganizationAddressArea}
+            </if>
+            <if test="registrationOrganizationAddressStreet != null and registrationOrganizationAddressStreet != ''">
+                and registration_organization_address_street = #{registrationOrganizationAddressStreet}
+            </if>
+            <if test="registrationOrganizationAddressNum != null and registrationOrganizationAddressNum != ''">
+                and registration_organization_address_num = #{registrationOrganizationAddressNum}
+            </if>
+            <if test="registrationOrganizationPostalCode != null and registrationOrganizationPostalCode != ''">
+                and registration_organization_postal_code = #{registrationOrganizationPostalCode}
+            </if>
+            <if test="registrationOrganizationIrecAccountId != null and registrationOrganizationIrecAccountId != ''">
+                and registration_organization_irec_account_id = #{registrationOrganizationIrecAccountId}
+            </if>
+            <if test="registrationOrganizationAgentName != null and registrationOrganizationAgentName != ''">
+                and registration_organization_agent_name = #{registrationOrganizationAgentName}
+            </if>
+            <if test="registrationOrganizationAgentContactPhone != null and registrationOrganizationAgentContactPhone != ''">
+                and registration_organization_agent_contact_phone = #{registrationOrganizationAgentContactPhone}
+            </if>
+            <if test="registrationOrganizationAgentEmail != null and registrationOrganizationAgentEmail != ''">
+                and registration_organization_agent_email = #{registrationOrganizationAgentEmail}
+            </if>
+            <if test="registrationOrganizationAgentContactSignature != null and registrationOrganizationAgentContactSignature != ''">
+                and registration_organization_agent_contact_signature = #{registrationOrganizationAgentContactSignature}
+            </if>
+            <if test="registrationOrganizationAgentPosition != null and registrationOrganizationAgentPosition != ''">
+                and registration_organization_agent_position = #{registrationOrganizationAgentPosition}
+            </if>
+            <if test="projectHolderName != null and projectHolderName != ''">
+                and project_holder_name = #{projectHolderName}
+            </if>
+            <if test="projectHolderAddressArea != null and projectHolderAddressArea != ''">
+                and project_holder_address_area = #{projectHolderAddressArea}
+            </if>
+            <if test="projectHolderAddressStreet != null and projectHolderAddressStreet != ''">
+                and project_holder_address_street = #{projectHolderAddressStreet}
+            </if>
+            <if test="projectHolderAddressNum != null and projectHolderAddressNum != ''">
+                and project_holder_address_num = #{projectHolderAddressNum}
+            </if>
+            <if test="projectHolderPostalCode != null and projectHolderPostalCode != ''">
+                and project_holder_postal_code = #{projectHolderPostalCode}
+            </if>
+            <if test="projectHolderAgentName != null and projectHolderAgentName != ''">
+                and project_holder_agent_name = #{projectHolderAgentName}
+            </if>
+            <if test="projectHolderAgentContactPhone != null and projectHolderAgentContactPhone != ''">
+                and project_holder_agent_contact_phone = #{projectHolderAgentContactPhone}
+            </if>
+            <if test="projectHolderAgentEmail != null and projectHolderAgentEmail != ''">
+                and project_holder_agent_email = #{projectHolderAgentEmail}
+            </if>
+            <if test="projectHolderAgentContactSignature != null and projectHolderAgentContactSignature != ''">
+                and project_holder_agent_contact_signature = #{projectHolderAgentContactSignature}
+            </if>
+            <if test="projectHolderAgentAuthorizationAttachment != null and projectHolderAgentAuthorizationAttachment != ''">
+                and project_holder_agent_authorization_attachment = #{projectHolderAgentAuthorizationAttachment}
+            </if>
+            <if test="issuingRecipientName != null and issuingRecipientName != ''">
+                and issuing_recipient_name = #{issuingRecipientName}
+            </if>
+            <if test="issueRecipientIrecAccountId != null and issueRecipientIrecAccountId != ''">
+                and issue_recipient_irec_account_id = #{issueRecipientIrecAccountId}
+            </if>
+            <if test="contentEnId != null">
+                and content_en_id = #{contentEnId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into customer_info_ex(customer_id, registration_organization_name, registration_organization_address_area, registration_organization_address_street, registration_organization_address_num, registration_organization_postal_code, registration_organization_irec_account_id, registration_organization_agent_name, registration_organization_agent_contact_phone, registration_organization_agent_email, registration_organization_agent_contact_signature, registration_organization_agent_position, project_holder_name, project_holder_address_area, project_holder_address_street, project_holder_address_num, project_holder_postal_code, project_holder_agent_name, project_holder_agent_contact_phone, project_holder_agent_email, project_holder_agent_contact_signature, project_holder_agent_authorization_attachment, issuing_recipient_name, issue_recipient_irec_account_id, content_en_id, is_delete, created_by, created_at, updated_at)
+        values (#{customerId}, #{registrationOrganizationName}, #{registrationOrganizationAddressArea}, #{registrationOrganizationAddressStreet}, #{registrationOrganizationAddressNum}, #{registrationOrganizationPostalCode}, #{registrationOrganizationIrecAccountId}, #{registrationOrganizationAgentName}, #{registrationOrganizationAgentContactPhone}, #{registrationOrganizationAgentEmail}, #{registrationOrganizationAgentContactSignature}, #{registrationOrganizationAgentPosition}, #{projectHolderName}, #{projectHolderAddressArea}, #{projectHolderAddressStreet}, #{projectHolderAddressNum}, #{projectHolderPostalCode}, #{projectHolderAgentName}, #{projectHolderAgentContactPhone}, #{projectHolderAgentEmail}, #{projectHolderAgentContactSignature}, #{projectHolderAgentAuthorizationAttachment}, #{issuingRecipientName}, #{issueRecipientIrecAccountId}, #{contentEnId}, #{isDelete}, #{createdBy}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into customer_info_ex(customer_id, registration_organization_name, registration_organization_address_area, registration_organization_address_street, registration_organization_address_num, registration_organization_postal_code, registration_organization_irec_account_id, registration_organization_agent_name, registration_organization_agent_contact_phone, registration_organization_agent_email, registration_organization_agent_contact_signature, registration_organization_agent_position, project_holder_name, project_holder_address_area, project_holder_address_street, project_holder_address_num, project_holder_postal_code, project_holder_agent_name, project_holder_agent_contact_phone, project_holder_agent_email, project_holder_agent_contact_signature, project_holder_agent_authorization_attachment, issuing_recipient_name, issue_recipient_irec_account_id, content_en_id, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.customerId}, #{entity.registrationOrganizationName}, #{entity.registrationOrganizationAddressArea}, #{entity.registrationOrganizationAddressStreet}, #{entity.registrationOrganizationAddressNum}, #{entity.registrationOrganizationPostalCode}, #{entity.registrationOrganizationIrecAccountId}, #{entity.registrationOrganizationAgentName}, #{entity.registrationOrganizationAgentContactPhone}, #{entity.registrationOrganizationAgentEmail}, #{entity.registrationOrganizationAgentContactSignature}, #{entity.registrationOrganizationAgentPosition}, #{entity.projectHolderName}, #{entity.projectHolderAddressArea}, #{entity.projectHolderAddressStreet}, #{entity.projectHolderAddressNum}, #{entity.projectHolderPostalCode}, #{entity.projectHolderAgentName}, #{entity.projectHolderAgentContactPhone}, #{entity.projectHolderAgentEmail}, #{entity.projectHolderAgentContactSignature}, #{entity.projectHolderAgentAuthorizationAttachment}, #{entity.issuingRecipientName}, #{entity.issueRecipientIrecAccountId}, #{entity.contentEnId}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into customer_info_ex(customer_id, registration_organization_name, registration_organization_address_area, registration_organization_address_street, registration_organization_address_num, registration_organization_postal_code, registration_organization_irec_account_id, registration_organization_agent_name, registration_organization_agent_contact_phone, registration_organization_agent_email, registration_organization_agent_contact_signature, registration_organization_agent_position, project_holder_name, project_holder_address_area, project_holder_address_street, project_holder_address_num, project_holder_postal_code, project_holder_agent_name, project_holder_agent_contact_phone, project_holder_agent_email, project_holder_agent_contact_signature, project_holder_agent_authorization_attachment, issuing_recipient_name, issue_recipient_irec_account_id, content_en_id, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.customerId}, #{entity.registrationOrganizationName}, #{entity.registrationOrganizationAddressArea}, #{entity.registrationOrganizationAddressStreet}, #{entity.registrationOrganizationAddressNum}, #{entity.registrationOrganizationPostalCode}, #{entity.registrationOrganizationIrecAccountId}, #{entity.registrationOrganizationAgentName}, #{entity.registrationOrganizationAgentContactPhone}, #{entity.registrationOrganizationAgentEmail}, #{entity.registrationOrganizationAgentContactSignature}, #{entity.registrationOrganizationAgentPosition}, #{entity.projectHolderName}, #{entity.projectHolderAddressArea}, #{entity.projectHolderAddressStreet}, #{entity.projectHolderAddressNum}, #{entity.projectHolderPostalCode}, #{entity.projectHolderAgentName}, #{entity.projectHolderAgentContactPhone}, #{entity.projectHolderAgentEmail}, #{entity.projectHolderAgentContactSignature}, #{entity.projectHolderAgentAuthorizationAttachment}, #{entity.issuingRecipientName}, #{entity.issueRecipientIrecAccountId}, #{entity.contentEnId}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        customer_id = values(customer_id),
+        registration_organization_name = values(registration_organization_name),
+        registration_organization_address_area = values(registration_organization_address_area),
+        registration_organization_address_street = values(registration_organization_address_street),
+        registration_organization_address_num = values(registration_organization_address_num),
+        registration_organization_postal_code = values(registration_organization_postal_code),
+        registration_organization_irec_account_id = values(registration_organization_irec_account_id),
+        registration_organization_agent_name = values(registration_organization_agent_name),
+        registration_organization_agent_contact_phone = values(registration_organization_agent_contact_phone),
+        registration_organization_agent_email = values(registration_organization_agent_email),
+        registration_organization_agent_contact_signature = values(registration_organization_agent_contact_signature),
+        registration_organization_agent_position = values(registration_organization_agent_position),
+        project_holder_name = values(project_holder_name),
+        project_holder_address_area = values(project_holder_address_area),
+        project_holder_address_street = values(project_holder_address_street),
+        project_holder_address_num = values(project_holder_address_num),
+        project_holder_postal_code = values(project_holder_postal_code),
+        project_holder_agent_name = values(project_holder_agent_name),
+        project_holder_agent_contact_phone = values(project_holder_agent_contact_phone),
+        project_holder_agent_email = values(project_holder_agent_email),
+        project_holder_agent_contact_signature = values(project_holder_agent_contact_signature),
+        project_holder_agent_authorization_attachment = values(project_holder_agent_authorization_attachment),
+        issuing_recipient_name = values(issuing_recipient_name),
+        issue_recipient_irec_account_id = values(issue_recipient_irec_account_id),
+        content_en_id = values(content_en_id),
+        is_delete = values(is_delete),
+        created_by = values(created_by),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update customer_info_ex
+        <set>
+            <if test="customerId != null">
+                customer_id = #{customerId},
+            </if>
+            <if test="registrationOrganizationName != null and registrationOrganizationName != ''">
+                registration_organization_name = #{registrationOrganizationName},
+            </if>
+            <if test="registrationOrganizationAddressArea != null and registrationOrganizationAddressArea != ''">
+                registration_organization_address_area = #{registrationOrganizationAddressArea},
+            </if>
+            <if test="registrationOrganizationAddressStreet != null and registrationOrganizationAddressStreet != ''">
+                registration_organization_address_street = #{registrationOrganizationAddressStreet},
+            </if>
+            <if test="registrationOrganizationAddressNum != null and registrationOrganizationAddressNum != ''">
+                registration_organization_address_num = #{registrationOrganizationAddressNum},
+            </if>
+            <if test="registrationOrganizationPostalCode != null and registrationOrganizationPostalCode != ''">
+                registration_organization_postal_code = #{registrationOrganizationPostalCode},
+            </if>
+            <if test="registrationOrganizationIrecAccountId != null and registrationOrganizationIrecAccountId != ''">
+                registration_organization_irec_account_id = #{registrationOrganizationIrecAccountId},
+            </if>
+            <if test="registrationOrganizationAgentName != null and registrationOrganizationAgentName != ''">
+                registration_organization_agent_name = #{registrationOrganizationAgentName},
+            </if>
+            <if test="registrationOrganizationAgentContactPhone != null and registrationOrganizationAgentContactPhone != ''">
+                registration_organization_agent_contact_phone = #{registrationOrganizationAgentContactPhone},
+            </if>
+            <if test="registrationOrganizationAgentEmail != null and registrationOrganizationAgentEmail != ''">
+                registration_organization_agent_email = #{registrationOrganizationAgentEmail},
+            </if>
+            <if test="registrationOrganizationAgentContactSignature != null and registrationOrganizationAgentContactSignature != ''">
+                registration_organization_agent_contact_signature = #{registrationOrganizationAgentContactSignature},
+            </if>
+            <if test="registrationOrganizationAgentPosition != null and registrationOrganizationAgentPosition != ''">
+                registration_organization_agent_position = #{registrationOrganizationAgentPosition},
+            </if>
+            <if test="projectHolderName != null and projectHolderName != ''">
+                project_holder_name = #{projectHolderName},
+            </if>
+            <if test="projectHolderAddressArea != null and projectHolderAddressArea != ''">
+                project_holder_address_area = #{projectHolderAddressArea},
+            </if>
+            <if test="projectHolderAddressStreet != null and projectHolderAddressStreet != ''">
+                project_holder_address_street = #{projectHolderAddressStreet},
+            </if>
+            <if test="projectHolderAddressNum != null and projectHolderAddressNum != ''">
+                project_holder_address_num = #{projectHolderAddressNum},
+            </if>
+            <if test="projectHolderPostalCode != null and projectHolderPostalCode != ''">
+                project_holder_postal_code = #{projectHolderPostalCode},
+            </if>
+            <if test="projectHolderAgentName != null and projectHolderAgentName != ''">
+                project_holder_agent_name = #{projectHolderAgentName},
+            </if>
+            <if test="projectHolderAgentContactPhone != null and projectHolderAgentContactPhone != ''">
+                project_holder_agent_contact_phone = #{projectHolderAgentContactPhone},
+            </if>
+            <if test="projectHolderAgentEmail != null and projectHolderAgentEmail != ''">
+                project_holder_agent_email = #{projectHolderAgentEmail},
+            </if>
+            <if test="projectHolderAgentContactSignature != null and projectHolderAgentContactSignature != ''">
+                project_holder_agent_contact_signature = #{projectHolderAgentContactSignature},
+            </if>
+            <if test="projectHolderAgentAuthorizationAttachment != null and projectHolderAgentAuthorizationAttachment != ''">
+                project_holder_agent_authorization_attachment = #{projectHolderAgentAuthorizationAttachment},
+            </if>
+            <if test="issuingRecipientName != null and issuingRecipientName != ''">
+                issuing_recipient_name = #{issuingRecipientName},
+            </if>
+            <if test="issueRecipientIrecAccountId != null and issueRecipientIrecAccountId != ''">
+                issue_recipient_irec_account_id = #{issueRecipientIrecAccountId},
+            </if>
+            <if test="contentEnId != null">
+                content_en_id = #{contentEnId},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdBy != null">
+                created_by = #{createdBy},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from customer_info_ex where id = #{id}
+    </delete>
+
+</mapper>
+

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.RegistrationDocumentsDao">
+
+    <resultMap type="org.irecapi.entity.RegistrationDocuments" id="RegistrationDocumentsMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="packageId" column="package_id" jdbcType="INTEGER"/>
+        <result property="projectId" column="project_id" jdbcType="INTEGER"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+        <result property="signatureType" column="signature_type" jdbcType="INTEGER"/>
+        <result property="nameCh" column="name_ch" jdbcType="VARCHAR"/>
+        <result property="nameEn" column="name_en" jdbcType="VARCHAR"/>
+        <result property="path" column="path" jdbcType="VARCHAR"/>
+        <result property="fileId" column="file_id" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdBy" column="created_by" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="RegistrationDocumentsMap">
+        select
+          id, package_id, project_id, type, signature_type, name_ch, name_en, path, file_id, is_delete, created_by, created_at, updated_at
+        from registration_documents
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="RegistrationDocumentsMap">
+        select
+          id, package_id, project_id, type, signature_type, name_ch, name_en, path, file_id, is_delete, created_by, created_at, updated_at
+        from registration_documents
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="signatureType != null">
+                and signature_type = #{signatureType}
+            </if>
+            <if test="nameCh != null and nameCh != ''">
+                and name_ch = #{nameCh}
+            </if>
+            <if test="nameEn != null and nameEn != ''">
+                and name_en = #{nameEn}
+            </if>
+            <if test="path != null and path != ''">
+                and path = #{path}
+            </if>
+            <if test="fileId != null">
+                and file_id = #{fileId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from registration_documents
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="signatureType != null">
+                and signature_type = #{signatureType}
+            </if>
+            <if test="nameCh != null and nameCh != ''">
+                and name_ch = #{nameCh}
+            </if>
+            <if test="nameEn != null and nameEn != ''">
+                and name_en = #{nameEn}
+            </if>
+            <if test="path != null and path != ''">
+                and path = #{path}
+            </if>
+            <if test="fileId != null">
+                and file_id = #{fileId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_documents(package_id, project_id, type, signature_type, name_ch, name_en, path, file_id, is_delete, created_by, created_at, updated_at)
+        values (#{packageId}, #{projectId}, #{type}, #{signatureType}, #{nameCh}, #{nameEn}, #{path}, #{fileId}, #{isDelete}, #{createdBy}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_documents(package_id, project_id, type, signature_type, name_ch, name_en, path, file_id, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.packageId}, #{entity.projectId}, #{entity.type}, #{entity.signatureType}, #{entity.nameCh}, #{entity.nameEn}, #{entity.path}, #{entity.fileId}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_documents(package_id, project_id, type, signature_type, name_ch, name_en, path, file_id, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.packageId}, #{entity.projectId}, #{entity.type}, #{entity.signatureType}, #{entity.nameCh}, #{entity.nameEn}, #{entity.path}, #{entity.fileId}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        package_id = values(package_id),
+        project_id = values(project_id),
+        type = values(type),
+        signature_type = values(signature_type),
+        name_ch = values(name_ch),
+        name_en = values(name_en),
+        path = values(path),
+        file_id = values(file_id),
+        is_delete = values(is_delete),
+        created_by = values(created_by),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update registration_documents
+        <set>
+            <if test="packageId != null">
+                package_id = #{packageId},
+            </if>
+            <if test="projectId != null">
+                project_id = #{projectId},
+            </if>
+            <if test="type != null and type != ''">
+                type = #{type},
+            </if>
+            <if test="signatureType != null">
+                signature_type = #{signatureType},
+            </if>
+            <if test="nameCh != null and nameCh != ''">
+                name_ch = #{nameCh},
+            </if>
+            <if test="nameEn != null and nameEn != ''">
+                name_en = #{nameEn},
+            </if>
+            <if test="path != null and path != ''">
+                path = #{path},
+            </if>
+            <if test="fileId != null">
+                file_id = #{fileId},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdBy != null">
+                created_by = #{createdBy},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from registration_documents where id = #{id}
+    </delete>
+
+</mapper>
+

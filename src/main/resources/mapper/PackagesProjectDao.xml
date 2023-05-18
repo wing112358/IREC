@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.PackagesProjectDao">
+
+    <resultMap type="org.irecapi.entity.PackagesProject" id="PackagesProjectMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="packageId" column="package_id" jdbcType="INTEGER"/>
+        <result property="projectId" column="project_id" jdbcType="INTEGER"/>
+        <result property="isStandard" column="is_standard" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="PackagesProjectMap">
+        select
+          id, package_id, project_id, is_standard, is_delete, created_at, updated_at
+        from packages_project
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="PackagesProjectMap">
+        select
+          id, package_id, project_id, is_standard, is_delete, created_at, updated_at
+        from packages_project
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="isStandard != null">
+                and is_standard = #{isStandard}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from packages_project
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="isStandard != null">
+                and is_standard = #{isStandard}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into packages_project(package_id, project_id, is_standard, is_delete, created_at, updated_at)
+        values (#{packageId}, #{projectId}, #{isStandard}, #{isDelete}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into packages_project(package_id, project_id, is_standard, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.packageId}, #{entity.projectId}, #{entity.isStandard}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into packages_project(package_id, project_id, is_standard, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.packageId}, #{entity.projectId}, #{entity.isStandard}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        package_id = values(package_id),
+        project_id = values(project_id),
+        is_standard = values(is_standard),
+        is_delete = values(is_delete),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update packages_project
+        <set>
+            <if test="packageId != null">
+                package_id = #{packageId},
+            </if>
+            <if test="projectId != null">
+                project_id = #{projectId},
+            </if>
+            <if test="isStandard != null">
+                is_standard = #{isStandard},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from packages_project where id = #{id}
+    </delete>
+
+</mapper>
+

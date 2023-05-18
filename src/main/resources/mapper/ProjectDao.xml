@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.ProjectDao">
+
+    <resultMap type="org.irecapi.entity.Project" id="ProjectMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="energyType" column="energy_type" jdbcType="VARCHAR"/>
+        <result property="technologyType" column="technology_type" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="capacity" column="capacity" jdbcType="NUMERIC"/>
+        <result property="deliveryDate" column="delivery_date" jdbcType="TIMESTAMP"/>
+        <result property="registrationDate" column="registration_date" jdbcType="TIMESTAMP"/>
+        <result property="developFlag" column="develop_flag" jdbcType="INTEGER"/>
+        <result property="developDesc" column="develop_desc" jdbcType="VARCHAR"/>
+        <result property="subsidyFlag" column="subsidy_flag" jdbcType="INTEGER"/>
+        <result property="gridConnectedFlag" column="grid_connected_flag" jdbcType="INTEGER"/>
+        <result property="gridConnectedVoltageType" column="grid_connected_voltage_type" jdbcType="VARCHAR"/>
+        <result property="gridConnectedDesc" column="grid_connected_desc" jdbcType="VARCHAR"/>
+        <result property="measurementType" column="measurement_type" jdbcType="VARCHAR"/>
+        <result property="siteConsumptionFlag" column="site_consumption_flag" jdbcType="INTEGER"/>
+        <result property="siteConsumptionDesc" column="site_consumption_desc" jdbcType="VARCHAR"/>
+        <result property="siteConsumptionAuxiliaryPowerFlag" column="site_consumption_auxiliary_power_flag" jdbcType="INTEGER"/>
+        <result property="siteConsumptionAuxiliaryPowerDesc" column="site_consumption_auxiliary_power_desc" jdbcType="VARCHAR"/>
+        <result property="powerGenerationFacilityOwnerName" column="power_generation_facility_owner_name" jdbcType="VARCHAR"/>
+        <result property="contentEnId" column="content_en_id" jdbcType="INTEGER"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ProjectMap">
+        select
+          id, name, address, energy_type, technology_type, status, capacity, delivery_date, registration_date, develop_flag, develop_desc, subsidy_flag, grid_connected_flag, grid_connected_voltage_type, grid_connected_desc, measurement_type, site_consumption_flag, site_consumption_desc, site_consumption_auxiliary_power_flag, site_consumption_auxiliary_power_desc, power_generation_facility_owner_name, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at
+        from project
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ProjectMap">
+        select
+          id, name, address, energy_type, technology_type, status, capacity, delivery_date, registration_date, develop_flag, develop_desc, subsidy_flag, grid_connected_flag, grid_connected_voltage_type, grid_connected_desc, measurement_type, site_consumption_flag, site_consumption_desc, site_consumption_auxiliary_power_flag, site_consumption_auxiliary_power_desc, power_generation_facility_owner_name, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at
+        from project
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="address != null and address != ''">
+                and address = #{address}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                and technology_type = #{technologyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="deliveryDate != null">
+                and delivery_date = #{deliveryDate}
+            </if>
+            <if test="registrationDate != null">
+                and registration_date = #{registrationDate}
+            </if>
+            <if test="developFlag != null">
+                and develop_flag = #{developFlag}
+            </if>
+            <if test="developDesc != null and developDesc != ''">
+                and develop_desc = #{developDesc}
+            </if>
+            <if test="subsidyFlag != null">
+                and subsidy_flag = #{subsidyFlag}
+            </if>
+            <if test="gridConnectedFlag != null">
+                and grid_connected_flag = #{gridConnectedFlag}
+            </if>
+            <if test="gridConnectedVoltageType != null and gridConnectedVoltageType != ''">
+                and grid_connected_voltage_type = #{gridConnectedVoltageType}
+            </if>
+            <if test="gridConnectedDesc != null and gridConnectedDesc != ''">
+                and grid_connected_desc = #{gridConnectedDesc}
+            </if>
+            <if test="measurementType != null and measurementType != ''">
+                and measurement_type = #{measurementType}
+            </if>
+            <if test="siteConsumptionFlag != null">
+                and site_consumption_flag = #{siteConsumptionFlag}
+            </if>
+            <if test="siteConsumptionDesc != null and siteConsumptionDesc != ''">
+                and site_consumption_desc = #{siteConsumptionDesc}
+            </if>
+            <if test="siteConsumptionAuxiliaryPowerFlag != null">
+                and site_consumption_auxiliary_power_flag = #{siteConsumptionAuxiliaryPowerFlag}
+            </if>
+            <if test="siteConsumptionAuxiliaryPowerDesc != null and siteConsumptionAuxiliaryPowerDesc != ''">
+                and site_consumption_auxiliary_power_desc = #{siteConsumptionAuxiliaryPowerDesc}
+            </if>
+            <if test="powerGenerationFacilityOwnerName != null and powerGenerationFacilityOwnerName != ''">
+                and power_generation_facility_owner_name = #{powerGenerationFacilityOwnerName}
+            </if>
+            <if test="contentEnId != null">
+                and content_en_id = #{contentEnId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from project
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="address != null and address != ''">
+                and address = #{address}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                and technology_type = #{technologyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="deliveryDate != null">
+                and delivery_date = #{deliveryDate}
+            </if>
+            <if test="registrationDate != null">
+                and registration_date = #{registrationDate}
+            </if>
+            <if test="developFlag != null">
+                and develop_flag = #{developFlag}
+            </if>
+            <if test="developDesc != null and developDesc != ''">
+                and develop_desc = #{developDesc}
+            </if>
+            <if test="subsidyFlag != null">
+                and subsidy_flag = #{subsidyFlag}
+            </if>
+            <if test="gridConnectedFlag != null">
+                and grid_connected_flag = #{gridConnectedFlag}
+            </if>
+            <if test="gridConnectedVoltageType != null and gridConnectedVoltageType != ''">
+                and grid_connected_voltage_type = #{gridConnectedVoltageType}
+            </if>
+            <if test="gridConnectedDesc != null and gridConnectedDesc != ''">
+                and grid_connected_desc = #{gridConnectedDesc}
+            </if>
+            <if test="measurementType != null and measurementType != ''">
+                and measurement_type = #{measurementType}
+            </if>
+            <if test="siteConsumptionFlag != null">
+                and site_consumption_flag = #{siteConsumptionFlag}
+            </if>
+            <if test="siteConsumptionDesc != null and siteConsumptionDesc != ''">
+                and site_consumption_desc = #{siteConsumptionDesc}
+            </if>
+            <if test="siteConsumptionAuxiliaryPowerFlag != null">
+                and site_consumption_auxiliary_power_flag = #{siteConsumptionAuxiliaryPowerFlag}
+            </if>
+            <if test="siteConsumptionAuxiliaryPowerDesc != null and siteConsumptionAuxiliaryPowerDesc != ''">
+                and site_consumption_auxiliary_power_desc = #{siteConsumptionAuxiliaryPowerDesc}
+            </if>
+            <if test="powerGenerationFacilityOwnerName != null and powerGenerationFacilityOwnerName != ''">
+                and power_generation_facility_owner_name = #{powerGenerationFacilityOwnerName}
+            </if>
+            <if test="contentEnId != null">
+                and content_en_id = #{contentEnId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into project(name, address, energy_type, technology_type, status, capacity, delivery_date, registration_date, develop_flag, develop_desc, subsidy_flag, grid_connected_flag, grid_connected_voltage_type, grid_connected_desc, measurement_type, site_consumption_flag, site_consumption_desc, site_consumption_auxiliary_power_flag, site_consumption_auxiliary_power_desc, power_generation_facility_owner_name, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values (#{name}, #{address}, #{energyType}, #{technologyType}, #{status}, #{capacity}, #{deliveryDate}, #{registrationDate}, #{developFlag}, #{developDesc}, #{subsidyFlag}, #{gridConnectedFlag}, #{gridConnectedVoltageType}, #{gridConnectedDesc}, #{measurementType}, #{siteConsumptionFlag}, #{siteConsumptionDesc}, #{siteConsumptionAuxiliaryPowerFlag}, #{siteConsumptionAuxiliaryPowerDesc}, #{powerGenerationFacilityOwnerName}, #{contentEnId}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into project(name, address, energy_type, technology_type, status, capacity, delivery_date, registration_date, develop_flag, develop_desc, subsidy_flag, grid_connected_flag, grid_connected_voltage_type, grid_connected_desc, measurement_type, site_consumption_flag, site_consumption_desc, site_consumption_auxiliary_power_flag, site_consumption_auxiliary_power_desc, power_generation_facility_owner_name, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.name}, #{entity.address}, #{entity.energyType}, #{entity.technologyType}, #{entity.status}, #{entity.capacity}, #{entity.deliveryDate}, #{entity.registrationDate}, #{entity.developFlag}, #{entity.developDesc}, #{entity.subsidyFlag}, #{entity.gridConnectedFlag}, #{entity.gridConnectedVoltageType}, #{entity.gridConnectedDesc}, #{entity.measurementType}, #{entity.siteConsumptionFlag}, #{entity.siteConsumptionDesc}, #{entity.siteConsumptionAuxiliaryPowerFlag}, #{entity.siteConsumptionAuxiliaryPowerDesc}, #{entity.powerGenerationFacilityOwnerName}, #{entity.contentEnId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into project(name, address, energy_type, technology_type, status, capacity, delivery_date, registration_date, develop_flag, develop_desc, subsidy_flag, grid_connected_flag, grid_connected_voltage_type, grid_connected_desc, measurement_type, site_consumption_flag, site_consumption_desc, site_consumption_auxiliary_power_flag, site_consumption_auxiliary_power_desc, power_generation_facility_owner_name, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.address}, #{entity.energyType}, #{entity.technologyType}, #{entity.status}, #{entity.capacity}, #{entity.deliveryDate}, #{entity.registrationDate}, #{entity.developFlag}, #{entity.developDesc}, #{entity.subsidyFlag}, #{entity.gridConnectedFlag}, #{entity.gridConnectedVoltageType}, #{entity.gridConnectedDesc}, #{entity.measurementType}, #{entity.siteConsumptionFlag}, #{entity.siteConsumptionDesc}, #{entity.siteConsumptionAuxiliaryPowerFlag}, #{entity.siteConsumptionAuxiliaryPowerDesc}, #{entity.powerGenerationFacilityOwnerName}, #{entity.contentEnId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        name = values(name),
+        address = values(address),
+        energy_type = values(energy_type),
+        technology_type = values(technology_type),
+        status = values(status),
+        capacity = values(capacity),
+        delivery_date = values(delivery_date),
+        registration_date = values(registration_date),
+        develop_flag = values(develop_flag),
+        develop_desc = values(develop_desc),
+        subsidy_flag = values(subsidy_flag),
+        grid_connected_flag = values(grid_connected_flag),
+        grid_connected_voltage_type = values(grid_connected_voltage_type),
+        grid_connected_desc = values(grid_connected_desc),
+        measurement_type = values(measurement_type),
+        site_consumption_flag = values(site_consumption_flag),
+        site_consumption_desc = values(site_consumption_desc),
+        site_consumption_auxiliary_power_flag = values(site_consumption_auxiliary_power_flag),
+        site_consumption_auxiliary_power_desc = values(site_consumption_auxiliary_power_desc),
+        power_generation_facility_owner_name = values(power_generation_facility_owner_name),
+        content_en_id = values(content_en_id),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update project
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+            <if test="energyType != null and energyType != ''">
+                energy_type = #{energyType},
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                technology_type = #{technologyType},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="capacity != null">
+                capacity = #{capacity},
+            </if>
+            <if test="deliveryDate != null">
+                delivery_date = #{deliveryDate},
+            </if>
+            <if test="registrationDate != null">
+                registration_date = #{registrationDate},
+            </if>
+            <if test="developFlag != null">
+                develop_flag = #{developFlag},
+            </if>
+            <if test="developDesc != null and developDesc != ''">
+                develop_desc = #{developDesc},
+            </if>
+            <if test="subsidyFlag != null">
+                subsidy_flag = #{subsidyFlag},
+            </if>
+            <if test="gridConnectedFlag != null">
+                grid_connected_flag = #{gridConnectedFlag},
+            </if>
+            <if test="gridConnectedVoltageType != null and gridConnectedVoltageType != ''">
+                grid_connected_voltage_type = #{gridConnectedVoltageType},
+            </if>
+            <if test="gridConnectedDesc != null and gridConnectedDesc != ''">
+                grid_connected_desc = #{gridConnectedDesc},
+            </if>
+            <if test="measurementType != null and measurementType != ''">
+                measurement_type = #{measurementType},
+            </if>
+            <if test="siteConsumptionFlag != null">
+                site_consumption_flag = #{siteConsumptionFlag},
+            </if>
+            <if test="siteConsumptionDesc != null and siteConsumptionDesc != ''">
+                site_consumption_desc = #{siteConsumptionDesc},
+            </if>
+            <if test="siteConsumptionAuxiliaryPowerFlag != null">
+                site_consumption_auxiliary_power_flag = #{siteConsumptionAuxiliaryPowerFlag},
+            </if>
+            <if test="siteConsumptionAuxiliaryPowerDesc != null and siteConsumptionAuxiliaryPowerDesc != ''">
+                site_consumption_auxiliary_power_desc = #{siteConsumptionAuxiliaryPowerDesc},
+            </if>
+            <if test="powerGenerationFacilityOwnerName != null and powerGenerationFacilityOwnerName != ''">
+                power_generation_facility_owner_name = #{powerGenerationFacilityOwnerName},
+            </if>
+            <if test="contentEnId != null">
+                content_en_id = #{contentEnId},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from project where id = #{id}
+    </delete>
+
+</mapper>
+

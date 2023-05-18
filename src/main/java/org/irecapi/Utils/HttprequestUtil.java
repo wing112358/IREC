@@ -1,0 +1,446 @@
+package org.irecapi.Utils;
+
+
+import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.IOUtils;
+import org.apache.http.*;
+import org.apache.http.client.CookieStore;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.StringBody;
+import org.apache.http.impl.client.*;
+import org.apache.http.message.BasicHeader;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+import org.irecapi.Bean.common.Request;
+import org.irecapi.Bean.common.Response;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+
+/**
+ * 基础发送请求方法
+ */
+
+
+@Slf4j
+public class HttprequestUtil {
+
+
+    public String getValue( String key){
+
+        ResourceBundle bundle = ResourceBundle.getBundle("application");
+        String value=bundle.getString(key);
+
+        return value;
+    }
+
+    public String PRIVATEKEY=getValue("PRIVATEKEY");
+
+
+    public String PUBLICKEY=getValue("PUBLICKEY");
+
+
+
+    /**
+     * 处理Header
+     */
+
+    public Header[]  encryptheader(Request request) throws Exception {
+
+        String body=aesbody(request);
+
+        String X_TIMESTAMP=String.valueOf(new Date().getTime());
+        String X_NONCE=X_TIMESTAMP;
+        byte [] bytekey  =  PRIVATEKEY.getBytes("UTF-8");;
+        byte[] rsakey= RSAUtil.encrypt(bytekey,PUBLICKEY);
+        String X_EAK= Base64Util.encode(rsakey);
+        TreeMap<String, String> params = new TreeMap<>();
+        params.put("timestamp", X_TIMESTAMP);
+        params.put("nonce", X_NONCE);
+        params.put("aesKey", PRIVATEKEY);
+//        params.put("id", "99");
+        params.put("body", body);
+        String X_SIGN = SignUtil.sign(params);
+
+        Header[] headers={
+
+                new BasicHeader("X_TIMESTAMP", X_TIMESTAMP)
+
+                ,new BasicHeader("X_NONCE", X_NONCE)
+
+                ,new BasicHeader("X_EAK", X_EAK)
+
+                ,new BasicHeader("X_SIGN", X_SIGN)
+        };
+
+        return headers;
+
+    }
+
+    /**
+     * 处理请求加密
+     */
+
+    public String aesbody(Request request)  throws Exception {
+        String aesresult="";
+
+        String body=new ObjectMapper().writeValueAsString(request);
+
+        aesresult= AESUtil.encrypt(body,PRIVATEKEY);
+
+        return aesresult;
+
+    }
+
+
+    //POST-Form
+    public Response postForm(String url, Request request, CookieStore cookies, Header[] headers) throws IOException {
+        return this.post(url, request, cookies, headers, 0);
+    }
+
+    //POST-Json
+    public Response postJson(String url, Request request, CookieStore cookies, Header[] headers) throws IOException {
+        return this.post(url, request, cookies, headers, 1);
+    }
+
+    //POST请求
+    public Response post(String url, Request request, CookieStore cookies, Header[] headers, int flag) throws IOException {
+
+        //用来存放结果
+        if (cookies == null) {
+            cookies = new BasicCookieStore();
+        }
+
+        HttpEntity reqentity = getEntity(request, url, flag);
+
+        //构建一个post请求
+        HttpPost post = new HttpPost(url);
+
+        //用来执行post方法
+        CloseableHttpClient client = HttpClients.custom().setDefaultCookieStore(cookies).build();
+        //传递参数
+        post.setEntity(reqentity);
+        //设置header
+        post.setHeaders(headers);
+
+        //获取请求header
+        Header requestheaders[] = post.getAllHeaders();
+
+
+        //打印请求
+        log.info("这里是请求路径：：：" + url);
+        log.info("这里是请求header：：：");
+        int ii = 0;
+        while (ii < requestheaders.length) {
+            System.out.println(requestheaders[ii].getName() + ":"
+                    + requestheaders[ii].getValue());
+            ++ii;
+        }
+
+
+        //预设返回
+        CloseableHttpResponse response = null;
+        try {
+            if (reqentity != null) {
+                log.info("此处是请求参数：：：：" + IOUtils.toString(reqentity.getContent(), Charset.forName("UTF-8")));
+            }
+            //获取响应结果
+            response = client.execute(post);
+            if (response.getEntity() == null) {
+                String errMsg = String.format("HTTP请求无返回数据[url=%s,charset=%s]", url, Charset.forName("UTF-8"));
+                throw new RuntimeException(errMsg);
+            }
+            //获取返回内容
+            HttpEntity entity = response.getEntity();
+            String result1 = IOUtils.toString(entity.getContent(), Charset.forName("UTF-8"));
+
+            //结果转化为json
+            Response result = new Response(response.getStatusLine().getStatusCode(), result1, (CookieStore) cookies, response.getAllHeaders());
+
+            return result;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Response postWithFile(String url, CookieStore cookies, Request request,Header[] headers, File file) throws IOException {
+        //用来存放结果
+        if (cookies == null) {
+            cookies = new BasicCookieStore();
+        }
+
+        HttpPost httpPost = new HttpPost(url);
+        RequestConfig config = RequestConfig.custom()
+                .setConnectTimeout(3000) // 连接超时时间
+                .setConnectionRequestTimeout(3000) // 请求超时时间
+                .setSocketTimeout(3000) // 响应数据超时时间
+                .setExpectContinueEnabled(false)
+                .build();
+        httpPost.setConfig(config);
+        MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+        builder.setCharset(Charset.forName("UTF-8"));
+
+        if(request !=null){
+            Gson gson=new Gson();
+            String jsonstring=gson.toJson(request);
+            JSONObject json= JSONObject.parseObject(jsonstring);
+
+            for(String key: json.keySet()){
+                Object value=json.get(key);
+                builder.addTextBody(key,value.toString());
+
+            }
+        }
+
+
+
+        builder.addBinaryBody("file", file, ContentType.create(Files.probeContentType(file.toPath())), file.getName());
+        httpPost.setEntity(builder.build());
+
+        //设置header
+        httpPost.setHeaders(headers);
+
+
+        CloseableHttpClient httpClient = HttpClientBuilder.create()
+                .setRetryHandler(new DefaultHttpRequestRetryHandler(3, true))
+                .setConnectionTimeToLive(30, TimeUnit.SECONDS)
+                .setDefaultRequestConfig(config)
+                .build();
+
+        CloseableHttpResponse response = null;
+
+        Response result=new Response(null,null,null,null);
+        try {
+            response = httpClient.execute(httpPost);
+            int status = response.getStatusLine().getStatusCode();
+            if (status == HttpStatus.SC_OK) {
+                HttpEntity entity = response.getEntity();
+                String responseContent = EntityUtils.toString(entity, "UTF-8");
+
+                //结果转化为json
+                result = new Response(response.getStatusLine().getStatusCode(), responseContent, (CookieStore) cookies, response.getAllHeaders());
+                // 对上传成功或上传失败的结果进行断言或验证
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (response != null) {
+                try {
+                    response.close();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
+
+
+        return result;
+
+
+    }
+    public Response postWithSign(String url, Request request, CookieStore cookies, Header[] headers) throws Exception {
+
+        //用来存放结果
+        if (cookies == null) {
+            cookies = new BasicCookieStore();
+        }
+
+        String stringRequest=this.aesbody(request);
+        HttpEntity reqentity = new StringEntity(stringRequest, Charset.forName("UTF-8"));
+        ((StringEntity) reqentity).setContentType("application/json");
+
+
+        //构建一个post请求
+        HttpPost post = new HttpPost(url);
+
+        //用来执行post方法
+        CloseableHttpClient client = HttpClients.custom().setDefaultCookieStore(cookies).build();
+        //传递参数
+        post.setEntity(reqentity);
+        //设置header
+        String X_TIMESTAMP=String.valueOf(new Date().getTime());
+        String X_NONCE=X_TIMESTAMP;
+        byte [] bytekey  =  PRIVATEKEY.getBytes("UTF-8");;
+        byte[] rsakey= RSAUtil.encrypt(bytekey,PUBLICKEY);
+        String X_EAK= Base64Util.encode(rsakey);
+        TreeMap<String, String> params = new TreeMap<>();
+        params.put("timestamp", X_TIMESTAMP);
+        params.put("nonce", X_NONCE);
+        params.put("aesKey", PRIVATEKEY);
+//        params.put("id", "99");
+        params.put("body", stringRequest);
+        String X_SIGN = SignUtil.sign(params);
+
+        post.setHeaders(headers);
+        post.addHeader("X_TIMESTAMP", X_TIMESTAMP);
+        post.addHeader("X_NONCE", X_NONCE);
+        post.addHeader("X_EAK", X_EAK);
+        post.addHeader("X_SIGN", X_SIGN);
+
+
+        //获取请求header
+        Header requestheaders[] = post.getAllHeaders();
+
+
+        //打印请求
+        log.info("这里是请求路径：：：" + url);
+        log.info("这里是请求header：：：");
+        int ii = 0;
+        while (ii < requestheaders.length) {
+            System.out.println(requestheaders[ii].getName() + ":"
+                    + requestheaders[ii].getValue());
+            ++ii;
+        }
+
+
+        //预设返回
+        CloseableHttpResponse response = null;
+        try {
+            if (reqentity != null) {
+                log.info("此处是请求参数：：：：" + IOUtils.toString(reqentity.getContent(), Charset.forName("UTF-8")));
+            }
+            //获取响应结果
+            response = client.execute(post);
+            if (response.getEntity() == null) {
+                String errMsg = String.format("HTTP请求无返回数据[url=%s,charset=%s]", url, Charset.forName("UTF-8"));
+                throw new RuntimeException(errMsg);
+            }
+            //获取返回内容
+            HttpEntity entity = response.getEntity();
+            String result1 = IOUtils.toString(entity.getContent(), Charset.forName("UTF-8"));
+
+            //结果转化为json
+            Response result = new Response(response.getStatusLine().getStatusCode(), result1, (CookieStore) cookies, response.getAllHeaders());
+
+            return result;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    //Get请求
+    public Response get(String url, Request request, CookieStore cookies, Header[] headers) throws UnsupportedEncodingException {
+        //用来存放结果
+        if (cookies == null) {
+            cookies = new BasicCookieStore();
+        }
+        String str = "";
+        if (request != null) {
+            //处理参数与url的拼接
+
+            HttpEntity entity = getEntity(request, url, 0);
+
+            //处理参数以及异常
+            try {
+                str = EntityUtils.toString(entity);
+            } catch (IOException | ParseException var16) {
+                var16.printStackTrace();
+            }
+
+            //拼接url
+            url = url + "?" + str;
+
+        } else {
+            url = url;
+        }
+
+        //发送请求
+        CloseableHttpClient client = HttpClients.custom().setDefaultCookieStore((CookieStore) cookies).build();
+        HttpGet get = new HttpGet(url);
+        //设置header
+        get.setHeaders(headers);
+        log.info(url);
+        CloseableHttpResponse res = null;
+
+        try {
+            res = client.execute(get);
+            HttpEntity entityresult = res.getEntity();
+            String result2 = IOUtils.toString(entityresult.getContent(), Charset.forName("UTF-8"));
+
+            //结果转化为json
+            Response result = new Response(res.getStatusLine().getStatusCode(), result2, (CookieStore) cookies, res.getAllHeaders());
+            log.info(result.toString());
+            return result;
+        } catch (IOException var17) {
+            var17.printStackTrace();
+        }
+
+        return null;
+    }
+
+
+    //根据flag判断是form格式还是json对请求参数做出不同处理
+    private static HttpEntity getEntity(Request request, String url, int flag) throws UnsupportedEncodingException {
+        //用来存放结果
+        HttpEntity reqentity = null;
+        //转化请求为json字符串
+        String temp = (new Gson()).toJson(request);
+
+        //置换特殊情况
+        temp = temp.replace("\"\"", "null");
+        temp = temp.replace("blank", "");
+
+        JsonObject json = (JsonObject) (new JsonParser()).parse(temp);
+
+        //
+        if (temp == null) {
+            return (HttpEntity) reqentity;
+        } else {
+            if (flag == 0) {
+                List<NameValuePair> params = new ArrayList();
+                Iterator it = json.keySet().iterator();
+
+                while (it.hasNext()) {
+                    String key = (String) it.next();
+                    JsonElement value = json.get(key);
+                    if (value.isJsonNull()) {
+                        params.add(new BasicNameValuePair(key, (String) null));
+                    } else {
+                        params.add(new BasicNameValuePair(key, value.getAsString()));
+                    }
+                }
+
+                reqentity = new UrlEncodedFormEntity(params, Charset.forName("UTF-8"));
+            } else {
+                reqentity = new StringEntity(json.toString(), Charset.forName("UTF-8"));
+                ((StringEntity) reqentity).setContentType("application/json");
+            }
+
+            return (HttpEntity) reqentity;
+        }
+
+
+    }
+
+
+}
+

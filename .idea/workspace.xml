@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="40bd6d36-f881-4812-878b-78b191a31033" name="Changes" comment="项目新建至打包至回填流程">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/BackFillBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/ChangeStatusBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/ConfirmBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateContractDataBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateMapLocationBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateMeasurementSampleBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreatePrimaryWiringDiagramBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateSitePhotoBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/FinishBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/GenerateDocumentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/GenerateSingleDocumentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/LoginBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/PagingBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/QueryDetailBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/QueryPreviewBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/SampleTranslationBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/SignDocumentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/SignatureBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/TranslationBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/UpdateFileBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/UploadFileBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/common/Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/common/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/common/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/DSconfig/CarbonDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/IRECApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/AESUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/Base64Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/EnvironmentUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/GetPathWithURLUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/HttprequestUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/MybatisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/RSAUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/RandomUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/SignUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/TestngListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/ToolsUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Utils/YamlDataHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/ContentEnController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/CustomerInfoExController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/PackagesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/PackagesProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/ProjectRegistrationDataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/RegistrationDocumentsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/RegistrationDocumentsExportLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/RegistrationResultController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/ContentEnDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/CustomerInfoExDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/PackagesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/PackagesProjectDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/ProjectDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/ProjectRegistrationDataDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/RegistrationDocumentsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/RegistrationDocumentsExportLogDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/RegistrationResultDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/ContentEn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/CustomerInfoEx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/Packages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/PackagesProject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/ProjectRegistrationData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/RegistrationDocuments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/RegistrationDocumentsExportLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/RegistrationResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/ContentEnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/CustomerInfoExService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/Irec/baseWorkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/Irec/createService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/Irec/loginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/Irec/packageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/Irec/translationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/PackagesProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/PackagesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/ProjectRegistrationDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/ProjectService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/RegistrationDocumentsExportLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/RegistrationDocumentsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/RegistrationResultService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/ContentEnServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/CustomerInfoExServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/PackagesProjectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/PackagesServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/ProjectRegistrationDataServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/ProjectServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/RegistrationDocumentsExportLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/RegistrationDocumentsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/RegistrationResultServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ContentEnDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CustomerInfoExDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PackagesDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PackagesProjectDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProjectDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProjectRegistrationDataDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/RegistrationDocumentsDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/RegistrationDocumentsExportLogDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/RegistrationResultDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/BaseLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/confirmData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/createContractData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/createData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/createMapLocationData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/createMeasurementSampleData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/createPrimaryWiringDiagramData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/createSitePhotoData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/loginData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Data/Irec/previewData.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/FinishProjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/HandleDocumentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/backFillTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/changeStatusTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/confirmTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createContractTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createMapLocationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createMeasurementSampleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createPrimaryWiringDiagramTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createSitePhotoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/generateDocumentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/generateSingleDocumentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/loginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/previewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/queryDetailTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/signDocumentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-xml/mainTest.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
+  <component name="ProjectId" id="2CBtayJ6eMcA8oQgmgntayL9s4P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/javacode/IrecAPIAuto/src/test/java/org/irecapi/Data/Irec&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.sjhy.plugin.ui.GlobalConfigSettingForm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;907d40cd08700d192f0e8fbefed4398d&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\javacode\IrecAPIAuto\src\test\java\org\irecapi\Data\Irec" />
+      <recent name="D:\code\javacode\IrecAPIAuto\src\main\java\org\irecapi\Utils" />
+      <recent name="D:\code\javacode\IrecAPIAuto\src\test\java\org\irecapi" />
+      <recent name="D:\code\javacode\IrecAPIAuto\src\test\java\org\irecapi\Data" />
+      <recent name="D:\code\javacode\IrecAPIAuto\src\main\java\org\irecapi\Bean" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\javacode\IrecAPIAuto\src\main\resources\mapper" />
+      <recent name="D:\code\javacode\IrecAPIAuto\src\main\resources\mapper\irec" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.irecapi.Irec" />
+      <recent name="org.irecapi.Utils" />
+      <recent name="org.irecapi.Bean.Irec" />
+      <recent name="org.irecapi.service.Irec" />
+      <recent name="org.irecapi.Bean.Project" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.D:/code/javacode/IrecAPIAuto/test-xml/mainTest.xml">
+    <configuration name="GetPathWithURLUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.irecapi.Utils.GetPathWithURLUtil" />
+      <module name="IrecAPIAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.irecapi.Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BaseTest.upload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IrecAPIAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.irecapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.irecapi" />
+      <option name="MAIN_CLASS_NAME" value="org.irecapi.BaseTest" />
+      <option name="METHOD_NAME" value="upload" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="loginTest.logintest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IrecAPIAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.irecapi.Irec.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.irecapi.User" />
+      <option name="MAIN_CLASS_NAME" value="org.irecapi.Irec.loginTest" />
+      <option name="METHOD_NAME" value="logintest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IRECApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="IrecAPIAuto" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.irecapi.IRECApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/code/javacode/IrecAPIAuto/test-xml/mainTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IrecAPIAuto" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/test-xml/mainTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="IrecAPIAuto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.irecapi.Irec.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.irecapi.User" />
+      <option name="MAIN_CLASS_NAME" value="org.irecapi.Irec.loginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/code/javacode/IrecAPIAuto/test-xml/mainTest.xml" />
+        <item itemvalue="Application.GetPathWithURLUtil" />
+        <item itemvalue="JUnit.BaseTest.upload" />
+        <item itemvalue="JUnit.loginTest.logintest" />
+        <item itemvalue="TestNG.loginTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40bd6d36-f881-4812-878b-78b191a31033" name="Changes" comment="" />
+      <created>1658287874622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658287874622</updated>
+      <workItem from="1658287876452" duration="13233000" />
+      <workItem from="1658310859789" duration="1015000" />
+      <workItem from="1658311896408" duration="1357000" />
+      <workItem from="1658369754676" duration="16078000" />
+      <workItem from="1658472075798" duration="58000" />
+      <workItem from="1658472641261" duration="64000" />
+      <workItem from="1658480345309" duration="206000" />
+      <workItem from="1658480585254" duration="1215000" />
+      <workItem from="1662027674495" duration="34000" />
+      <workItem from="1676428132978" duration="22000" />
+      <workItem from="1676946709909" duration="878000" />
+      <workItem from="1677044300867" duration="24000" />
+      <workItem from="1677052387755" duration="478000" />
+      <workItem from="1677052975133" duration="970000" />
+      <workItem from="1678773738368" duration="24639000" />
+      <workItem from="1679369221766" duration="2085000" />
+      <workItem from="1679391226479" duration="47826000" />
+      <workItem from="1681699774689" duration="80000" />
+      <workItem from="1681700359565" duration="19004000" />
+      <workItem from="1682662549834" duration="1799000" />
+      <workItem from="1683268548604" duration="1584000" />
+      <workItem from="1683276275894" duration="164000" />
+      <workItem from="1683613342741" duration="3511000" />
+      <workItem from="1684115042374" duration="14035000" />
+      <workItem from="1684138191437" duration="27406000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="项目新建至打包至回填流程" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目新建至打包至回填流程" />
+  </component>
+</project>

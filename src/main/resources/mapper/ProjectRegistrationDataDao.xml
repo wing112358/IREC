@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.ProjectRegistrationDataDao">
+
+    <resultMap type="org.irecapi.entity.ProjectRegistrationData" id="ProjectRegistrationDataMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="projectId" column="project_id" jdbcType="INTEGER"/>
+        <result property="powerGenerationFacilitiesAddress" column="power_generation_facilities_address" jdbcType="VARCHAR"/>
+        <result property="powerGenerationFacilitiesAddressLanLon" column="power_generation_facilities_address_lan_lon" jdbcType="VARCHAR"/>
+        <result property="powerGenerationFacilitiesAddressScreenshot" column="power_generation_facilities_address_screenshot" jdbcType="VARCHAR"/>
+        <result property="powerGenerationFacilitiesAddressScreenshotDesc" column="power_generation_facilities_address_screenshot_desc" jdbcType="VARCHAR"/>
+        <result property="powerGenerationFacilitiesAddressScreenshotDescEn" column="power_generation_facilities_address_screenshot_desc_en" jdbcType="VARCHAR"/>
+        <result property="sitePhoto" column="site_photo" jdbcType="VARCHAR"/>
+        <result property="siteNearPhoto" column="site_near_photo" jdbcType="VARCHAR"/>
+        <result property="siteDoorPhoto" column="site_door_photo" jdbcType="VARCHAR"/>
+        <result property="contract" column="contract" jdbcType="VARCHAR"/>
+        <result property="projectName" column="project_name" jdbcType="VARCHAR"/>
+        <result property="powerGenerationFacilityOwnerName" column="power_generation_facility_owner_name" jdbcType="VARCHAR"/>
+        <result property="siteConsumerName" column="site_consumer_name" jdbcType="VARCHAR"/>
+        <result property="gridOperatorName" column="grid_operator_name" jdbcType="VARCHAR"/>
+        <result property="contractKeyInfoEn" column="contract_key_info_en" jdbcType="VARCHAR"/>
+        <result property="contractScreenshot" column="contract_screenshot" jdbcType="VARCHAR"/>
+        <result property="contractScreenshotDesc" column="contract_screenshot_desc" jdbcType="VARCHAR"/>
+        <result property="contractScreenshotDescEn" column="contract_screenshot_desc_en" jdbcType="VARCHAR"/>
+        <result property="primaryWiringDiagram" column="primary_wiring_diagram" jdbcType="VARCHAR"/>
+        <result property="capacity" column="capacity" jdbcType="NUMERIC"/>
+        <result property="siteConsumptiveElectricityList" column="site_consumptive_electricity_list" jdbcType="VARCHAR"/>
+        <result property="siteConsumptiveElectricitySalesInvoice" column="site_consumptive_electricity_sales_invoice" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricityList" column="grid_connected_electricity_list" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricitySalesInvoice" column="grid_connected_electricity_sales_invoice" jdbcType="VARCHAR"/>
+        <result property="meter" column="meter" jdbcType="VARCHAR"/>
+        <result property="siteConsumptiveElectricityListScreenshot" column="site_consumptive_electricity_list_screenshot" jdbcType="VARCHAR"/>
+        <result property="siteConsumptiveElectricityListScreenshotDesc" column="site_consumptive_electricity_list_screenshot_desc" jdbcType="VARCHAR"/>
+        <result property="siteConsumptiveElectricityListScreenshotDescEn" column="site_consumptive_electricity_list_screenshot_desc_en" jdbcType="VARCHAR"/>
+        <result property="siteConsumptiveElectricitySalesInvoiceScreenshot" column="site_consumptive_electricity_sales_invoice_screenshot" jdbcType="VARCHAR"/>
+        <result property="siteConsumptiveElectricitySalesInvoiceScreenshotDesc" column="site_consumptive_electricity_sales_invoice_screenshot_desc" jdbcType="VARCHAR"/>
+        <result property="siteConsumptiveElectricitySalesInvoiceScreenshotDescEn" column="site_consumptive_electricity_sales_invoice_screenshot_desc_en" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricityListScreenshot" column="grid_connected_electricity_list_screenshot" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricityListScreenshotDesc" column="grid_connected_electricity_list_screenshot_desc" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricityListScreenshotDescEn" column="grid_connected_electricity_list_screenshot_desc_en" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricitySalesInvoiceScreenshot" column="grid_connected_electricity_sales_invoice_screenshot" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricitySalesInvoiceScreenshotDesc" column="grid_connected_electricity_sales_invoice_screenshot_desc" jdbcType="VARCHAR"/>
+        <result property="gridConnectedElectricitySalesInvoiceScreenshotDescEn" column="grid_connected_electricity_sales_invoice_screenshot_desc_en" jdbcType="VARCHAR"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ProjectRegistrationDataMap">
+        select
+          id, project_id, power_generation_facilities_address, power_generation_facilities_address_lan_lon, power_generation_facilities_address_screenshot,site_photo, site_near_photo, site_door_photo, contract, project_name, power_generation_facility_owner_name, site_consumer_name, grid_operator_name, contract_key_info_en, contract_screenshot,   primary_wiring_diagram, capacity, site_consumptive_electricity_list, site_consumptive_electricity_sales_invoice, grid_connected_electricity_list, grid_connected_electricity_sales_invoice, meter, creator_user_id, creator_user_name, is_delete, created_at, updated_at
+        from project_registration_data
+        where id = #{id}
+    </select>
+
+    <!--查询单个-->
+    <select id="queryByProjectId" resultMap="ProjectRegistrationDataMap">
+        select
+            id, project_id, power_generation_facilities_address, power_generation_facilities_address_lan_lon, power_generation_facilities_address_screenshot,   site_photo, site_near_photo, site_door_photo, contract, project_name, power_generation_facility_owner_name, site_consumer_name, grid_operator_name, contract_key_info_en, contract_screenshot,   primary_wiring_diagram, capacity, site_consumptive_electricity_list, site_consumptive_electricity_sales_invoice, grid_connected_electricity_list, grid_connected_electricity_sales_invoice, meter,  creator_user_id, creator_user_name, is_delete, created_at, updated_at
+        from project_registration_data
+        where project_id = #{projectId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ProjectRegistrationDataMap">
+        select
+          id, project_id, power_generation_facilities_address, power_generation_facilities_address_lan_lon, power_generation_facilities_address_screenshot, site_photo, site_near_photo, site_door_photo, contract, project_name, power_generation_facility_owner_name, site_consumer_name, grid_operator_name, contract_key_info_en, contract_screenshot,  primary_wiring_diagram, capacity, site_consumptive_electricity_list, site_consumptive_electricity_sales_invoice, grid_connected_electricity_list, grid_connected_electricity_sales_invoice, meter, site_consumptive_electricity_list_screenshot_desc, creator_user_id, creator_user_name, is_delete, created_at, updated_at
+        from project_registration_data
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="powerGenerationFacilitiesAddress != null and powerGenerationFacilitiesAddress != ''">
+                and power_generation_facilities_address = #{powerGenerationFacilitiesAddress}
+            </if>
+            <if test="powerGenerationFacilitiesAddressLanLon != null and powerGenerationFacilitiesAddressLanLon != ''">
+                and power_generation_facilities_address_lan_lon = #{powerGenerationFacilitiesAddressLanLon}
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshot != null and powerGenerationFacilitiesAddressScreenshot != ''">
+                and power_generation_facilities_address_screenshot = #{powerGenerationFacilitiesAddressScreenshot}
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshotDesc != null and powerGenerationFacilitiesAddressScreenshotDesc != ''">
+                and power_generation_facilities_address_screenshot_desc = #{powerGenerationFacilitiesAddressScreenshotDesc}
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshotDescEn != null and powerGenerationFacilitiesAddressScreenshotDescEn != ''">
+                and power_generation_facilities_address_screenshot_desc_en = #{powerGenerationFacilitiesAddressScreenshotDescEn}
+            </if>
+            <if test="sitePhoto != null and sitePhoto != ''">
+                and site_photo = #{sitePhoto}
+            </if>
+            <if test="siteNearPhoto != null and siteNearPhoto != ''">
+                and site_near_photo = #{siteNearPhoto}
+            </if>
+            <if test="siteDoorPhoto != null and siteDoorPhoto != ''">
+                and site_door_photo = #{siteDoorPhoto}
+            </if>
+            <if test="contract != null and contract != ''">
+                and contract = #{contract}
+            </if>
+            <if test="projectName != null and projectName != ''">
+                and project_name = #{projectName}
+            </if>
+            <if test="powerGenerationFacilityOwnerName != null and powerGenerationFacilityOwnerName != ''">
+                and power_generation_facility_owner_name = #{powerGenerationFacilityOwnerName}
+            </if>
+            <if test="siteConsumerName != null and siteConsumerName != ''">
+                and site_consumer_name = #{siteConsumerName}
+            </if>
+            <if test="gridOperatorName != null and gridOperatorName != ''">
+                and grid_operator_name = #{gridOperatorName}
+            </if>
+            <if test="contractKeyInfoEn != null and contractKeyInfoEn != ''">
+                and contract_key_info_en = #{contractKeyInfoEn}
+            </if>
+            <if test="contractScreenshot != null and contractScreenshot != ''">
+                and contract_screenshot = #{contractScreenshot}
+            </if>
+            <if test="contractScreenshotDesc != null and contractScreenshotDesc != ''">
+                and contract_screenshot_desc = #{contractScreenshotDesc}
+            </if>
+            <if test="contractScreenshotDescEn != null and contractScreenshotDescEn != ''">
+                and contract_screenshot_desc_en = #{contractScreenshotDescEn}
+            </if>
+            <if test="primaryWiringDiagram != null and primaryWiringDiagram != ''">
+                and primary_wiring_diagram = #{primaryWiringDiagram}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="siteConsumptiveElectricityList != null and siteConsumptiveElectricityList != ''">
+                and site_consumptive_electricity_list = #{siteConsumptiveElectricityList}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoice != null and siteConsumptiveElectricitySalesInvoice != ''">
+                and site_consumptive_electricity_sales_invoice = #{siteConsumptiveElectricitySalesInvoice}
+            </if>
+            <if test="gridConnectedElectricityList != null and gridConnectedElectricityList != ''">
+                and grid_connected_electricity_list = #{gridConnectedElectricityList}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoice != null and gridConnectedElectricitySalesInvoice != ''">
+                and grid_connected_electricity_sales_invoice = #{gridConnectedElectricitySalesInvoice}
+            </if>
+            <if test="meter != null and meter != ''">
+                and meter = #{meter}
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshot != null and siteConsumptiveElectricityListScreenshot != ''">
+                and site_consumptive_electricity_list_screenshot = #{siteConsumptiveElectricityListScreenshot}
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshotDesc != null and siteConsumptiveElectricityListScreenshotDesc != ''">
+                and site_consumptive_electricity_list_screenshot_desc = #{siteConsumptiveElectricityListScreenshotDesc}
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshotDescEn != null and siteConsumptiveElectricityListScreenshotDescEn != ''">
+                and site_consumptive_electricity_list_screenshot_desc_en = #{siteConsumptiveElectricityListScreenshotDescEn}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshot != null and siteConsumptiveElectricitySalesInvoiceScreenshot != ''">
+                and site_consumptive_electricity_sales_invoice_screenshot = #{siteConsumptiveElectricitySalesInvoiceScreenshot}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshotDesc != null and siteConsumptiveElectricitySalesInvoiceScreenshotDesc != ''">
+                and site_consumptive_electricity_sales_invoice_screenshot_desc = #{siteConsumptiveElectricitySalesInvoiceScreenshotDesc}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshotDescEn != null and siteConsumptiveElectricitySalesInvoiceScreenshotDescEn != ''">
+                and site_consumptive_electricity_sales_invoice_screenshot_desc_en = #{siteConsumptiveElectricitySalesInvoiceScreenshotDescEn}
+            </if>
+            <if test="gridConnectedElectricityListScreenshot != null and gridConnectedElectricityListScreenshot != ''">
+                and grid_connected_electricity_list_screenshot = #{gridConnectedElectricityListScreenshot}
+            </if>
+            <if test="gridConnectedElectricityListScreenshotDesc != null and gridConnectedElectricityListScreenshotDesc != ''">
+                and grid_connected_electricity_list_screenshot_desc = #{gridConnectedElectricityListScreenshotDesc}
+            </if>
+            <if test="gridConnectedElectricityListScreenshotDescEn != null and gridConnectedElectricityListScreenshotDescEn != ''">
+                and grid_connected_electricity_list_screenshot_desc_en = #{gridConnectedElectricityListScreenshotDescEn}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshot != null and gridConnectedElectricitySalesInvoiceScreenshot != ''">
+                and grid_connected_electricity_sales_invoice_screenshot = #{gridConnectedElectricitySalesInvoiceScreenshot}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshotDesc != null and gridConnectedElectricitySalesInvoiceScreenshotDesc != ''">
+                and grid_connected_electricity_sales_invoice_screenshot_desc = #{gridConnectedElectricitySalesInvoiceScreenshotDesc}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshotDescEn != null and gridConnectedElectricitySalesInvoiceScreenshotDescEn != ''">
+                and grid_connected_electricity_sales_invoice_screenshot_desc_en = #{gridConnectedElectricitySalesInvoiceScreenshotDescEn}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from project_registration_data
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="projectId != null">
+                and project_id = #{projectId}
+            </if>
+            <if test="powerGenerationFacilitiesAddress != null and powerGenerationFacilitiesAddress != ''">
+                and power_generation_facilities_address = #{powerGenerationFacilitiesAddress}
+            </if>
+            <if test="powerGenerationFacilitiesAddressLanLon != null and powerGenerationFacilitiesAddressLanLon != ''">
+                and power_generation_facilities_address_lan_lon = #{powerGenerationFacilitiesAddressLanLon}
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshot != null and powerGenerationFacilitiesAddressScreenshot != ''">
+                and power_generation_facilities_address_screenshot = #{powerGenerationFacilitiesAddressScreenshot}
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshotDesc != null and powerGenerationFacilitiesAddressScreenshotDesc != ''">
+                and power_generation_facilities_address_screenshot_desc = #{powerGenerationFacilitiesAddressScreenshotDesc}
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshotDescEn != null and powerGenerationFacilitiesAddressScreenshotDescEn != ''">
+                and power_generation_facilities_address_screenshot_desc_en = #{powerGenerationFacilitiesAddressScreenshotDescEn}
+            </if>
+            <if test="sitePhoto != null and sitePhoto != ''">
+                and site_photo = #{sitePhoto}
+            </if>
+            <if test="siteNearPhoto != null and siteNearPhoto != ''">
+                and site_near_photo = #{siteNearPhoto}
+            </if>
+            <if test="siteDoorPhoto != null and siteDoorPhoto != ''">
+                and site_door_photo = #{siteDoorPhoto}
+            </if>
+            <if test="contract != null and contract != ''">
+                and contract = #{contract}
+            </if>
+            <if test="projectName != null and projectName != ''">
+                and project_name = #{projectName}
+            </if>
+            <if test="powerGenerationFacilityOwnerName != null and powerGenerationFacilityOwnerName != ''">
+                and power_generation_facility_owner_name = #{powerGenerationFacilityOwnerName}
+            </if>
+            <if test="siteConsumerName != null and siteConsumerName != ''">
+                and site_consumer_name = #{siteConsumerName}
+            </if>
+            <if test="gridOperatorName != null and gridOperatorName != ''">
+                and grid_operator_name = #{gridOperatorName}
+            </if>
+            <if test="contractKeyInfoEn != null and contractKeyInfoEn != ''">
+                and contract_key_info_en = #{contractKeyInfoEn}
+            </if>
+            <if test="contractScreenshot != null and contractScreenshot != ''">
+                and contract_screenshot = #{contractScreenshot}
+            </if>
+            <if test="contractScreenshotDesc != null and contractScreenshotDesc != ''">
+                and contract_screenshot_desc = #{contractScreenshotDesc}
+            </if>
+            <if test="contractScreenshotDescEn != null and contractScreenshotDescEn != ''">
+                and contract_screenshot_desc_en = #{contractScreenshotDescEn}
+            </if>
+            <if test="primaryWiringDiagram != null and primaryWiringDiagram != ''">
+                and primary_wiring_diagram = #{primaryWiringDiagram}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="siteConsumptiveElectricityList != null and siteConsumptiveElectricityList != ''">
+                and site_consumptive_electricity_list = #{siteConsumptiveElectricityList}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoice != null and siteConsumptiveElectricitySalesInvoice != ''">
+                and site_consumptive_electricity_sales_invoice = #{siteConsumptiveElectricitySalesInvoice}
+            </if>
+            <if test="gridConnectedElectricityList != null and gridConnectedElectricityList != ''">
+                and grid_connected_electricity_list = #{gridConnectedElectricityList}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoice != null and gridConnectedElectricitySalesInvoice != ''">
+                and grid_connected_electricity_sales_invoice = #{gridConnectedElectricitySalesInvoice}
+            </if>
+            <if test="meter != null and meter != ''">
+                and meter = #{meter}
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshot != null and siteConsumptiveElectricityListScreenshot != ''">
+                and site_consumptive_electricity_list_screenshot = #{siteConsumptiveElectricityListScreenshot}
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshotDesc != null and siteConsumptiveElectricityListScreenshotDesc != ''">
+                and site_consumptive_electricity_list_screenshot_desc = #{siteConsumptiveElectricityListScreenshotDesc}
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshotDescEn != null and siteConsumptiveElectricityListScreenshotDescEn != ''">
+                and site_consumptive_electricity_list_screenshot_desc_en = #{siteConsumptiveElectricityListScreenshotDescEn}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshot != null and siteConsumptiveElectricitySalesInvoiceScreenshot != ''">
+                and site_consumptive_electricity_sales_invoice_screenshot = #{siteConsumptiveElectricitySalesInvoiceScreenshot}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshotDesc != null and siteConsumptiveElectricitySalesInvoiceScreenshotDesc != ''">
+                and site_consumptive_electricity_sales_invoice_screenshot_desc = #{siteConsumptiveElectricitySalesInvoiceScreenshotDesc}
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshotDescEn != null and siteConsumptiveElectricitySalesInvoiceScreenshotDescEn != ''">
+                and site_consumptive_electricity_sales_invoice_screenshot_desc_en = #{siteConsumptiveElectricitySalesInvoiceScreenshotDescEn}
+            </if>
+            <if test="gridConnectedElectricityListScreenshot != null and gridConnectedElectricityListScreenshot != ''">
+                and grid_connected_electricity_list_screenshot = #{gridConnectedElectricityListScreenshot}
+            </if>
+            <if test="gridConnectedElectricityListScreenshotDesc != null and gridConnectedElectricityListScreenshotDesc != ''">
+                and grid_connected_electricity_list_screenshot_desc = #{gridConnectedElectricityListScreenshotDesc}
+            </if>
+            <if test="gridConnectedElectricityListScreenshotDescEn != null and gridConnectedElectricityListScreenshotDescEn != ''">
+                and grid_connected_electricity_list_screenshot_desc_en = #{gridConnectedElectricityListScreenshotDescEn}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshot != null and gridConnectedElectricitySalesInvoiceScreenshot != ''">
+                and grid_connected_electricity_sales_invoice_screenshot = #{gridConnectedElectricitySalesInvoiceScreenshot}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshotDesc != null and gridConnectedElectricitySalesInvoiceScreenshotDesc != ''">
+                and grid_connected_electricity_sales_invoice_screenshot_desc = #{gridConnectedElectricitySalesInvoiceScreenshotDesc}
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshotDescEn != null and gridConnectedElectricitySalesInvoiceScreenshotDescEn != ''">
+                and grid_connected_electricity_sales_invoice_screenshot_desc_en = #{gridConnectedElectricitySalesInvoiceScreenshotDescEn}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into project_registration_data(project_id, power_generation_facilities_address, power_generation_facilities_address_lan_lon, power_generation_facilities_address_screenshot, power_generation_facilities_address_screenshot_desc, power_generation_facilities_address_screenshot_desc_en, site_photo, site_near_photo, site_door_photo, contract, project_name, power_generation_facility_owner_name, site_consumer_name, grid_operator_name, contract_key_info_en, contract_screenshot, contract_screenshot_desc, contract_screenshot_desc_en, primary_wiring_diagram, capacity, site_consumptive_electricity_list, site_consumptive_electricity_sales_invoice, grid_connected_electricity_list, grid_connected_electricity_sales_invoice, meter, site_consumptive_electricity_list_screenshot, site_consumptive_electricity_list_screenshot_desc, site_consumptive_electricity_list_screenshot_desc_en, site_consumptive_electricity_sales_invoice_screenshot, site_consumptive_electricity_sales_invoice_screenshot_desc, site_consumptive_electricity_sales_invoice_screenshot_desc_en, grid_connected_electricity_list_screenshot, grid_connected_electricity_list_screenshot_desc, grid_connected_electricity_list_screenshot_desc_en, grid_connected_electricity_sales_invoice_screenshot, grid_connected_electricity_sales_invoice_screenshot_desc, grid_connected_electricity_sales_invoice_screenshot_desc_en, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values (#{projectId}, #{powerGenerationFacilitiesAddress}, #{powerGenerationFacilitiesAddressLanLon}, #{powerGenerationFacilitiesAddressScreenshot}, #{powerGenerationFacilitiesAddressScreenshotDesc}, #{powerGenerationFacilitiesAddressScreenshotDescEn}, #{sitePhoto}, #{siteNearPhoto}, #{siteDoorPhoto}, #{contract}, #{projectName}, #{powerGenerationFacilityOwnerName}, #{siteConsumerName}, #{gridOperatorName}, #{contractKeyInfoEn}, #{contractScreenshot}, #{contractScreenshotDesc}, #{contractScreenshotDescEn}, #{primaryWiringDiagram}, #{capacity}, #{siteConsumptiveElectricityList}, #{siteConsumptiveElectricitySalesInvoice}, #{gridConnectedElectricityList}, #{gridConnectedElectricitySalesInvoice}, #{meter}, #{siteConsumptiveElectricityListScreenshot}, #{siteConsumptiveElectricityListScreenshotDesc}, #{siteConsumptiveElectricityListScreenshotDescEn}, #{siteConsumptiveElectricitySalesInvoiceScreenshot}, #{siteConsumptiveElectricitySalesInvoiceScreenshotDesc}, #{siteConsumptiveElectricitySalesInvoiceScreenshotDescEn}, #{gridConnectedElectricityListScreenshot}, #{gridConnectedElectricityListScreenshotDesc}, #{gridConnectedElectricityListScreenshotDescEn}, #{gridConnectedElectricitySalesInvoiceScreenshot}, #{gridConnectedElectricitySalesInvoiceScreenshotDesc}, #{gridConnectedElectricitySalesInvoiceScreenshotDescEn}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into project_registration_data(project_id, power_generation_facilities_address, power_generation_facilities_address_lan_lon, power_generation_facilities_address_screenshot, power_generation_facilities_address_screenshot_desc, power_generation_facilities_address_screenshot_desc_en, site_photo, site_near_photo, site_door_photo, contract, project_name, power_generation_facility_owner_name, site_consumer_name, grid_operator_name, contract_key_info_en, contract_screenshot, contract_screenshot_desc, contract_screenshot_desc_en, primary_wiring_diagram, capacity, site_consumptive_electricity_list, site_consumptive_electricity_sales_invoice, grid_connected_electricity_list, grid_connected_electricity_sales_invoice, meter, site_consumptive_electricity_list_screenshot, site_consumptive_electricity_list_screenshot_desc, site_consumptive_electricity_list_screenshot_desc_en, site_consumptive_electricity_sales_invoice_screenshot, site_consumptive_electricity_sales_invoice_screenshot_desc, site_consumptive_electricity_sales_invoice_screenshot_desc_en, grid_connected_electricity_list_screenshot, grid_connected_electricity_list_screenshot_desc, grid_connected_electricity_list_screenshot_desc_en, grid_connected_electricity_sales_invoice_screenshot, grid_connected_electricity_sales_invoice_screenshot_desc, grid_connected_electricity_sales_invoice_screenshot_desc_en, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.projectId}, #{entity.powerGenerationFacilitiesAddress}, #{entity.powerGenerationFacilitiesAddressLanLon}, #{entity.powerGenerationFacilitiesAddressScreenshot}, #{entity.powerGenerationFacilitiesAddressScreenshotDesc}, #{entity.powerGenerationFacilitiesAddressScreenshotDescEn}, #{entity.sitePhoto}, #{entity.siteNearPhoto}, #{entity.siteDoorPhoto}, #{entity.contract}, #{entity.projectName}, #{entity.powerGenerationFacilityOwnerName}, #{entity.siteConsumerName}, #{entity.gridOperatorName}, #{entity.contractKeyInfoEn}, #{entity.contractScreenshot}, #{entity.contractScreenshotDesc}, #{entity.contractScreenshotDescEn}, #{entity.primaryWiringDiagram}, #{entity.capacity}, #{entity.siteConsumptiveElectricityList}, #{entity.siteConsumptiveElectricitySalesInvoice}, #{entity.gridConnectedElectricityList}, #{entity.gridConnectedElectricitySalesInvoice}, #{entity.meter}, #{entity.siteConsumptiveElectricityListScreenshot}, #{entity.siteConsumptiveElectricityListScreenshotDesc}, #{entity.siteConsumptiveElectricityListScreenshotDescEn}, #{entity.siteConsumptiveElectricitySalesInvoiceScreenshot}, #{entity.siteConsumptiveElectricitySalesInvoiceScreenshotDesc}, #{entity.siteConsumptiveElectricitySalesInvoiceScreenshotDescEn}, #{entity.gridConnectedElectricityListScreenshot}, #{entity.gridConnectedElectricityListScreenshotDesc}, #{entity.gridConnectedElectricityListScreenshotDescEn}, #{entity.gridConnectedElectricitySalesInvoiceScreenshot}, #{entity.gridConnectedElectricitySalesInvoiceScreenshotDesc}, #{entity.gridConnectedElectricitySalesInvoiceScreenshotDescEn}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into project_registration_data(project_id, power_generation_facilities_address, power_generation_facilities_address_lan_lon, power_generation_facilities_address_screenshot, power_generation_facilities_address_screenshot_desc, power_generation_facilities_address_screenshot_desc_en, site_photo, site_near_photo, site_door_photo, contract, project_name, power_generation_facility_owner_name, site_consumer_name, grid_operator_name, contract_key_info_en, contract_screenshot, contract_screenshot_desc, contract_screenshot_desc_en, primary_wiring_diagram, capacity, site_consumptive_electricity_list, site_consumptive_electricity_sales_invoice, grid_connected_electricity_list, grid_connected_electricity_sales_invoice, meter, site_consumptive_electricity_list_screenshot, site_consumptive_electricity_list_screenshot_desc, site_consumptive_electricity_list_screenshot_desc_en, site_consumptive_electricity_sales_invoice_screenshot, site_consumptive_electricity_sales_invoice_screenshot_desc, site_consumptive_electricity_sales_invoice_screenshot_desc_en, grid_connected_electricity_list_screenshot, grid_connected_electricity_list_screenshot_desc, grid_connected_electricity_list_screenshot_desc_en, grid_connected_electricity_sales_invoice_screenshot, grid_connected_electricity_sales_invoice_screenshot_desc, grid_connected_electricity_sales_invoice_screenshot_desc_en, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.projectId}, #{entity.powerGenerationFacilitiesAddress}, #{entity.powerGenerationFacilitiesAddressLanLon}, #{entity.powerGenerationFacilitiesAddressScreenshot}, #{entity.powerGenerationFacilitiesAddressScreenshotDesc}, #{entity.powerGenerationFacilitiesAddressScreenshotDescEn}, #{entity.sitePhoto}, #{entity.siteNearPhoto}, #{entity.siteDoorPhoto}, #{entity.contract}, #{entity.projectName}, #{entity.powerGenerationFacilityOwnerName}, #{entity.siteConsumerName}, #{entity.gridOperatorName}, #{entity.contractKeyInfoEn}, #{entity.contractScreenshot}, #{entity.contractScreenshotDesc}, #{entity.contractScreenshotDescEn}, #{entity.primaryWiringDiagram}, #{entity.capacity}, #{entity.siteConsumptiveElectricityList}, #{entity.siteConsumptiveElectricitySalesInvoice}, #{entity.gridConnectedElectricityList}, #{entity.gridConnectedElectricitySalesInvoice}, #{entity.meter}, #{entity.siteConsumptiveElectricityListScreenshot}, #{entity.siteConsumptiveElectricityListScreenshotDesc}, #{entity.siteConsumptiveElectricityListScreenshotDescEn}, #{entity.siteConsumptiveElectricitySalesInvoiceScreenshot}, #{entity.siteConsumptiveElectricitySalesInvoiceScreenshotDesc}, #{entity.siteConsumptiveElectricitySalesInvoiceScreenshotDescEn}, #{entity.gridConnectedElectricityListScreenshot}, #{entity.gridConnectedElectricityListScreenshotDesc}, #{entity.gridConnectedElectricityListScreenshotDescEn}, #{entity.gridConnectedElectricitySalesInvoiceScreenshot}, #{entity.gridConnectedElectricitySalesInvoiceScreenshotDesc}, #{entity.gridConnectedElectricitySalesInvoiceScreenshotDescEn}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        project_id = values(project_id),
+        power_generation_facilities_address = values(power_generation_facilities_address),
+        power_generation_facilities_address_lan_lon = values(power_generation_facilities_address_lan_lon),
+        power_generation_facilities_address_screenshot = values(power_generation_facilities_address_screenshot),
+        power_generation_facilities_address_screenshot_desc = values(power_generation_facilities_address_screenshot_desc),
+        power_generation_facilities_address_screenshot_desc_en = values(power_generation_facilities_address_screenshot_desc_en),
+        site_photo = values(site_photo),
+        site_near_photo = values(site_near_photo),
+        site_door_photo = values(site_door_photo),
+        contract = values(contract),
+        project_name = values(project_name),
+        power_generation_facility_owner_name = values(power_generation_facility_owner_name),
+        site_consumer_name = values(site_consumer_name),
+        grid_operator_name = values(grid_operator_name),
+        contract_key_info_en = values(contract_key_info_en),
+        contract_screenshot = values(contract_screenshot),
+        contract_screenshot_desc = values(contract_screenshot_desc),
+        contract_screenshot_desc_en = values(contract_screenshot_desc_en),
+        primary_wiring_diagram = values(primary_wiring_diagram),
+        capacity = values(capacity),
+        site_consumptive_electricity_list = values(site_consumptive_electricity_list),
+        site_consumptive_electricity_sales_invoice = values(site_consumptive_electricity_sales_invoice),
+        grid_connected_electricity_list = values(grid_connected_electricity_list),
+        grid_connected_electricity_sales_invoice = values(grid_connected_electricity_sales_invoice),
+        meter = values(meter),
+        site_consumptive_electricity_list_screenshot = values(site_consumptive_electricity_list_screenshot),
+        site_consumptive_electricity_list_screenshot_desc = values(site_consumptive_electricity_list_screenshot_desc),
+        site_consumptive_electricity_list_screenshot_desc_en = values(site_consumptive_electricity_list_screenshot_desc_en),
+        site_consumptive_electricity_sales_invoice_screenshot = values(site_consumptive_electricity_sales_invoice_screenshot),
+        site_consumptive_electricity_sales_invoice_screenshot_desc = values(site_consumptive_electricity_sales_invoice_screenshot_desc),
+        site_consumptive_electricity_sales_invoice_screenshot_desc_en = values(site_consumptive_electricity_sales_invoice_screenshot_desc_en),
+        grid_connected_electricity_list_screenshot = values(grid_connected_electricity_list_screenshot),
+        grid_connected_electricity_list_screenshot_desc = values(grid_connected_electricity_list_screenshot_desc),
+        grid_connected_electricity_list_screenshot_desc_en = values(grid_connected_electricity_list_screenshot_desc_en),
+        grid_connected_electricity_sales_invoice_screenshot = values(grid_connected_electricity_sales_invoice_screenshot),
+        grid_connected_electricity_sales_invoice_screenshot_desc = values(grid_connected_electricity_sales_invoice_screenshot_desc),
+        grid_connected_electricity_sales_invoice_screenshot_desc_en = values(grid_connected_electricity_sales_invoice_screenshot_desc_en),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update project_registration_data
+        <set>
+            <if test="projectId != null">
+                project_id = #{projectId},
+            </if>
+            <if test="powerGenerationFacilitiesAddress != null and powerGenerationFacilitiesAddress != ''">
+                power_generation_facilities_address = #{powerGenerationFacilitiesAddress},
+            </if>
+            <if test="powerGenerationFacilitiesAddressLanLon != null and powerGenerationFacilitiesAddressLanLon != ''">
+                power_generation_facilities_address_lan_lon = #{powerGenerationFacilitiesAddressLanLon},
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshot != null and powerGenerationFacilitiesAddressScreenshot != ''">
+                power_generation_facilities_address_screenshot = #{powerGenerationFacilitiesAddressScreenshot},
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshotDesc != null and powerGenerationFacilitiesAddressScreenshotDesc != ''">
+                power_generation_facilities_address_screenshot_desc = #{powerGenerationFacilitiesAddressScreenshotDesc},
+            </if>
+            <if test="powerGenerationFacilitiesAddressScreenshotDescEn != null and powerGenerationFacilitiesAddressScreenshotDescEn != ''">
+                power_generation_facilities_address_screenshot_desc_en = #{powerGenerationFacilitiesAddressScreenshotDescEn},
+            </if>
+            <if test="sitePhoto != null and sitePhoto != ''">
+                site_photo = #{sitePhoto},
+            </if>
+            <if test="siteNearPhoto != null and siteNearPhoto != ''">
+                site_near_photo = #{siteNearPhoto},
+            </if>
+            <if test="siteDoorPhoto != null and siteDoorPhoto != ''">
+                site_door_photo = #{siteDoorPhoto},
+            </if>
+            <if test="contract != null and contract != ''">
+                contract = #{contract},
+            </if>
+            <if test="projectName != null and projectName != ''">
+                project_name = #{projectName},
+            </if>
+            <if test="powerGenerationFacilityOwnerName != null and powerGenerationFacilityOwnerName != ''">
+                power_generation_facility_owner_name = #{powerGenerationFacilityOwnerName},
+            </if>
+            <if test="siteConsumerName != null and siteConsumerName != ''">
+                site_consumer_name = #{siteConsumerName},
+            </if>
+            <if test="gridOperatorName != null and gridOperatorName != ''">
+                grid_operator_name = #{gridOperatorName},
+            </if>
+            <if test="contractKeyInfoEn != null and contractKeyInfoEn != ''">
+                contract_key_info_en = #{contractKeyInfoEn},
+            </if>
+            <if test="contractScreenshot != null and contractScreenshot != ''">
+                contract_screenshot = #{contractScreenshot},
+            </if>
+            <if test="contractScreenshotDesc != null and contractScreenshotDesc != ''">
+                contract_screenshot_desc = #{contractScreenshotDesc},
+            </if>
+            <if test="contractScreenshotDescEn != null and contractScreenshotDescEn != ''">
+                contract_screenshot_desc_en = #{contractScreenshotDescEn},
+            </if>
+            <if test="primaryWiringDiagram != null and primaryWiringDiagram != ''">
+                primary_wiring_diagram = #{primaryWiringDiagram},
+            </if>
+            <if test="capacity != null">
+                capacity = #{capacity},
+            </if>
+            <if test="siteConsumptiveElectricityList != null and siteConsumptiveElectricityList != ''">
+                site_consumptive_electricity_list = #{siteConsumptiveElectricityList},
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoice != null and siteConsumptiveElectricitySalesInvoice != ''">
+                site_consumptive_electricity_sales_invoice = #{siteConsumptiveElectricitySalesInvoice},
+            </if>
+            <if test="gridConnectedElectricityList != null and gridConnectedElectricityList != ''">
+                grid_connected_electricity_list = #{gridConnectedElectricityList},
+            </if>
+            <if test="gridConnectedElectricitySalesInvoice != null and gridConnectedElectricitySalesInvoice != ''">
+                grid_connected_electricity_sales_invoice = #{gridConnectedElectricitySalesInvoice},
+            </if>
+            <if test="meter != null and meter != ''">
+                meter = #{meter},
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshot != null and siteConsumptiveElectricityListScreenshot != ''">
+                site_consumptive_electricity_list_screenshot = #{siteConsumptiveElectricityListScreenshot},
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshotDesc != null and siteConsumptiveElectricityListScreenshotDesc != ''">
+                site_consumptive_electricity_list_screenshot_desc = #{siteConsumptiveElectricityListScreenshotDesc},
+            </if>
+            <if test="siteConsumptiveElectricityListScreenshotDescEn != null and siteConsumptiveElectricityListScreenshotDescEn != ''">
+                site_consumptive_electricity_list_screenshot_desc_en = #{siteConsumptiveElectricityListScreenshotDescEn},
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshot != null and siteConsumptiveElectricitySalesInvoiceScreenshot != ''">
+                site_consumptive_electricity_sales_invoice_screenshot = #{siteConsumptiveElectricitySalesInvoiceScreenshot},
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshotDesc != null and siteConsumptiveElectricitySalesInvoiceScreenshotDesc != ''">
+                site_consumptive_electricity_sales_invoice_screenshot_desc = #{siteConsumptiveElectricitySalesInvoiceScreenshotDesc},
+            </if>
+            <if test="siteConsumptiveElectricitySalesInvoiceScreenshotDescEn != null and siteConsumptiveElectricitySalesInvoiceScreenshotDescEn != ''">
+                site_consumptive_electricity_sales_invoice_screenshot_desc_en = #{siteConsumptiveElectricitySalesInvoiceScreenshotDescEn},
+            </if>
+            <if test="gridConnectedElectricityListScreenshot != null and gridConnectedElectricityListScreenshot != ''">
+                grid_connected_electricity_list_screenshot = #{gridConnectedElectricityListScreenshot},
+            </if>
+            <if test="gridConnectedElectricityListScreenshotDesc != null and gridConnectedElectricityListScreenshotDesc != ''">
+                grid_connected_electricity_list_screenshot_desc = #{gridConnectedElectricityListScreenshotDesc},
+            </if>
+            <if test="gridConnectedElectricityListScreenshotDescEn != null and gridConnectedElectricityListScreenshotDescEn != ''">
+                grid_connected_electricity_list_screenshot_desc_en = #{gridConnectedElectricityListScreenshotDescEn},
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshot != null and gridConnectedElectricitySalesInvoiceScreenshot != ''">
+                grid_connected_electricity_sales_invoice_screenshot = #{gridConnectedElectricitySalesInvoiceScreenshot},
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshotDesc != null and gridConnectedElectricitySalesInvoiceScreenshotDesc != ''">
+                grid_connected_electricity_sales_invoice_screenshot_desc = #{gridConnectedElectricitySalesInvoiceScreenshotDesc},
+            </if>
+            <if test="gridConnectedElectricitySalesInvoiceScreenshotDescEn != null and gridConnectedElectricitySalesInvoiceScreenshotDescEn != ''">
+                grid_connected_electricity_sales_invoice_screenshot_desc_en = #{gridConnectedElectricitySalesInvoiceScreenshotDescEn},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from project_registration_data where id = #{id}
+    </delete>
+
+</mapper>
+

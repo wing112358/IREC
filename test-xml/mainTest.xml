@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IREC主流程测试" verbose="10" time-out="600000" allow-return-values="true">
+    <test name="流程测试">
+        <classes>
+            <class name="org.irecapi.Irec.createTest">
+                <methods>
+                    <include name="createTest" description="创建项目"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.createSitePhotoTest">
+                <methods>
+                    <include name="createSitePhotoTest" description="完善现场图片"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.createMapLocationTest">
+                <methods>
+                    <include name="createMapLocationTest" description="完善地图信息"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.createContractTest">
+                <methods>
+                    <include name="createContractTest" description="完善合同信息"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.createPrimaryWiringDiagramTest">
+                <methods>
+                    <include name="createPrimaryWiringDiagramTest" description="完善一次性接线图信息"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.createMeasurementSampleTest">
+                <methods>
+                    <include name="createMeasurementSampleTest" description="完善计量信息"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.generateSingleDocumentTest">
+                <methods>
+                    <include name="generateSingleDocumentTest" description="生成子项目注册文件"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.HandleDocumentTest">
+                <methods>
+                    <include name="HandleDocumentTest" description="处理子项目注册文件"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.FinishProjectTest">
+                <methods>
+                    <include name="FinishProjectTest" description="完成子项目整理"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.previewTest">
+                <methods>
+                    <include name="previewTest" description="项目分析"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.confirmTest">
+                <methods>
+                    <include name="confirmTest" description="确认分析"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.generateDocumentTest">
+                <methods>
+                    <include name="generateDocumentTest" description="生成注册文件列表"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.signDocumentTest">
+                <methods>
+                    <include name="signDocumentTest" description="文件签章"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.changeStatusTest">
+                <methods>
+                    <include name="changeStatusTest" description="改变状态"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.queryDetailTest">
+                <methods>
+                    <include name="queryDetailTest" description="查询注册信息"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.backFillTest">
+                <methods>
+                    <include name="backFillTest" description="注册回填"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

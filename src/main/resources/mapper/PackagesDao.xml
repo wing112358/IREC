@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.PackagesDao">
+
+    <resultMap type="org.irecapi.entity.Packages" id="PackagesMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="capacity" column="capacity" jdbcType="NUMERIC"/>
+        <result property="energyType" column="energy_type" jdbcType="VARCHAR"/>
+        <result property="technologyType" column="technology_type" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="registrationDate" column="registration_date" jdbcType="TIMESTAMP"/>
+        <result property="contentEnId" column="content_en_id" jdbcType="INTEGER"/>
+        <result property="creatorUserId" column="creator_user_id" jdbcType="INTEGER"/>
+        <result property="creatorUserName" column="creator_user_name" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="PackagesMap">
+        select
+          id, name, capacity, energy_type, technology_type, status, registration_date, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at
+        from packages
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="PackagesMap">
+        select
+          id, name, capacity, energy_type, technology_type, status, registration_date, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at
+        from packages
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                and technology_type = #{technologyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="registrationDate != null">
+                and registration_date = #{registrationDate}
+            </if>
+            <if test="contentEnId != null">
+                and content_en_id = #{contentEnId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from packages
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="capacity != null">
+                and capacity = #{capacity}
+            </if>
+            <if test="energyType != null and energyType != ''">
+                and energy_type = #{energyType}
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                and technology_type = #{technologyType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="registrationDate != null">
+                and registration_date = #{registrationDate}
+            </if>
+            <if test="contentEnId != null">
+                and content_en_id = #{contentEnId}
+            </if>
+            <if test="creatorUserId != null">
+                and creator_user_id = #{creatorUserId}
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                and creator_user_name = #{creatorUserName}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into packages(name, capacity, energy_type, technology_type, status, registration_date, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values (#{name}, #{capacity}, #{energyType}, #{technologyType}, #{status}, #{registrationDate}, #{contentEnId}, #{creatorUserId}, #{creatorUserName}, #{isDelete}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into packages(name, capacity, energy_type, technology_type, status, registration_date, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.name}, #{entity.capacity}, #{entity.energyType}, #{entity.technologyType}, #{entity.status}, #{entity.registrationDate}, #{entity.contentEnId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into packages(name, capacity, energy_type, technology_type, status, registration_date, content_en_id, creator_user_id, creator_user_name, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.capacity}, #{entity.energyType}, #{entity.technologyType}, #{entity.status}, #{entity.registrationDate}, #{entity.contentEnId}, #{entity.creatorUserId}, #{entity.creatorUserName}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        name = values(name),
+        capacity = values(capacity),
+        energy_type = values(energy_type),
+        technology_type = values(technology_type),
+        status = values(status),
+        registration_date = values(registration_date),
+        content_en_id = values(content_en_id),
+        creator_user_id = values(creator_user_id),
+        creator_user_name = values(creator_user_name),
+        is_delete = values(is_delete),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update packages
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="capacity != null">
+                capacity = #{capacity},
+            </if>
+            <if test="energyType != null and energyType != ''">
+                energy_type = #{energyType},
+            </if>
+            <if test="technologyType != null and technologyType != ''">
+                technology_type = #{technologyType},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="registrationDate != null">
+                registration_date = #{registrationDate},
+            </if>
+            <if test="contentEnId != null">
+                content_en_id = #{contentEnId},
+            </if>
+            <if test="creatorUserId != null">
+                creator_user_id = #{creatorUserId},
+            </if>
+            <if test="creatorUserName != null and creatorUserName != ''">
+                creator_user_name = #{creatorUserName},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from packages where id = #{id}
+    </delete>
+
+</mapper>
+

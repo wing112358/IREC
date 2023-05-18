@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.RegistrationResultDao">
+
+    <resultMap type="org.irecapi.entity.RegistrationResult" id="RegistrationResultMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="packageId" column="package_id" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="registrationOrganizationIrecAccountId" column="registration_organization_irec_account_id" jdbcType="VARCHAR"/>
+        <result property="deviceId" column="device_id" jdbcType="VARCHAR"/>
+        <result property="registrationEffectiveTime" column="registration_effective_time" jdbcType="TIMESTAMP"/>
+        <result property="issueRecipientIrecAccountId" column="issue_recipient_irec_account_id" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdBy" column="created_by" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="RegistrationResultMap">
+        select
+          id, package_id, status, registration_organization_irec_account_id, device_id, registration_effective_time, issue_recipient_irec_account_id, is_delete, created_by, created_at, updated_at
+        from registration_result
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="RegistrationResultMap">
+        select
+          id, package_id, status, registration_organization_irec_account_id, device_id, registration_effective_time, issue_recipient_irec_account_id, is_delete, created_by, created_at, updated_at
+        from registration_result
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="registrationOrganizationIrecAccountId != null and registrationOrganizationIrecAccountId != ''">
+                and registration_organization_irec_account_id = #{registrationOrganizationIrecAccountId}
+            </if>
+            <if test="deviceId != null and deviceId != ''">
+                and device_id = #{deviceId}
+            </if>
+            <if test="registrationEffectiveTime != null">
+                and registration_effective_time = #{registrationEffectiveTime}
+            </if>
+            <if test="issueRecipientIrecAccountId != null and issueRecipientIrecAccountId != ''">
+                and issue_recipient_irec_account_id = #{issueRecipientIrecAccountId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from registration_result
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="registrationOrganizationIrecAccountId != null and registrationOrganizationIrecAccountId != ''">
+                and registration_organization_irec_account_id = #{registrationOrganizationIrecAccountId}
+            </if>
+            <if test="deviceId != null and deviceId != ''">
+                and device_id = #{deviceId}
+            </if>
+            <if test="registrationEffectiveTime != null">
+                and registration_effective_time = #{registrationEffectiveTime}
+            </if>
+            <if test="issueRecipientIrecAccountId != null and issueRecipientIrecAccountId != ''">
+                and issue_recipient_irec_account_id = #{issueRecipientIrecAccountId}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_result(package_id, status, registration_organization_irec_account_id, device_id, registration_effective_time, issue_recipient_irec_account_id, is_delete, created_by, created_at, updated_at)
+        values (#{packageId}, #{status}, #{registrationOrganizationIrecAccountId}, #{deviceId}, #{registrationEffectiveTime}, #{issueRecipientIrecAccountId}, #{isDelete}, #{createdBy}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_result(package_id, status, registration_organization_irec_account_id, device_id, registration_effective_time, issue_recipient_irec_account_id, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.packageId}, #{entity.status}, #{entity.registrationOrganizationIrecAccountId}, #{entity.deviceId}, #{entity.registrationEffectiveTime}, #{entity.issueRecipientIrecAccountId}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_result(package_id, status, registration_organization_irec_account_id, device_id, registration_effective_time, issue_recipient_irec_account_id, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.packageId}, #{entity.status}, #{entity.registrationOrganizationIrecAccountId}, #{entity.deviceId}, #{entity.registrationEffectiveTime}, #{entity.issueRecipientIrecAccountId}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        package_id = values(package_id),
+        status = values(status),
+        registration_organization_irec_account_id = values(registration_organization_irec_account_id),
+        device_id = values(device_id),
+        registration_effective_time = values(registration_effective_time),
+        issue_recipient_irec_account_id = values(issue_recipient_irec_account_id),
+        is_delete = values(is_delete),
+        created_by = values(created_by),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update registration_result
+        <set>
+            <if test="packageId != null">
+                package_id = #{packageId},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="registrationOrganizationIrecAccountId != null and registrationOrganizationIrecAccountId != ''">
+                registration_organization_irec_account_id = #{registrationOrganizationIrecAccountId},
+            </if>
+            <if test="deviceId != null and deviceId != ''">
+                device_id = #{deviceId},
+            </if>
+            <if test="registrationEffectiveTime != null">
+                registration_effective_time = #{registrationEffectiveTime},
+            </if>
+            <if test="issueRecipientIrecAccountId != null and issueRecipientIrecAccountId != ''">
+                issue_recipient_irec_account_id = #{issueRecipientIrecAccountId},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdBy != null">
+                created_by = #{createdBy},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from registration_result where id = #{id}
+    </delete>
+
+</mapper>
+

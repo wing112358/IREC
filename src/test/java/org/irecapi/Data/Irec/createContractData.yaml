@@ -1,0 +1,14 @@
+normal:
+  expectedresult: 操作成功
+  params:
+    contractKeyInfoChinese:
+      gridOperatorName: "赣州供电局"
+      powerGenerationFacilityOwnerName: "湖州能源公司"
+      siteConsumerName: "张三果"
+    contractKeyInfoEnglish:
+      gridOperatorName: "Ganzhou Power Supply Bureau"
+      powerGenerationFacilityOwnerName: "Huzhou Energy Company"
+      siteConsumerName: "Zhang Sanguo"
+
+
+

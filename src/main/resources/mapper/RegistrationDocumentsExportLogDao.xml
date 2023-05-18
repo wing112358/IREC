@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.RegistrationDocumentsExportLogDao">
+
+    <resultMap type="org.irecapi.entity.RegistrationDocumentsExportLog" id="RegistrationDocumentsExportLogMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="packageId" column="package_id" jdbcType="INTEGER"/>
+        <result property="registrationDocumentsIds" column="registration_documents_ids" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdBy" column="created_by" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="RegistrationDocumentsExportLogMap">
+        select
+          id, package_id, registration_documents_ids, status, is_delete, created_by, created_at, updated_at
+        from registration_documents_export_log
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="RegistrationDocumentsExportLogMap">
+        select
+          id, package_id, registration_documents_ids, status, is_delete, created_by, created_at, updated_at
+        from registration_documents_export_log
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="registrationDocumentsIds != null and registrationDocumentsIds != ''">
+                and registration_documents_ids = #{registrationDocumentsIds}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from registration_documents_export_log
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="registrationDocumentsIds != null and registrationDocumentsIds != ''">
+                and registration_documents_ids = #{registrationDocumentsIds}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdBy != null">
+                and created_by = #{createdBy}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_documents_export_log(package_id, registration_documents_ids, status, is_delete, created_by, created_at, updated_at)
+        values (#{packageId}, #{registrationDocumentsIds}, #{status}, #{isDelete}, #{createdBy}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_documents_export_log(package_id, registration_documents_ids, status, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.packageId}, #{entity.registrationDocumentsIds}, #{entity.status}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into registration_documents_export_log(package_id, registration_documents_ids, status, is_delete, created_by, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.packageId}, #{entity.registrationDocumentsIds}, #{entity.status}, #{entity.isDelete}, #{entity.createdBy}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        package_id = values(package_id),
+        registration_documents_ids = values(registration_documents_ids),
+        status = values(status),
+        is_delete = values(is_delete),
+        created_by = values(created_by),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update registration_documents_export_log
+        <set>
+            <if test="packageId != null">
+                package_id = #{packageId},
+            </if>
+            <if test="registrationDocumentsIds != null and registrationDocumentsIds != ''">
+                registration_documents_ids = #{registrationDocumentsIds},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdBy != null">
+                created_by = #{createdBy},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from registration_documents_export_log where id = #{id}
+    </delete>
+
+</mapper>
+

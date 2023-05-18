@@ -1,0 +1,129 @@
+package org.irecapi.Irec;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.http.Header;
+import org.irecapi.BaseTest;
+import org.irecapi.Bean.Irec.CreateMapLocationBean;
+import org.irecapi.Bean.Irec.CreatePrimaryWiringDiagramBean;
+import org.irecapi.Utils.TestngListener;
+import org.irecapi.Utils.YamlDataHelper;
+import org.irecapi.entity.Project;
+import org.irecapi.entity.ProjectRegistrationData;
+import org.testng.Assert;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Random;
+
+@Slf4j
+@Listeners({TestngListener.class})
+public class createPrimaryWiringDiagramTest extends BaseTest {
+
+    public Header[] headers;
+
+    public Long projectId;
+    public double capacity;
+
+
+    @BeforeClass(alwaysRun = true)
+    public void setHeaderAndWorkId(ITestContext ctx){
+        //获取header
+        this.headers= (Header[])ctx.getAttribute("headers");
+        this.projectId=(Long)ctx.getAttribute("projectId");
+
+    }
+
+
+
+    @Test(dataProvider = "addparam",description = "维护一次接线图信息",groups = {"CreatePrimaryWiringDiagram"},dependsOnGroups = {"createContract"})
+    public void createPrimaryWiringDiagramTest(CreatePrimaryWiringDiagramBean createPrimaryWiringDiagramBean, String result){
+
+        JSONObject response=null;
+
+        try{
+
+            log.info("准备开始---------");
+            response=this.createService.createDiagram(createPrimaryWiringDiagramBean, result,this.headers);
+            log.info(response.toString());
+
+
+
+        }catch (IOException e){
+            log.info("开始执行---------");
+            e.printStackTrace();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+        //核对一次接线图和装机容量
+        ProjectRegistrationData projectData=this.projectRegistrationDataService.queryByProjectId(this.projectId);
+        Project project=this.projectService.queryById(this.projectId);
+
+        //核对项目状态
+        int status=project.getStatus();
+
+        Assert.assertEquals(status,1,"项目表状态核对不通过");
+
+        Double pCapicity=project.getCapacity();
+        Assert.assertEquals(pCapicity,this.capacity,"项目表装机容量校验不通过");
+        Double capicity=projectData.getCapacity();
+        JSONArray primary=JSONArray.parseArray(projectData.getPrimaryWiringDiagram());
+        Assert.assertEquals(capicity,this.capacity,"信息表装机容量核对一致");
+        Assert.assertEquals(primary.get(0),createPrimaryWiringDiagramBean.getPrimaryWiringDiagramAtt().get(0),"基础信息表合同信息核对一致");
+
+
+
+    }
+
+
+
+    @DataProvider(name = "addparam")
+    public Object[][] addparam() throws Exception {
+
+        return getData("normal");
+
+    }
+
+    public  Object[][] getData(String casename) throws Exception {
+        JSONObject jsonresult=new YamlDataHelper().getYamlDataByCase("Irec","createPrimaryWiringDiagramData",casename);
+
+
+        String expectedresult=jsonresult.getString("expectedresult");
+
+        JSONObject param=jsonresult.getJSONObject("params");
+
+
+        CreatePrimaryWiringDiagramBean createPrimaryWiringDiagramBean=param.toJavaObject(CreatePrimaryWiringDiagramBean.class);
+
+        createPrimaryWiringDiagramBean.setProjectId(this.projectId);
+        Random random = new Random();
+        int randomNum1 = random.nextInt(9999 - 1 + 1) + 1;
+        int randomNum2 = random.nextInt(999 - 1 + 1) + 1;
+        String capacity1 =randomNum1+"."+randomNum2;
+        this.capacity=Double.parseDouble(capacity1);
+        createPrimaryWiringDiagramBean.setCapacity(this.capacity);
+
+        List<JSONArray> temp=this.upload(1);
+
+        createPrimaryWiringDiagramBean.setPrimaryWiringDiagramAtt(temp.get(0));
+
+
+        return new Object[][]{{
+            createPrimaryWiringDiagramBean,
+            expectedresult
+        },};
+
+    }
+
+
+
+}

@@ -1,0 +1,16 @@
+normal:
+  expectedresult: 操作成功
+  params:
+    meterList:
+      -
+        meterId: "55232"
+        meterMeasurementType: "Power Generation"
+        meterType: "scalar"
+      -
+        meterId: "4352432"
+        meterMeasurementType: "On-site Consume"
+        meterType: "interval"
+
+
+
+
