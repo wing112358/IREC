@@ -1,28 +1,27 @@
 package org.irecapi.Irec;
 
-import cn.hutool.core.date.DateTime;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.Header;
 import org.irecapi.BaseTest;
 import org.irecapi.Bean.Irec.BackFillBean;
-import org.irecapi.Bean.Irec.GenerateDocumentBean;
+import org.irecapi.Bean.Irec.CreateResultBean;
 import org.irecapi.Utils.TestngListener;
-import org.irecapi.entity.Project;
-import org.testng.Assert;
 import org.testng.ITestContext;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 @Slf4j
 @Listeners({TestngListener.class})
-public class backFillTest extends BaseTest {
+public class createResultTest extends BaseTest {
 
     public Header[] headers;
 
-    public JSONObject resultContent;
+    public Integer issueId;
 
 
 
@@ -30,21 +29,22 @@ public class backFillTest extends BaseTest {
     public void setHeaderAndWorkId(ITestContext ctx){
         //获取header
         this.headers= (Header[])ctx.getAttribute("headers");
-        this.resultContent=(JSONObject) ctx.getAttribute("resultContent");
+        Long a=(Long) ctx.getAttribute("issueId");
+        this.issueId=a.intValue() ;
 
 
 
     }
 
-    @Test(dataProvider = "addparam",description = "注册回填",groups = {"backFill"},dependsOnGroups = {"queryDetail"})
-    public void backFillTest(BackFillBean backfillBean, String result){
+    @Test(dataProvider = "addparam",description = "签发回填",groups = {"createResult"},dependsOnGroups = {"finish"})
+    public void createResultTest(CreateResultBean createResultBean, String result){
 
         JSONObject response=null;
 
         try{
 
             log.info("准备开始---------");
-            response=this.packageService.backfill(backfillBean, result,this.headers);
+            response=this.issueService.createResult(result, this.headers,createResultBean);
             log.info(response.toString());
 
 
@@ -81,8 +81,7 @@ public class backFillTest extends BaseTest {
 
         String expectedresult="操作成功";
 
-        BackFillBean backFillBean=new BackFillBean("DV008899",this.resultContent.getIntValue("id"),this.resultContent.getString("issueRecipientIrecAccountId"),
-                "1672502400000",this.resultContent.getString("registrationOrganizationIrecAccountId"));
+        CreateResultBean backFillBean=new CreateResultBean(this.issueId,1);
 
 
         return new Object[][]{{

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.irecapi.dao.IssuanceDao">
+
+    <resultMap type="org.irecapi.entity.Issuance" id="IssuanceMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="packageId" column="package_id" jdbcType="INTEGER"/>
+        <result property="packageName" column="package_name" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+        <result property="issuanceTimeStart" column="issuance_time_start" jdbcType="TIMESTAMP"/>
+        <result property="issuanceTimeEnd" column="issuance_time_end" jdbcType="TIMESTAMP"/>
+        <result property="issuanceTimeRange" column="issuance_time_range" jdbcType="VARCHAR"/>
+        <result property="issuedQuantity" column="issued_quantity" jdbcType="NUMERIC"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="IssuanceMap">
+        select
+          id, package_id, package_name, status, type, issuance_time_start, issuance_time_end, issuance_time_range, issued_quantity, is_delete, created_at, updated_at
+        from issuance
+        where id = #{id}
+    </select>
+
+    <!--查询单个-->
+    <select id="queryByPackageId" resultMap="IssuanceMap">
+        select
+            id, package_id, package_name, status, type, issuance_time_start, issuance_time_end, issuance_time_range, issued_quantity, is_delete, created_at, updated_at
+        from issuance
+        where package_id = #{packageId} and issuance_time_start=#{startTime}
+        limit 1
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="IssuanceMap">
+        select
+          id, package_id, package_name, status, type, issuance_time_start, issuance_time_end, issuance_time_range, issued_quantity, is_delete, created_at, updated_at
+        from issuance
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="packageName != null and packageName != ''">
+                and package_name = #{packageName}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="issuanceTimeStart != null">
+                and issuance_time_start = #{issuanceTimeStart}
+            </if>
+            <if test="issuanceTimeEnd != null">
+                and issuance_time_end = #{issuanceTimeEnd}
+            </if>
+            <if test="issuanceTimeRange != null and issuanceTimeRange != ''">
+                and issuance_time_range = #{issuanceTimeRange}
+            </if>
+            <if test="issuedQuantity != null">
+                and issued_quantity = #{issuedQuantity}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from issuance
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="packageId != null">
+                and package_id = #{packageId}
+            </if>
+            <if test="packageName != null and packageName != ''">
+                and package_name = #{packageName}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+            <if test="issuanceTimeStart != null">
+                and issuance_time_start = #{issuanceTimeStart}
+            </if>
+            <if test="issuanceTimeEnd != null">
+                and issuance_time_end = #{issuanceTimeEnd}
+            </if>
+            <if test="issuanceTimeRange != null and issuanceTimeRange != ''">
+                and issuance_time_range = #{issuanceTimeRange}
+            </if>
+            <if test="issuedQuantity != null">
+                and issued_quantity = #{issuedQuantity}
+            </if>
+            <if test="isDelete != null">
+                and is_delete = #{isDelete}
+            </if>
+            <if test="createdAt != null">
+                and created_at = #{createdAt}
+            </if>
+            <if test="updatedAt != null">
+                and updated_at = #{updatedAt}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into issuance(package_id, package_name, status, type, issuance_time_start, issuance_time_end, issuance_time_range, issued_quantity, is_delete, created_at, updated_at)
+        values (#{packageId}, #{packageName}, #{status}, #{type}, #{issuanceTimeStart}, #{issuanceTimeEnd}, #{issuanceTimeRange}, #{issuedQuantity}, #{isDelete}, #{createdAt}, #{updatedAt})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into issuance(package_id, package_name, status, type, issuance_time_start, issuance_time_end, issuance_time_range, issued_quantity, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.packageId}, #{entity.packageName}, #{entity.status}, #{entity.type}, #{entity.issuanceTimeStart}, #{entity.issuanceTimeEnd}, #{entity.issuanceTimeRange}, #{entity.issuedQuantity}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into issuance(package_id, package_name, status, type, issuance_time_start, issuance_time_end, issuance_time_range, issued_quantity, is_delete, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.packageId}, #{entity.packageName}, #{entity.status}, #{entity.type}, #{entity.issuanceTimeStart}, #{entity.issuanceTimeEnd}, #{entity.issuanceTimeRange}, #{entity.issuedQuantity}, #{entity.isDelete}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        package_id = values(package_id),
+        package_name = values(package_name),
+        status = values(status),
+        type = values(type),
+        issuance_time_start = values(issuance_time_start),
+        issuance_time_end = values(issuance_time_end),
+        issuance_time_range = values(issuance_time_range),
+        issued_quantity = values(issued_quantity),
+        is_delete = values(is_delete),
+        created_at = values(created_at),
+        updated_at = values(updated_at)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update issuance
+        <set>
+            <if test="packageId != null">
+                package_id = #{packageId},
+            </if>
+            <if test="packageName != null and packageName != ''">
+                package_name = #{packageName},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="type != null and type != ''">
+                type = #{type},
+            </if>
+            <if test="issuanceTimeStart != null">
+                issuance_time_start = #{issuanceTimeStart},
+            </if>
+            <if test="issuanceTimeEnd != null">
+                issuance_time_end = #{issuanceTimeEnd},
+            </if>
+            <if test="issuanceTimeRange != null and issuanceTimeRange != ''">
+                issuance_time_range = #{issuanceTimeRange},
+            </if>
+            <if test="issuedQuantity != null">
+                issued_quantity = #{issuedQuantity},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt},
+            </if>
+            <if test="updatedAt != null">
+                updated_at = #{updatedAt},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from issuance where id = #{id}
+    </delete>
+
+</mapper>
+

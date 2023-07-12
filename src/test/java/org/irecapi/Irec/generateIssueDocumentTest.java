@@ -1,16 +1,13 @@
 package org.irecapi.Irec;
 
-import cn.hutool.core.date.DateTime;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.Header;
 import org.irecapi.BaseTest;
-import org.irecapi.Bean.Irec.BackFillBean;
 import org.irecapi.Bean.Irec.GenerateDocumentBean;
+import org.irecapi.Bean.Irec.IssueGenerateDocumentBean;
 import org.irecapi.Utils.TestngListener;
-import org.irecapi.entity.Project;
-import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
 
@@ -18,11 +15,13 @@ import java.io.IOException;
 
 @Slf4j
 @Listeners({TestngListener.class})
-public class backFillTest extends BaseTest {
+public class generateIssueDocumentTest extends BaseTest {
 
     public Header[] headers;
 
-    public JSONObject resultContent;
+    public Integer issueId;
+
+    public JSONArray issueFileList=new JSONArray();
 
 
 
@@ -30,21 +29,31 @@ public class backFillTest extends BaseTest {
     public void setHeaderAndWorkId(ITestContext ctx){
         //获取header
         this.headers= (Header[])ctx.getAttribute("headers");
-        this.resultContent=(JSONObject) ctx.getAttribute("resultContent");
+        Long a=(Long) ctx.getAttribute("issueId");
+        this.issueId=a.intValue() ;
 
 
 
     }
 
-    @Test(dataProvider = "addparam",description = "注册回填",groups = {"backFill"},dependsOnGroups = {"queryDetail"})
-    public void backFillTest(BackFillBean backfillBean, String result){
+    @AfterGroups(groups = {"generateIssueDocument"}, alwaysRun=true)
+    public void setWorkId(ITestContext ctx){
+        ctx.setAttribute("issueFileList", this.issueFileList);
+        log.info("请求放置的签发打包文件列表："+this.issueFileList);
+
+    }
+
+
+
+    @Test(dataProvider = "addparam",description = "生成签发文件",groups = {"generateIssueDocument"},dependsOnGroups = {"createIssuanceProjectMaterial"})
+    public JSONArray generateIssueDocumentTest(IssueGenerateDocumentBean issueGenerateDocumentBean, String result){
 
         JSONObject response=null;
 
         try{
 
             log.info("准备开始---------");
-            response=this.packageService.backfill(backfillBean, result,this.headers);
+            response=this.issueService.generateDocument( result,this.headers,issueGenerateDocumentBean);
             log.info(response.toString());
 
 
@@ -56,14 +65,16 @@ public class backFillTest extends BaseTest {
             throw new RuntimeException(e);
         }
 
-        //核对子项目及打包项目状态
-//        Project project =this.projectService.queryById(this);
-//        int status=project.getStatus();
-//
-//        Assert.assertEquals(status,2,"打包项目表状态核对不通过");
+        //放置文件list
+        this.issueFileList=response.getJSONArray("data");
+
+        //校验文件内容
 
 
 
+
+
+        return this.issueFileList;
 
     }
 
@@ -81,12 +92,11 @@ public class backFillTest extends BaseTest {
 
         String expectedresult="操作成功";
 
-        BackFillBean backFillBean=new BackFillBean("DV008899",this.resultContent.getIntValue("id"),this.resultContent.getString("issueRecipientIrecAccountId"),
-                "1672502400000",this.resultContent.getString("registrationOrganizationIrecAccountId"));
+        IssueGenerateDocumentBean generateDocumentBean=new IssueGenerateDocumentBean(this.issueId);
 
 
         return new Object[][]{{
-                backFillBean,
+            generateDocumentBean,
             expectedresult
         },};
 

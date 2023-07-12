@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.Header;
 import org.irecapi.service.Irec.*;
+import org.irecapi.service.IssuanceService;
 import org.irecapi.service.ProjectRegistrationDataService;
 import org.irecapi.service.ProjectService;
 import org.junit.runner.RunWith;
@@ -43,8 +44,14 @@ public class BaseTest extends AbstractTestNGSpringContextTests {
     @Autowired
     public packageService packageService;
 
+    @Autowired
+    public issueService issueService;
+
     @Resource
     public ProjectService projectService;
+
+    @Resource
+    public IssuanceService issuanceService;
 
     @Resource
     public ProjectRegistrationDataService projectRegistrationDataService;

@@ -5,33 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40bd6d36-f881-4812-878b-78b191a31033" name="Changes" comment="项目新建至打包至回填流程">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f87d2f0d-984f-429c-8eae-87832c0aaf33.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f87d2f0d-984f-429c-8eae-87832c0aaf33/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f87d2f0d-984f-429c-8eae-87832c0aaf33/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f87d2f0d-984f-429c-8eae-87832c0aaf33/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f87d2f0d-984f-429c-8eae-87832c0aaf33/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileData/0.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileData/1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileData/123.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2022-07-20-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2022-07-21-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-14-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-15-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-21-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-22-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-23-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-03-24-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-04-17-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-04-18-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-04-28-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-05-05-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-05-09-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-05-15-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-05-16-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-05-17-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-05-18-0-log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output/index-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateIssueBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateMaterialBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/CreateResultBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/IssueGenerateDocumentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/IssueGenerateSingleDocumentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/QueryDateBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/QueryIssueDetailBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/Bean/Irec/QueryMaterialDetailBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/controller/IssuanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/dao/IssuanceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/entity/Issuance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/Irec/issueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/IssuanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/irecapi/service/impl/IssuanceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/IssuanceDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createIssuanceProjectMaterialTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createIssueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/createResultTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/finishTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/generateIssueDocumentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/signIssueDocumentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f87d2f0d-984f-429c-8eae-87832c0aaf33.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f87d2f0d-984f-429c-8eae-87832c0aaf33.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileData/123.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/fileData/123.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-logs/carbon-log2023-04-28-0-log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-logs/carbon-log2023-05-18-0-log" beforeDir="false" afterPath="$PROJECT_DIR$/out-logs/carbon-log2023-05-18-0-log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/irecapi/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/backFillTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/irecapi/Irec/backFillTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/index-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-xml/mainTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-xml/mainTest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,10 +96,10 @@
       <recent name="D:\code\javacode\IrecAPIAuto\src\main\resources\mapper\irec" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.irecapi.Irec" />
-      <recent name="org.irecapi.Utils" />
       <recent name="org.irecapi.Bean.Irec" />
+      <recent name="org.irecapi.Irec" />
       <recent name="org.irecapi.service.Irec" />
+      <recent name="org.irecapi.Utils" />
       <recent name="org.irecapi.Bean.Project" />
     </key>
   </component>
@@ -162,7 +166,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="createIssueTest.createIssueTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="IrecAPIAuto" />
       <extension name="coverage">
         <pattern>
@@ -170,9 +174,10 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.irecapi.User" />
-      <option name="MAIN_CLASS_NAME" value="org.irecapi.Irec.loginTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="org.irecapi.Irec" />
+      <option name="MAIN_CLASS_NAME" value="org.irecapi.Irec.createIssueTest" />
+      <option name="METHOD_NAME" value="createIssueTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -182,10 +187,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/code/javacode/IrecAPIAuto/test-xml/mainTest.xml" />
+        <item itemvalue="TestNG.createIssueTest.createIssueTest" />
         <item itemvalue="Application.GetPathWithURLUtil" />
         <item itemvalue="JUnit.BaseTest.upload" />
         <item itemvalue="JUnit.loginTest.logintest" />
-        <item itemvalue="TestNG.loginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +226,15 @@
       <workItem from="1683276275894" duration="164000" />
       <workItem from="1683613342741" duration="3511000" />
       <workItem from="1684115042374" duration="14035000" />
-      <workItem from="1684138191437" duration="28239000" />
+      <workItem from="1684138191437" duration="35686000" />
+      <workItem from="1684736163576" duration="15112000" />
+      <workItem from="1684996169632" duration="681000" />
+      <workItem from="1685338586030" duration="26429000" />
+      <workItem from="1687153487547" duration="3638000" />
+      <workItem from="1687229558605" duration="3926000" />
+      <workItem from="1687325983355" duration="908000" />
+      <workItem from="1688365134327" duration="6861000" />
+      <workItem from="1689041424653" duration="14345000" />
     </task>
     <task id="LOCAL-00001" summary="项目新建至打包至回填流程">
       <created>1684395389293</created>
@@ -230,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684395389293</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="项目新建至打包至回填流程">
+      <created>1684396399344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684396399344</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,5 +270,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="项目新建至打包至回填流程" />
     <option name="LAST_COMMIT_MESSAGE" value="项目新建至打包至回填流程" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/irecapi/Irec/signIssueDocumentTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

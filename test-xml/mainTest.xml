@@ -83,6 +83,37 @@
                     <include name="backFillTest" description="注册回填"></include>
                 </methods>
             </class>
+            <class name="org.irecapi.Irec.createIssueTest">
+                <methods>
+                    <include name="createIssueTest" description="新建签发"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.createIssuanceProjectMaterialTest">
+                <methods>
+                    <include name="createIssuanceProjectMaterialTest" description="整理数据"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.generateIssueDocumentTest">
+                <methods>
+                    <include name="generateIssueDocumentTest" description="获取签发文件"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.signIssueDocumentTest">
+                <methods>
+                    <include name="signIssueDocumentTest" description="签发文件签章"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.finishTest">
+                <methods>
+                    <include name="finishTest" description="完成签发"></include>
+                </methods>
+            </class>
+            <class name="org.irecapi.Irec.createResultTest">
+                <methods>
+                    <include name="createResultTest" description="签发回填"></include>
+                </methods>
+            </class>
+
         </classes>
     </test>
 </suite>
